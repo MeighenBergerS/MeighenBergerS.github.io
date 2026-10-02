@@ -37,8 +37,9 @@ neutrinos.
 
 - First person. Use **"we"** for papers with co-authors ("With colleagues at ..., we
   show ..."). Use **"I"** only for single-author work or personal framing.
-- Credit collaborators and students by name where it is natural, for example
-  "led by my PhD student Ho Man Yim".
+- Credit collaborators and students by name where it is natural, with their role in
+  parentheses, for example "Ho Man Yim (PhD candidate)". Never write "my student" or
+  "my PhD student".
 - Active verbs with the subject first: "we show", "we find", "we compute",
   "we point out". Calibrate: "show" for established results, "find" for numbers,
   "could" or "in principle" for speculation.

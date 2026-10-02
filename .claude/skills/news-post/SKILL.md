@@ -28,6 +28,8 @@ Read `docs/news-style.md` in full and follow it. The essentials:
   collaborators and students by name when their full names are in the source material.
 - No em dashes, no colons joining clauses, no semicolon chains, American spelling.
   Greek letters as inline math (`$\nu_\tau$`).
+- Never write "my student" or "my PhD student". Name students with their role in
+  parentheses, for example "Ho Man Yim (PhD candidate)".
 - Use only facts from the source material. Never invent numbers, comparisons, or
   claims of experimental adoption.
 
