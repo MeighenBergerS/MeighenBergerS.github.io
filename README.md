@@ -22,6 +22,10 @@ data/*.yml  +  INSPIRE / arXiv / GitHub  ──►  pipeline/build.py  ──►
 | Research page text | `data/research.yml` |
 | Bio, links | `data/profile.yml` |
 
+Text fields accept light Markdown (`**bold**`, `*italic*`, `[text](url)`) and inline math
+(`$\nu_\tau$`, `$p\gamma$`), rendered by KaTeX on the site and by LaTeX in the CV. Use Greek
+letters rather than spelled-out names.
+
 Paper metadata (authors, journal, citations) is never typed by hand: it comes from
 INSPIRE. Counts in the prose ("12 invited talks", "two Master's students",
 "84 refereed papers") are computed at build time.

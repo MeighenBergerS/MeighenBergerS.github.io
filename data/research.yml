@@ -1,7 +1,7 @@
 # Research page: one section per theme (`cv_title`/`cv_summary` are the shorter
 # versions used in the CV's "Research Themes" section). Papers are attached automatically via the
 # `themes:` tags in papers.yml; `highlights` pick a few to feature with a one-line
-# result. Text uses light Markdown.
+# result. Text uses light Markdown and $...$ math (e.g. $\nu_\tau$).
 
 intro: >-
   My work asks how the neutrino detectors now being built (Hyper-K, DUNE, JUNO,
@@ -16,7 +16,7 @@ themes:
     title: Neutrino phenomenology and precision oscillation physics
     cv_title: Neutrino phenomenology and precision oscillation physics
     cv_summary: >-
-      Leptonic CP violation with sub-GeV atmospheric neutrinos (targeting Hyper-K and DUNE), tau-neutrino appearance and mass ordering (JUNO), solar neutrinos via neutral currents (DUNE).
+      Leptonic CP violation with sub-GeV atmospheric neutrinos (targeting Hyper-K and DUNE), $\nu_\tau$ appearance and mass ordering (JUNO), solar neutrinos via neutral currents (DUNE).
     summary: >-
       Low-energy atmospheric and solar neutrinos are still an underused resource for
       precision physics, mainly because current detectors lack the size and resolution
@@ -24,13 +24,13 @@ themes:
       unique: carbon's efficient neutron capture in JUNO, nuclear transitions in argon
       at DUNE, and sheer size at Hyper-K. I develop the predictions and analysis
       strategies that turn these features into new measurements, from leptonic CP
-      violation with sub-GeV atmospheric neutrinos to tau-neutrino appearance and
+      violation with sub-GeV atmospheric neutrinos to $\nu_\tau$ appearance and
       neutral-current solar neutrinos.
     highlights:
       - paper: Beacom:2026mys
         result: Sub-GeV atmospheric neutrinos give competitive sensitivity to the CP-violating phase, independent of accelerator systematics.
       - paper: Meighen-Berger:2023xpr
-        result: JUNO can be the first experiment to see atmospheric tau-neutrino appearance, via sub-GeV neutral-current interactions.
+        result: JUNO can be the first experiment to see atmospheric $\nu_\tau$ appearance, via sub-GeV neutral-current interactions.
       - paper: Meighen-Berger:2024xbx
         result: Neutral-current detection on argon substantially extends DUNE's solar neutrino reach.
 

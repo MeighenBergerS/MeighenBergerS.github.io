@@ -1,12 +1,13 @@
 # CV content that is not papers, talks, software or teaching.
-# Text fields use light Markdown: **bold**, *italic*, [text](url).
+# Text fields use light Markdown: **bold**, *italic*, [text](url), and $...$ for
+# inline math such as $\nu_\tau$ or $p\gamma$ (prefer Greek letters over spelled-out names).
 
 highlights:
   # Rendered as a template: {{ stats.* }} values are computed at build time.
   - >-
     **New measurement channels.** Proposed and developed the phenomenological
     frameworks behind several new measurement strategies. These include leptonic CP
-    violation with sub-GeV atmospheric neutrinos, atmospheric tau-neutrino appearance
+    violation with sub-GeV atmospheric neutrinos, atmospheric $\nu_\tau$ appearance
     via neutral currents in JUNO, neutral-current solar neutrino detection in DUNE,
     and dark matter searches using Jupiter as a target.
   - >-
@@ -64,7 +65,7 @@ positions:
     end: 2025-08
     details:
       - Established an independent research program spanning neutrino phenomenology, dark matter theory, and detector simulation.
-      - Proposed new measurement channels for JUNO (tau-neutrino appearance) and DUNE (neutral-current solar neutrinos).
+      - Proposed new measurement channels for JUNO ($\nu_\tau$ appearance) and DUNE (neutral-current solar neutrinos).
       - Co-developed the Prometheus open-source neutrino telescope simulation. Supervised one PhD and one Master's student, and organized the theory seminar series (2023 to 2025).
       - Attracted competitive early-career funding from the Laby ECR Award and the ARC CoE Dark Matter ECR Special Initiatives program.
   - institution: The University of Melbourne

@@ -58,6 +58,15 @@ TEX_ESCAPE = {"&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#", "_": r"\_",
               "\\": r"\textbackslash{}", "–": "--", "—": "---"}
 
 
+# Greek letters typed directly (e.g. "pγ") become math in LaTeX; pdflatex has no text glyphs.
+GREEK = dict(zip("αβγδεζηθικλμνξπρστυφχψωΓΔΘΛΞΠΣΦΨΩ",
+                 [rf"$\{n}$" for n in ("alpha beta gamma delta epsilon zeta eta theta iota kappa lambda mu nu xi "
+                                        "pi rho sigma tau upsilon phi chi psi omega Gamma Delta Theta Lambda Xi Pi "
+                                        "Sigma Phi Psi Omega").split()]))
+TEX_ESCAPE.update(GREEK)
+MATH = re.compile(r"(?<!\\)\$(?!\s)(.+?)(?<!\s)\$")  # inline $...$ math, passed through untouched
+
+
 def tex_escape(s):
     return "".join(TEX_ESCAPE.get(c, c) for c in str(s))
 
@@ -71,11 +80,19 @@ def to_tex(text):
         links.append(m.group(2))
         return f"\x00{len(links) - 1}\x00{m.group(1)}\x01"
 
-    s = LINK.sub(stash, str(text))
+    maths = []
+
+    def stash_math(m):  # protect $...$ from escaping and from the * markup
+        maths.append(m.group(0))
+        return f"\x02{len(maths) - 1}\x03"
+
+    s = MATH.sub(stash_math, str(text))
+    s = LINK.sub(stash, s)
     s = tex_escape(s)
     s = re.sub(r"\x00(\d+)\x00(.*?)\x01", lambda m: rf"\href{{{links[int(m.group(1))]}}}{{{m.group(2)}}}", s)
     s = BOLD.sub(r"\\textbf{\1}", s)
     s = ITAL.sub(r"\\textit{\1}", s)
+    s = re.sub(r"\x02(\d+)\x03", lambda m: maths[int(m.group(1))], s)
     return s  # straight quotes are left to csquotes (\MakeOuterQuote)
 
 
@@ -293,7 +310,7 @@ def make_cv_bib(papers, bib):
         entry = re.sub(r"^(@\w+\{)\s*[^,\s]+", lambda m: m.group(1) + p["key"], entry, count=1)
         addendum = ""
         if p.get("contribution"):
-            addendum += "Contribution: " + tex_escape(p["contribution"])
+            addendum += "Contribution: " + to_tex(p["contribution"])
         keyword = f"exp-{slug(p['experiment'])}" if p["experiment"] else p["status"]
         fields = [f'keywords = "{keyword}"']
         if addendum:

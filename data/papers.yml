@@ -23,7 +23,7 @@ papers:
     themes: [transport, simulation]
 
   Arguelles:2026rjr:
-    details: Developed the production of neutrinos from p-p and p-gamma interactions
+    details: Developed the production of neutrinos from $pp$ and $p\gamma$ interactions
     themes: [bsm]
 
   Beacom:2026mys:
@@ -89,7 +89,7 @@ papers:
     selected: true
     summary: >-
       Proposed a new signature, sub-GeV neutral-current interactions, giving JUNO access
-      to atmospheric tau-neutrino appearance.
+      to atmospheric $\nu_\tau$ appearance.
     role: >-
       Conceived the project, developed the signal model, led the simulation and
       analysis, co-wrote the manuscript.
