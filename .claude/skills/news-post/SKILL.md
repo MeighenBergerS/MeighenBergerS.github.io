@@ -20,7 +20,7 @@ Fill in a draft news post in `data/news/`. Drafts are created weekly by CI
 
 ## 2. Read the rules
 
-Read `docs/news-style.md` in full and follow it. The essentials:
+Read `docs/news-style.md` in full and follow it, together with `design-prose`. The essentials:
 - 3–4 sentences (about 60–100 words), one paragraph: question → what we did → what we
   found (one number) → why it matters, the caveat, or your part. No separate post page
   exists; the summary is the whole post.
@@ -58,4 +58,5 @@ posts may keep the logo already set.
 - Run `python3 pipeline/build.py`. It fails if the image path is wrong. Show the user
   the finished post text and word count.
 - Do not commit or push unless the user asks. When they do, commit on the current
-  branch (the PR branch) with a message like `News: <headline>`.
+  branch (the PR branch) following `workflow-commits`, with a subject like
+  `add news post on <topic>`.

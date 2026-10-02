@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python pipeline/build.py)",
+      "Bash(python pipeline/build.py *)",
+      "Bash(python3 pipeline/build.py)",
+      "Bash(python3 pipeline/build.py *)",
+      "Bash(git fetch *)"
+    ],
+    "ask": [
+      "Edit(.claude/skills/**)",
+      "Edit(.claude/hooks/**)",
+      "Edit(.claude/agents/**)",
+      "Edit(.claude/settings.json)",
+      "Edit(CLAUDE.md)",
+      "Edit(private/**)"
+    ]
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/design_reminder.py\" 2>/dev/null || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/repo_audit_due.py\" 2>/dev/null || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
