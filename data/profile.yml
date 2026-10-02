@@ -24,8 +24,8 @@ links:
 # Two-sentence pitch at the top of the home page: what you do and what sets you apart.
 pitch: >-
   I find the measurements next-generation neutrino detectors weren't designed for, and
-  show they can make them: from leptonic CP violation with atmospheric neutrinos to new
-  probes of dark matter. Having worked inside IceCube, P-ONE and Borexino, I build the
+  show they can make them. These range from leptonic CP violation with atmospheric
+  neutrinos to new probes of dark matter. Having worked inside IceCube, P-ONE and Borexino, I build the
   transport and simulation tools that make these predictions hold up at the detector level.
 
 # Home-page highlight cards: one result each, with a figure from the paper (arXiv
@@ -40,7 +40,7 @@ highlights:
     title: $\nu_\tau$ appearance in JUNO
     result: A new neutral-current signature lets JUNO observe atmospheric $\nu_\tau$ appearance at 5$\sigma$, at energies no other experiment reaches.
     figure: img/highlights/juno-tau.png
-    alt: Bar chart of expected significance; JUNO reaches 5 sigma in five years, above KamLAND, SK, DeepCore and IceCube.
+    alt: Bar chart of expected significance. JUNO reaches 5 sigma in five years, above KamLAND, SK, DeepCore and IceCube.
   - paper: Meighen-Berger:2025hrq
     title: Dark matter from cosmic-ray accelerators
     result: The existence of ultrahigh-energy cosmic rays constrains dark matter-proton scattering, probing sub-GeV masses that direct detection cannot reach.
@@ -65,11 +65,11 @@ bio: >-
 research_profile: >-
   I am a phenomenologist working on neutrino and dark matter physics. I find the
   measurements next-generation neutrino detectors weren't designed for, and show they
-  can make them. My work has two main directions: new measurements with neutrinos,
-  from leptonic CP violation with sub-GeV atmospheric neutrinos to $\nu_\tau$
-  appearance in JUNO and neutral-current solar neutrinos in DUNE; and new probes of
-  dark matter and physics beyond the Standard Model with the same detectors and with
-  astrophysical systems. Both rest on particle transport, atmospheric fluxes, and
+  can make them. My work has two main directions. The first is new measurements with
+  neutrinos, from leptonic CP violation with sub-GeV atmospheric neutrinos to
+  $\nu_\tau$ appearance in JUNO and neutral-current solar neutrinos in DUNE. The second
+  is new probes of dark matter and physics beyond the Standard Model, with the same
+  detectors and with astrophysical systems. Both rest on particle transport, atmospheric fluxes, and
   detector modelling that I build into open tools now used across the field, and on
   direct experience inside the IceCube, P-ONE, and Borexino collaborations, which
   keeps the predictions honest about backgrounds and systematics. The phenomenology

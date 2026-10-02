@@ -6,10 +6,10 @@
 {% set led = curated|selectattr('roles')|selectattr('roles', 'contains', 'idea')|list %}
 {% set further = curated|reject('in', led)|list %}
 <p class="lede">
-  My own research program: {{ led|length }} papers built on ideas I developed, and {{ further|length }} further
-  papers with a major contribution from me. Each paper is tagged with my role. In phenomenology, author lists are
+  {{ led|length }} papers are built on ideas I developed, and {{ further|length }} further
+  papers carry a major contribution from me. Each paper is tagged with my role. In phenomenology, author lists are
   often alphabetical, so the tags, not the author order, show who led the work.
-  Papers from my membership in IceCube, P-ONE and Borexino are <a href="#experiments">listed separately</a>; the
+  Papers from my membership in IceCube, P-ONE and Borexino are <a href="#experiments">listed separately</a>. The
   complete record is on <a href="https://inspirehep.net/authors/{{ profile.ids.inspire_recid }}">INSPIRE</a>.
 </p>
 

@@ -23,8 +23,8 @@ themes:
       Low-energy atmospheric and solar neutrinos are still an underused resource for
       precision physics, mainly because current detectors lack the size and resolution
       to exploit them. JUNO, DUNE and Hyper-K change that, and each brings something
-      unique: carbon's efficient neutron capture in JUNO, nuclear transitions in argon
-      at DUNE, and sheer size at Hyper-K. I develop the predictions and analysis
+      unique. JUNO has carbon's efficient neutron capture, DUNE has nuclear transitions
+      in argon, and Hyper-K has sheer size. I develop the predictions and analysis
       strategies that turn these features into new measurements, from leptonic CP
       violation with sub-GeV atmospheric neutrinos to $\nu_\tau$ appearance,
       neutral-current solar neutrinos, and the cosmic-ray spectrum itself.
@@ -45,9 +45,9 @@ themes:
       Dark matter captured in Jupiter and annihilating in the Galaxy, dark matter-nucleon interactions probed through ultrahigh-energy cosmic-ray acceleration, stellar probes (white dwarfs, stars near supermassive black holes), and long-lived particles produced in air showers.
     summary: >-
       Neutrino detectors are also excellent detectors for new physics. I use them, and
-      astrophysical systems more broadly, to constrain dark matter and new particles:
-      dark matter captured in Jupiter or annihilating in the Galaxy, dark matter
-      exchanging energy with stars near supermassive black holes, and new charged
+      astrophysical systems more broadly, to constrain dark matter and new particles.
+      Examples are dark matter captured in Jupiter or annihilating in the Galaxy, dark
+      matter exchanging energy with stars near supermassive black holes, and new charged
       particles produced in air showers that reach the detector directly. A recent
       direction uses the very existence of ultrahigh-energy cosmic rays as a probe of
       dark matter-nucleon interactions.
@@ -61,7 +61,7 @@ themes:
 
   - id: tools
     supporting: true
-    title: "Making predictions testable: particle transport and open simulation"
+    title: Particle transport and open simulation
     cv_title: Particle transport and open simulation
     cv_summary: >-
       Analytic muon transport and telescope effective areas (softpaws), atmospheric fluxes and cascades, and open, geometry-agnostic detector simulation (Prometheus, Fennel) with public benchmarks, built to make the phenomenology above testable before the detectors exist.
@@ -70,8 +70,8 @@ themes:
       detector response. I work on the transport of particles and light through the
       atmosphere, the Earth and the detector, from electromagnetic cascades and
       atmospheric fluxes to analytic muon transport, and build it into open tools that
-      any experiment can use: Prometheus for end-to-end telescope simulation, softpaws
-      for effective areas, and Fennel for light yields.
+      any experiment can use. Prometheus provides end-to-end telescope simulation,
+      softpaws computes effective areas, and Fennel calculates light yields.
     highlights:
       - paper: Lazar:2023rol
         result: The first public, end-to-end neutrino-telescope simulation, now a community baseline.
@@ -84,7 +84,7 @@ themes:
     title: Side projects
     minor: true
     summary: >-
-      The same Monte Carlo methods carry over to other fields: modelling deep-sea
-      bioluminescence, the optical background for ocean neutrino telescopes, which grew
-      into a study of bioluminescent life in the Pacific, and, during the pandemic, an
-      agent-based model of epidemic spread and digital contact tracing.
+      The same Monte Carlo methods carry over to other fields. Modelling deep-sea
+      bioluminescence, the optical background for ocean neutrino telescopes, grew into a
+      study of bioluminescent life in the Pacific. During the pandemic, I applied them to
+      an agent-based model of epidemic spread and digital contact tracing.

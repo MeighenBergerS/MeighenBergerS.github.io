@@ -12,7 +12,7 @@
 {% for t in research.themes %}
 <section id="{{ t.id }}" class="theme{% if t.minor %} minor{% endif %}">
   <h2>{{ t.title }}</h2>
-  {% if t.supporting %}<p class="theme-note">The method behind both directions above.</p>{% endif %}
+  {% if t.supporting %}<p class="theme-note">Making the predictions of both directions above testable.</p>{% endif %}
   <p>{{ t.summary|md }}</p>
   {% if t.highlights %}
   <div class="cards{% if t.highlights|length == 4 %} cards-2x2{% endif %}">
