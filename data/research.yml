@@ -89,7 +89,7 @@ themes:
         result: The first public, end-to-end neutrino-telescope simulation, now a community baseline.
       - paper: Orsoe:2025yru
         result: An open benchmark for deep-learning event reconstruction across neutrino telescopes.
-      - paper: Holzapfel:2026ess
+      - paper: Li:2026jgr
         result: Four years of deep-sea camera and PMT data reveal the chromatic and tidal structure of Pacific bioluminescence.
 
   - id: interdisciplinary

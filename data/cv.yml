@@ -123,7 +123,8 @@ interdisciplinary:
     - title: Polychromatic Population of Bioluminescent Organisms in the Deep Pacific Ocean
       year: 2026
       text: Four years of STRAW camera and PMT data in the Cascadia Basin, characterizing the chromatic, temporal, and tidal structure of deep-sea bioluminescence.
-      url: https://essopenarchive.org/doi/full/10.22541/essoar.15002512/v1
+      venue: J. Geophys. Res. Oceans
+      url: https://doi.org/10.1029/2025JC023267
       link_label: link
     - title: Bioluminescence Modeling for Deep Sea Experiments
       year: 2021

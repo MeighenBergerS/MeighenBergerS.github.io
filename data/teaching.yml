@@ -15,6 +15,7 @@ lecturing:
 # level: phd, masters, junior
 students:
   - {level: phd, name: Esmenaz Isik, institution: Iowa, title: Solar Atmospheric Neutrinos}
+  - {level: phd, name: Ruohan Li, institution: TUM}
   - {level: phd, name: Ho Man Yim, institution: Melbourne, title: Probing CP Violation with Sub-GeV Atmospheric Neutrinos}
   - {level: masters, name: Jeongoh Park, institution: Melbourne, title: Dark Matter Annihilation Signals in JUNO}
   - {level: masters, name: Jan Henrik Schmidt-Dencker, institution: TUM, title: Stau Search in IceCube, note: published as an ICRC proceeding}

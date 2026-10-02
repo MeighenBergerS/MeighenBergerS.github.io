@@ -46,7 +46,7 @@
 <h3>Supervised students</h3>
 <ul class="plain">
   {% for s in teaching.students %}
-  <li><strong>{{ s.name }}</strong> ({{ {'phd':'PhD','masters':"Master's",'junior':'Undergraduate / junior'}[s.level] }}, {{ s.institution }}). <em>{{ s.title }}</em>{% if s.note %}, {{ s.note }}{% endif %}</li>
+  <li><strong>{{ s.name }}</strong> ({{ {'phd':'PhD','masters':"Master's",'junior':'Undergraduate / junior'}[s.level] }}, {{ s.institution }}){% if s.title %}. <em>{{ s.title }}</em>{% endif %}{% if s.note %}, {{ s.note }}{% endif %}</li>
   {% endfor %}
 </ul>
 <ul class="plain">{% for c in teaching.community %}<li>{{ c|md }}</li>{% endfor %}</ul>
