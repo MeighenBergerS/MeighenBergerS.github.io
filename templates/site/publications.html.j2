@@ -1,48 +1,29 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import paper, stat %}
+{% from "macros.html.j2" import paper %}
 {% block title %}Publications · {{ profile.name }}{% endblock %}
 {% block content %}
 <h1>Publications</h1>
+{% set led = curated|selectattr('roles')|selectattr('roles', 'contains', 'idea')|list %}
+{% set further = curated|reject('in', led)|list %}
 <p class="lede">
-  {{ stats.refereed }} refereed papers and {{ stats.conference }} conference papers, most from my membership in
-  IceCube and P-ONE. {{ stats.curated }} carry a major contribution from me; these are listed first, with my role.
-  Papers from experimental collaborations are <a href="#experiments">grouped by experiment</a> below.
-  The complete record is on <a href="https://inspirehep.net/authors/{{ profile.ids.inspire_recid }}">INSPIRE</a>.
+  My own research program: {{ led|length }} papers built on ideas I developed, and {{ further|length }} further
+  papers with a major contribution from me. Each paper is tagged with my role. In phenomenology, author lists are
+  often alphabetical, so the tags, not the author order, show who led the work.
+  Papers from my membership in IceCube, P-ONE and Borexino are <a href="#experiments">listed separately</a>; the
+  complete record is on <a href="https://inspirehep.net/authors/{{ profile.ids.inspire_recid }}">INSPIRE</a>.
 </p>
 
-<section class="stats" aria-label="Citation summary">
-  {{ stat("{:,}".format(stats.citations), 'citations across all ' ~ stats.records ~ ' papers') }}
-  {{ stat(stats.h_index, 'h-index across all ' ~ stats.records ~ ' papers') }}
-  {{ stat(stats.citations_main, 'citations of my ' ~ stats.curated ~ ' major-contribution papers') }}
-  {{ stat(stats.h_index_main, 'h-index of my ' ~ stats.curated ~ ' major-contribution papers') }}
-</section>
+<p class="role-legend">
+  <span class="role role-wrote">Co-wrote the paper</span> written or co-written by me
+  <span class="role role-idea">Developed the idea</span> my idea, or developed by me
+  <span class="role role-mentored">Mentored student</span> a student I mentored worked on or led it
+</p>
 
-<figure class="chart" id="pubs-chart">
-  <figcaption>
-    <span class="chart-title">Papers per year <span class="muted">(excluding large-collaboration papers, see table)</span></span>
-    <span class="legend" aria-hidden="true">
-      <span><i class="swatch s1"></i>Major contribution</span>
-      {% if chart_pubs|sum(attribute='small') %}<span><i class="swatch s2"></i>Other papers</span>{% endif %}
-    </span>
-  </figcaption>
-  <div class="chart-body"></div>
-  <details>
-    <summary>Show as table</summary>
-    <table>
-      <thead><tr><th>Year</th><th>Major contribution</th><th>Other papers</th><th>Experimental collaborations</th></tr></thead>
-      <tbody>{% for r in chart_pubs %}<tr><td>{{ r.year }}</td><td>{{ r.main }}</td><td>{{ r.small }}</td><td>{{ r.collab }}</td></tr>{% endfor %}</tbody>
-    </table>
-  </details>
-</figure>
+<h2>Papers I led</h2>
+<ul class="papers">{% for p in led %}{{ paper(p) }}{% endfor %}</ul>
 
-<h2>Major contributions</h2>
-{% for status, label in [('sub','Submitted'),('preprint','Preprints'),('pub','Published'),('proc','Proceedings')] %}
-{% set group = curated|selectattr('status','equalto',status)|list %}
-{% if group %}
-<h3>{{ label }}</h3>
-<ul class="papers">{% for p in group %}{{ paper(p) }}{% endfor %}</ul>
-{% endif %}
-{% endfor %}
+<h2>Further major contributions</h2>
+<ul class="papers">{% for p in further %}{{ paper(p) }}{% endfor %}</ul>
 
 {% set others = papers|rejectattr('curated')|rejectattr('hidden')|selectattr('experiment','none')|rejectattr('status','equalto','thesis')|list %}
 {% if others %}
@@ -66,8 +47,4 @@ substantial contribution from me are shown first, with my role.</p>
   {% endif %}
 </section>
 {% endfor %}
-{% endblock %}
-{% block scripts %}
-<script>window.PUBS = {{ chart_pubs|json }};</script>
-<script src="js/charts.js"></script>
 {% endblock %}

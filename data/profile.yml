@@ -7,7 +7,7 @@ position: Postdoctoral Research Fellow in Neutrino Phenomenology
 affiliation: University of Iowa, Department of Physics and Astronomy
 email: stephan-meighen-berger@uiowa.edu
 site_url: https://meighenbergers.github.io
-photo:  # e.g. img/portrait.jpg (put the file in static/img/)
+photo: img/portrait.jpg
 
 ids:
   inspire_bai: Stephan.Meighen.Berger.1
@@ -21,7 +21,38 @@ links:
   - {label: arXiv, url: "https://arxiv.org/search/?searchtype=author&query=Meighen-Berger"}
   - {label: GitHub, url: "https://github.com/MeighenBergerS"}
 
-# One-paragraph version for the landing page.
+# Two-sentence pitch at the top of the home page: what you do and what sets you apart.
+pitch: >-
+  I find new measurements for next-generation neutrino detectors, from leptonic CP
+  violation with atmospheric neutrinos to new probes of dark matter, and build the open
+  simulation tools that make them testable. Having worked inside IceCube, P-ONE and
+  Borexino, I design analyses that experiments can actually carry out.
+
+# Home-page highlight cards: one result each, with a figure from the paper (arXiv
+# source). `paper` is a key from papers.yml; the link and venue come from INSPIRE.
+highlights:
+  - paper: Beacom:2026mys
+    title: CP violation with atmospheric neutrinos
+    result: Sub-GeV atmospheric neutrinos give Hyper-K and DUNE a measurement of the CP-violating phase that is independent of accelerator systematics.
+    figure: img/highlights/cp-phase.jpg
+    alt: Oscillogram of the appearance probability versus neutrino energy and zenith angle, with the analysis region of interest marked.
+  - paper: Meighen-Berger:2023xpr
+    title: Tau-neutrino appearance in JUNO
+    result: A new neutral-current signature lets JUNO observe atmospheric $\nu_\tau$ appearance at 5$\sigma$, at energies no other experiment reaches.
+    figure: img/highlights/juno-tau.png
+    alt: Bar chart of expected significance; JUNO reaches 5 sigma in five years, above KamLAND, SK, DeepCore and IceCube.
+  - paper: Meighen-Berger:2025hrq
+    title: Dark matter from cosmic-ray accelerators
+    result: The existence of ultrahigh-energy cosmic rays constrains dark matter-proton scattering, probing sub-GeV masses that direct detection cannot reach.
+    figure: img/highlights/uhecr-dm.png
+    alt: Exclusion plot of the dark matter-proton cross section versus dark matter mass, with the new NGC 1068 and Milky Way bounds.
+  - paper: Lazar:2023rol
+    title: Prometheus, open neutrino-telescope simulation
+    result: The first public end-to-end simulation for neutrino telescopes in ice and water, now a community baseline.
+    figure: img/highlights/prometheus.png
+    alt: Diagram of the Prometheus simulation chain from particle injection through propagation and light yield to photon detection.
+
+# One-paragraph version (CV page and fallback).
 bio: >-
   I am a phenomenologist working at the interface of neutrino physics, dark matter,
   and astroparticle theory. I develop the theoretical frameworks that turn

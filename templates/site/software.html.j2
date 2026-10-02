@@ -4,7 +4,6 @@
   {% set g = s.github %}
   {% if g.pypi %}<span>v{{ g.pypi.version }}{% if g.pypi.date %} ({{ g.pypi.date[:7] }}){% endif %}</span>{% endif %}
   {% if g.pushed_at %}<span>updated {{ g.pushed_at[:7] }}</span>{% endif %}
-  {% if g.stargazers_count %}<span>★ {{ g.stargazers_count }}</span>{% endif %}
 {% endmacro %}
 {% macro links(s) %}
   {% if s.docs %}<a class="button primary" href="{{ s.docs }}">{{ s.docs_label or 'Docs' }}</a>{% endif %}

@@ -2,25 +2,44 @@
 {% from "macros.html.j2" import paper, stat %}
 {% block content %}
 <section class="hero">
-  {% if profile.photo %}<img class="portrait" src="{{ profile.photo }}" alt="Portrait of {{ profile.name }}">{% endif %}
-  <div>
+  <div class="hero-text">
     <h1>{{ profile.name }}</h1>
     <p class="lede">{{ profile.position }}<br>{{ profile.affiliation }}</p>
-    <p>{{ profile.bio|md }}</p>
+    <p class="pitch">{{ profile.pitch|md }}</p>
     <p class="links">
+      <a class="button primary" href="cv.html">CV</a>
       <a class="button" href="mailto:{{ profile.email }}">Email</a>
       {% for l in profile.links %}<a class="button" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
-      <a class="button" href="cv.html">CV</a>
     </p>
   </div>
+  {% if profile.photo %}<img class="portrait" src="{{ profile.photo }}" alt="Portrait of {{ profile.name }}" width="200" height="200">{% endif %}
 </section>
 
 <section class="stats" aria-label="At a glance">
-  {{ stat(stats.curated, 'papers with a major contribution') }}
-  {{ stat(stats.records, 'records on INSPIRE') }}
-  {{ stat("{:,}".format(stats.citations), 'citations across all papers (INSPIRE)') }}
+  {{ stat(stats.led, 'papers built on ideas I developed') }}
+  {{ stat(stats.recent, 'major-contribution papers since ' ~ stats.recent_since) }}
   {{ stat(stats.invited_talks, 'invited talks and seminars') }}
+  {{ stat(stats.supervision.phd, 'PhD students mentored') }}
 </section>
+
+{% if profile.highlights %}
+<section>
+  <h2>Highlights</h2>
+  <div class="highlights">
+    {% for h in profile.highlights if h.paper_obj %}
+    {% set p = h.paper_obj %}
+    <article class="highlight">
+      <a class="figure" href="{{ p.url }}"><img src="{{ h.figure }}" alt="{{ h.alt }}" loading="lazy"></a>
+      <div class="highlight-body">
+        <h3><a href="{{ p.url }}">{{ h.title }}</a></h3>
+        <p>{{ h.result|md }}</p>
+        <p class="muted">{{ p.venue or ('Preprint, ' ~ p.year) }}{% if p.arxiv %} · <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a>{% endif %}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 <section>
   <h2>Research</h2>
@@ -34,8 +53,8 @@
 <section>
   <h2>Recent papers</h2>
   <ul class="papers">
-    {% for p in papers if (p.curated or p.author_count <= 30) and not p.hidden and p.status != 'thesis' %}
-    {% if loop.index <= 5 %}{{ paper(p, contribution=false) }}{% endif %}
+    {% for p in papers if p.curated and not p.experiment %}
+    {% if loop.index <= 4 %}{{ paper(p) }}{% endif %}
     {% endfor %}
   </ul>
   <p><a href="publications.html">All publications →</a></p>
@@ -48,6 +67,6 @@
     <li><strong>{{ t.event }}</strong>, {{ t.city }}{% if t.country %}, {{ t.country }}{% endif %}, {{ t.year }}. <em>{{ t.title }}</em></li>
     {% endfor %}
   </ul>
-  <p><a href="talks.html">All talks →</a></p>
+  <p><a href="talks.html">All talks and media →</a></p>
 </section>
 {% endblock %}

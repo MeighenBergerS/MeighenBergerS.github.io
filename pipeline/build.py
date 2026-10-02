@@ -351,6 +351,9 @@ def compute_stats(papers, talks, teaching, software, github):
         "h_index": h_index(p["citations"] for p in inspire),
         "citations_main": sum(p["citations"] or 0 for p in curated),
         "h_index_main": h_index(p["citations"] for p in curated),
+        "led": sum(1 for p in curated if "idea" in (p.get("roles") or [])),
+        "recent_since": dt.date.today().year - 3,
+        "recent": sum(1 for p in curated if p["year"] >= dt.date.today().year - 3 and not p["experiment"]),
         "invited_talks": sum(1 for t in talks["talks"] if t["kind"] in ("invited", "seminar")),
         "contributed_talks": sum(1 for t in talks["talks"] if t["kind"] in ("contributed", "poster")),
         "software": len(software),
@@ -431,6 +434,7 @@ def site_env():
     env.filters["month"] = fmt_month
     env.filters["json"] = lambda v: jinja2.utils.markupsafe.Markup(json.dumps(v))
     env.tests["self"] = lambda name: SELF in name
+    env.tests["contains"] = lambda seq, item: item in (seq or [])
     return env
 
 
@@ -498,6 +502,8 @@ def main():
     for s in software["software"]:
         s["github"] = github.get(s.get("repo"), {})
         s["paper_obj"] = by_key.get(s.get("paper"))
+    for h in profile.get("highlights") or []:
+        h["paper_obj"] = by_key.get(h["paper"])
     for t in research["themes"]:
         t["papers"] = [p for p in papers if t["id"] in p["themes"]]
         for h in t.get("highlights", []):
