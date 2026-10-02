@@ -25,3 +25,6 @@ build/
 *.run.xml
 *.synctex.gz
 /6196968004143222886_121.jpg
+
+# Repo Audit reports (local only)
+.audit/
