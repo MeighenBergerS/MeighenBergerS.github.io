@@ -2,7 +2,7 @@ intro: >-
   Open simulation tools are a core research output. They exist to make the
   phenomenology testable, and they are used by the neutrino-telescope community to model
   detectors that do not yet exist and the environments they will be built in. Listed
-  here are the codes built for general use; analysis code for individual papers lives
+  here are the codes built for general use. Analysis code for individual papers lives
   on [GitHub](https://github.com/MeighenBergerS).
 
 # section: featured  -> large card on the Software page and listed in the CV.
@@ -72,10 +72,10 @@ software:
     logo: img/software/nestling.png
     tagline: A physics-first starting kit for early-career researchers.
     description: >-
-      Short guides, templates, examples and exercises across seven tracks: arXiv and
-      reading papers, journal club, writing papers, Git and GitHub, coding practices,
-      plotting, and working with LLMs. Used to onboard new students. Author and
-      maintainer.
+      Short guides, templates, examples and exercises in seven tracks. They cover
+      reading arXiv papers, journal clubs, writing papers, Git and GitHub, coding
+      practices, plotting, and working with LLMs. Used to onboard new students. Author
+      and maintainer.
 
   - name: jc-ppi
     section: community
@@ -85,7 +85,7 @@ software:
     logo: img/software/jc-ppi.svg
     tagline: Iowa Particles & Plots Journal Club.
     description: >-
-      Website and workflow for the journal club: members suggest papers as GitHub
+      Website and workflow for the journal club. Members suggest papers as GitHub
       issues, a bot fills in the details from INSPIRE, and the site groups them by week.
       Runs entirely on GitHub Actions, with nothing to host. Author and maintainer.
 

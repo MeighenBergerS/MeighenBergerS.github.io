@@ -6,8 +6,8 @@ highlights:
   # Rendered as a template: {{ stats.* }} values are computed at build time.
   - >-
     **New measurements with neutrinos.** Proposed and developed the frameworks for
-    measurements next-generation detectors were not designed for: leptonic CP violation
-    with sub-GeV atmospheric neutrinos (Hyper-K, DUNE), atmospheric $\nu_\tau$
+    measurements next-generation detectors were not designed for. These include leptonic
+    CP violation with sub-GeV atmospheric neutrinos (Hyper-K, DUNE), atmospheric $\nu_\tau$
     appearance via neutral currents (JUNO), neutral-current solar neutrino detection
     (DUNE), and the cosmic-ray spectrum measured through atmospheric neutrinos.
   - >-
