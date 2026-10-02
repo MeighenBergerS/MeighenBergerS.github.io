@@ -10,8 +10,9 @@
 #                   wrote     -> "Wrote the paper" (sole author) / "Co-wrote the paper"
 #                   idea      -> "Developed the idea" (had the idea or helped develop it)
 #                   mentored  -> "Mentored student" (a student worked on it and/or led it)
-#   details:      specific statement of what you did (for smaller contributions, or
-#                 anything the tags do not cover); shown after the tags
+#   details:      specific statement of what you did, for smaller contributions;
+#                 shown after the tags. Ignored when `idea` is set: developing the
+#                 idea needs no further description.
 #   themes:       ids from research.yml
 #   status:       override sub/pub/proc/preprint (normally derived from INSPIRE);
 #                 preprint = arXiv only, not submitted anywhere
@@ -60,7 +61,6 @@ papers:
 
   Meighen-Berger:2025pcq:
     roles: [wrote, idea]
-    details: Performed all calculations and sensitivity estimates
     themes: [transport, neutrino]
 
   Bhattacharjee:2025iip:
@@ -128,7 +128,6 @@ papers:
 
   Meighen-Berger:2020eun:
     roles: [wrote, idea]
-    details: Constructed the simulation
     themes: [bsm]
     selected: true
     summary: >-

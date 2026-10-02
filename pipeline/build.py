@@ -278,6 +278,9 @@ def contribution(p):
         if r in (p.get("roles") or []):
             tags.append((r, ("Wrote" if p["author_count"] == 1 else "Co-wrote") + " the paper"
                          if r == "wrote" else ROLE_LABELS[r]))
+    if "idea" in (p.get("roles") or []) and p.get("details"):
+        print(f"note: {p['key']}: `details` ignored because `idea` is set")
+        p["details"] = None
     parts = [label for _, label in tags] + ([p["details"].rstrip(".")] if p.get("details") else [])
     text = ", ".join(parts[:1] + [x[0].lower() + x[1:] for x in parts[1:]])
     return tags, text
