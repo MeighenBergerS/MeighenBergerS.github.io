@@ -11,10 +11,10 @@
 </p>
 
 <section class="stats" aria-label="Citation summary">
-  {{ stat("{:,}".format(stats.citations), 'citations, all records') }}
-  {{ stat(stats.h_index, 'h-index, all records') }}
-  {{ stat(stats.citations_main, 'citations, major contributions') }}
-  {{ stat(stats.h_index_main, 'h-index, major contributions') }}
+  {{ stat("{:,}".format(stats.citations), 'citations across all ' ~ stats.records ~ ' papers') }}
+  {{ stat(stats.h_index, 'h-index across all ' ~ stats.records ~ ' papers') }}
+  {{ stat(stats.citations_main, 'citations of my ' ~ stats.curated ~ ' major-contribution papers') }}
+  {{ stat(stats.h_index_main, 'h-index of my ' ~ stats.curated ~ ' major-contribution papers') }}
 </section>
 
 <figure class="chart" id="pubs-chart">

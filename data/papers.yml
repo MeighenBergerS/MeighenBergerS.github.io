@@ -118,7 +118,7 @@ papers:
     themes: [bsm]
 
   meighen2021bioluminescence:
-    details: One of the leading authors, developed the bioluminescence framework
+    roles: [wrote, idea, mentored]
     themes: [simulation]
     status: preprint
 
