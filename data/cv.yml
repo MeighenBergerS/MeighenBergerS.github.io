@@ -5,30 +5,31 @@
 highlights:
   # Rendered as a template: {{ stats.* }} values are computed at build time.
   - >-
-    **New measurement channels.** Proposed and developed the phenomenological
-    frameworks behind several new measurement strategies. These include leptonic CP
-    violation with sub-GeV atmospheric neutrinos, atmospheric $\nu_\tau$ appearance
-    via neutral currents in JUNO, neutral-current solar neutrino detection in DUNE,
-    and dark matter searches using Jupiter as a target.
+    **New measurements with neutrinos.** Proposed and developed the frameworks for
+    measurements next-generation detectors were not designed for: leptonic CP violation
+    with sub-GeV atmospheric neutrinos (Hyper-K, DUNE), atmospheric $\nu_\tau$
+    appearance via neutral currents (JUNO), neutral-current solar neutrino detection
+    (DUNE), and the cosmic-ray spectrum measured through atmospheric neutrinos.
   - >-
-    **Theory and BSM physics.** Independent theoretical work on dark matter and physics
-    beyond the Standard Model, including long-lived supersymmetric particles, dark
-    matter-nucleon interactions constrained by ultrahigh-energy cosmic ray
-    acceleration, and dark matter energy exchange in stars orbiting supermassive black
-    holes.
+    **Dark matter and new physics with neutrino detectors.** New probes of dark matter
+    captured in Jupiter and annihilating in the Galaxy, dark matter-nucleon
+    interactions constrained by ultrahigh-energy cosmic-ray acceleration, stellar probes
+    (white dwarfs, stars orbiting supermassive black holes), and the first
+    neutrino-telescope limits on long-lived supersymmetric particles.
   - >-
-    **Inside the experiments.** Collaboration member of IceCube, P-ONE, and Borexino,
-    providing the atmospheric-cascade and bioluminescence background models their
-    analyses depend on. My phenomenology for Hyper-K, DUNE, JUNO, and KM3NeT is
-    independent of those collaborations, but is built on that experience.
+    **Predictions that hold up at the detector level.** Collaboration member of
+    IceCube, P-ONE, and Borexino, providing the atmospheric-cascade and bioluminescence
+    background models their analyses depend on. My phenomenology for Hyper-K, DUNE,
+    JUNO, and KM3NeT is independent of those collaborations, but is built on that
+    experience.
   - >-
-    **Community software.** Lead developer and maintainer of **Prometheus**, the
-    open-source neutrino telescope simulation now used across the field, and author of
+    **Open tools.** Lead developer and maintainer of **Prometheus**, the open-source
+    neutrino telescope simulation now used across the field, and author of
     **softpaws** (analytic neutrino-telescope effective areas), **Fennel** (light yields)
     and **bib-checker** (bibliography validation against INSPIRE).
   - >-
     **Independent visibility.** {{ stats.invited_talks }} invited talks and seminars,
-    including Stanford, Harvard, Texas A&M, Ohio State, UNSW, and the Mitchell
+    including Stanford, Harvard, Queen's, Texas A&M, Ohio State, UNSW, and the Mitchell
     Conference.
   - >-
     **Mentoring.** Supervised {{ stats.supervision.phd_words }} PhD student{{ 's' if stats.supervision.phd != 1 }},
