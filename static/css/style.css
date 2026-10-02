@@ -211,3 +211,6 @@ ul.plain .meta span + span::before { content: " · "; }
 /* Tag legend on the publications page */
 .role-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 0.85rem; color: var(--muted); margin: 8px 0 0; }
 .role-legend .role + .role { margin-left: 8px; }
+.theme-note { margin: -8px 0 10px; font-size: 0.9rem; color: var(--accent); font-weight: 500; }
+.theme.minor h2 { font-size: 1.15rem; }
+@media (min-width: 640px) { .cards.cards-2x2 { grid-template-columns: repeat(2, 1fr); } }

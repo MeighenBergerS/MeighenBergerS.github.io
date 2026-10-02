@@ -21,7 +21,7 @@
 papers:
   Meighen-Berger:2026yls:
     roles: [wrote, idea]
-    themes: [transport, simulation]
+    themes: [tools]
 
   Arguelles:2026rjr:
     details: Developed the production of neutrinos from $pp$ and $p\gamma$ interactions
@@ -57,11 +57,11 @@ papers:
 
   Orsoe:2025yru:
     details: Wrote the simulation code and generated the public data sets
-    themes: [simulation]
+    themes: [tools]
 
   Meighen-Berger:2025pcq:
     roles: [wrote, idea]
-    themes: [transport, neutrino]
+    themes: [neutrino]
 
   Bhattacharjee:2025iip:
     details: Worked on the neutrino calculations and predictions
@@ -97,7 +97,7 @@ papers:
   Lazar:2023rol:
     roles: [wrote]
     details: Developed the water-based simulation, co-developed the framework
-    themes: [simulation]
+    themes: [tools]
     selected: true
     summary: >-
       Delivered the first public, geometry-agnostic simulation framework for neutrino
@@ -111,7 +111,7 @@ papers:
   Lazar:2025nps:
     roles: [wrote]
     details: Developed the training data set
-    themes: [simulation]
+    themes: [tools]
 
   Desai:2023zsb:
     roles: [wrote, idea, mentored]
@@ -119,7 +119,7 @@ papers:
 
   meighen2021bioluminescence:
     roles: [wrote, idea, mentored]
-    themes: [simulation]
+    themes: [side]
     status: preprint
 
   P-ONE:2020ljt:
@@ -139,7 +139,7 @@ papers:
 
   Agostini:2018fnx:
     details: Calculated the atmospheric flux variations
-    themes: [transport]
+    themes: [tools]
 
   Meighen-Berger:2021hka:
     roles: [wrote, idea]
@@ -152,20 +152,20 @@ papers:
 
   Meighen-Berger:2019lld:
     roles: [wrote, idea, mentored]
-    themes: [transport]
+    themes: [tools]
 
   Meighen-Berger:2019cxt:
     roles: [wrote, idea]
-    themes: [transport]
+    themes: [tools]
     status: preprint
 
   Li:2026jgr:
     roles: [mentored]
-    themes: [simulation]
+    themes: [side]
 
   Pollmann:2021epj:
     details: Wrote one of the numerical models
-    themes: [interdisciplinary]
+    themes: [side]
 
 # Papers you deliberately leave off the curated list (silences the review report).
 hidden: []

@@ -23,10 +23,10 @@ links:
 
 # Two-sentence pitch at the top of the home page: what you do and what sets you apart.
 pitch: >-
-  I find new measurements for next-generation neutrino detectors, from leptonic CP
-  violation with atmospheric neutrinos to new probes of dark matter, and build the open
-  simulation tools that make them testable. Having worked inside IceCube, P-ONE and
-  Borexino, I design analyses that experiments can actually carry out.
+  I find the measurements next-generation neutrino detectors weren't designed for, and
+  show they can make them: from leptonic CP violation with atmospheric neutrinos to new
+  probes of dark matter. Having worked inside IceCube, P-ONE and Borexino, I build the
+  transport and simulation tools that make these predictions hold up at the detector level.
 
 # Home-page highlight cards: one result each, with a figure from the paper (arXiv
 # source). `paper` is a key from papers.yml; the link and venue come from INSPIRE.
