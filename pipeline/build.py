@@ -437,39 +437,12 @@ def load_news(by_key, software, include_drafts=False):
         date = meta["date"] if isinstance(meta["date"], dt.date) else dt.date.fromisoformat(str(meta["date"]))
         post = dict(meta, slug=f.stem, date=date, body=body.strip(),
                     body_html=md_paragraphs(body) if body.strip() else "",
-                    excerpt=to_html(" ".join(re.split(r"\n\s*\n", body.strip())[0].split())) if body.strip() else "",
-                    url=f"news/{f.stem}.html",
+                    url=f"news.html#{f.stem}",
                     paper_obj=by_key.get(meta.get("paper")),
                     software_obj=next((s for s in software if s["name"] == meta.get("software")), None))
         posts.append(post)
     posts.sort(key=lambda p: (p["date"], p["slug"]), reverse=True)
     return posts
-
-
-def atom_feed(posts, profile):
-    base = profile["site_url"].rstrip("/") + "/"
-    updated = (posts[0]["date"] if posts else dt.date.today()).isoformat() + "T00:00:00Z"
-    entries = []
-    for p in posts[:30]:
-        link = base + p["url"]
-        entries.append(f"""  <entry>
-    <title>{html.escape(p["title"])}</title>
-    <link href="{link}"/>
-    <id>{link}</id>
-    <updated>{p["date"].isoformat()}T00:00:00Z</updated>
-    <summary>{html.escape(re.sub(r"<[^>]+>", "", p["excerpt"]) or p["title"])}</summary>
-  </entry>""")
-    return f"""<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{html.escape(profile["name"])}: News</title>
-  <link href="{base}news.html"/>
-  <link rel="self" href="{base}feed.xml"/>
-  <id>{base}</id>
-  <updated>{updated}</updated>
-  <author><name>{html.escape(profile["name"])}</name></author>
-{chr(10).join(entries)}
-</feed>
-"""
 
 
 # ---------------------------------------------------------------- render
@@ -520,14 +493,6 @@ def build_site(ctx):
     for page in pages:
         out = env.get_template(f"{page}.html.j2").render(page=page, root="", **ctx)
         (SITE / f"{page}.html").write_text(out, encoding="utf-8")
-    (SITE / "news").mkdir(exist_ok=True)
-    post_tpl = env.get_template("post.html.j2")
-    for post in ctx["news"]:
-        if post["type"] == "talk":
-            continue  # one-liners have no page of their own
-        out = post_tpl.render(page="news", root="../", post=post, **ctx)
-        (SITE / post["url"]).write_text(out, encoding="utf-8")
-    (SITE / "feed.xml").write_text(atom_feed(ctx["news"], ctx["profile"]), encoding="utf-8")
     (SITE / ".nojekyll").write_text("")
     print(f"site: {len(pages)} pages, {len(ctx['news'])} news items -> {SITE.relative_to(ROOT)}/")
 

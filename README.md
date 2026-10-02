@@ -32,8 +32,10 @@ INSPIRE. Counts in the prose ("12 invited talks", "two Master's students",
 
 ## News posts
 
-Plain-English posts for new papers and software releases live in `data/news/`
-(one Markdown file each, front matter + text). Style rules: `docs/news-style.md`.
+Short plain-English posts (3–4 sentences, an image, and links) for new papers and
+software releases live in `data/news/` (one Markdown file each, front matter + text).
+They appear on the News page and as "Latest" cards on the home page. Style rules:
+`docs/news-style.md`.
 
 Every Monday CI checks for new papers (yours, not large-collaboration papers) and new
 releases of the software in `software.yml`. For each one without a post it opens a

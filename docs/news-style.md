@@ -1,6 +1,7 @@
 # Writing news posts
 
-Short plain-English summaries of new papers and software releases for the News page.
+Short plain-English summaries (3–4 sentences) of new papers and software releases for the
+News page. Each item is a card with the image, the summary, and links to the paper or code.
 This guide is used both by people and by the automated draft generator
 (`pipeline/news_drafts.py`), so keep it concrete.
 
@@ -16,21 +17,21 @@ neutrinos.
 
 ## Shape
 
-- **Length:** 120–200 words, one or two short paragraphs. Shorter is better.
+- **Length:** 3–4 sentences, about 60–100 words, one paragraph.
 - **Title:** a plain-English finding or question, under about 12 words. Do not copy the
   paper title.
-- **Order:**
-  1. *Question.* One concrete physical fact, then the open problem it raises.
-  2. *What we did.* The approach, in concrete terms (which detector, which data, which
-     energy range).
+- **Order, one sentence each:**
+  1. *Question.* A concrete physical fact and the open problem it raises.
+  2. *What we did.* The approach in concrete terms, with collaborators named.
   3. *What we found.* One headline result with one number and its context (a factor, a
-     comparison, a percentage), plus the main caveat in a few words.
-  4. *Why it matters.* The implication or next step, without hype.
+     comparison, a percentage).
+  4. *Why it matters, or the caveat.* The implication, the main caveat, or your own part
+     in a large collaboration. Only one of these.
 - **Figure:** one figure from the paper that shows the main idea. Sketches and
   overview figures beat dense result plots. Alt text: chart type, what is plotted, and
   the takeaway, in one or two sentences.
-- **Link:** the paper (journal and arXiv) is added automatically from the metadata. Do
-  not paste links into the text.
+- **Links:** arXiv, journal and INSPIRE (papers) or docs, GitHub and PyPI (software) are
+  added automatically from the metadata. Do not paste links into the text.
 
 ## Voice
 
@@ -80,7 +81,6 @@ software: softpaws                 # name in software.yml (software releases)
 version: 1.0.0                     # software releases
 image: img/news/effective-areas.png
 image_alt: One or two sentences describing the figure and its takeaway.
-caption: One sentence telling the reader what to look at.
 ---
 ```
 

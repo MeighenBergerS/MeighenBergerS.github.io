@@ -1,20 +1,36 @@
-{% macro news_item(n, root="") %}
+{% macro news_links(n) %}
+{% set p = n.paper_obj %}{% set sw = n.software_obj %}
+<p class="news-links">
+  {% if p %}
+    {% if p.arxiv %}<a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a>{% endif %}
+    {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.venue or 'Journal' }}</a>{% endif %}
+    {% if p.recid %}<a href="{{ p.url }}">INSPIRE</a>{% endif %}
+  {% endif %}
+  {% if sw %}
+    {% if sw.docs %}<a href="{{ sw.docs }}">{{ sw.name }} docs</a>{% endif %}
+    <a href="https://github.com/{{ sw.repo }}">GitHub</a>
+    {% if sw.github.pypi %}<a href="{{ sw.github.pypi.url }}">PyPI</a>{% endif %}
+  {% endif %}
+</p>
+{% endmacro %}
+
+{% macro news_item(n) %}
 {% if n.type == 'talk' %}
-<li class="news-oneliner">
+<li class="news-oneliner" id="{{ n.slug }}">
   <span class="news-date">{{ n.date|nicedate }}</span>
   <span class="news-kind kind-talk">Talk</span>
   <span>{{ n.title }}</span>
 </li>
 {% else %}
-<li class="news-card">
-  {% if n.image %}<a class="news-thumb" href="{{ root }}{{ n.url }}"><img src="{{ root }}{{ n.image }}" alt="{{ n.image_alt or '' }}" loading="lazy"></a>{% endif %}
+<li class="news-card" id="{{ n.slug }}">
+  {% if n.image %}<a class="news-thumb" href="{{ n.image }}"><img src="{{ n.image }}" alt="{{ n.image_alt or '' }}" loading="lazy"></a>{% endif %}
   <div class="news-body">
     <p class="news-meta"><span class="news-date">{{ n.date|nicedate }}</span>
       <span class="news-kind kind-{{ n.type }}">{{ {'paper':'New paper','software':'Software'}.get(n.type, n.type|capitalize) }}</span>
       {% if n.software and n.type == 'paper' %}<span class="news-kind kind-software">Software</span>{% endif %}</p>
-    <h3><a href="{{ root }}{{ n.url }}">{{ n.title }}</a></h3>
-    <p>{{ n.excerpt|safe }}</p>
-    <p><a href="{{ root }}{{ n.url }}">Read more →</a></p>
+    <h3>{{ n.title }}</h3>
+    {{ n.body_html|safe }}
+    {{ news_links(n) }}
   </div>
 </li>
 {% endif %}

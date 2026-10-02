@@ -3,7 +3,7 @@
 {% block title %}News · {{ profile.name }}{% endblock %}
 {% block content %}
 <h1>News</h1>
-<p class="lede">New papers and software in plain English, plus talks. Subscribe with the <a href="feed.xml">news feed</a>.</p>
+<p class="lede">Here are some updates.</p>
 {% for year, items in news|groupby('date.year')|reverse %}
 <h2>{{ year }}</h2>
 <ul class="news-list">{% for n in items %}{{ news_item(n) }}{% endfor %}</ul>

@@ -21,8 +21,9 @@ Fill in a draft news post in `data/news/`. Drafts are created weekly by CI
 ## 2. Read the rules
 
 Read `docs/news-style.md` in full and follow it. The essentials:
-- 120–200 words, one or two short paragraphs, question → what we did → what we found
-  (one number, one caveat) → why it matters.
+- 3–4 sentences (about 60–100 words), one paragraph: question → what we did → what we
+  found (one number) → why it matters, the caveat, or your part. No separate post page
+  exists; the summary is the whole post.
 - First person: "we" with co-authors, "I" only for single-author work. Credit
   collaborators and students by name when their full names are in the source material.
 - No em dashes, no colons joining clauses, no semicolon chains, American spelling.
@@ -44,9 +45,8 @@ Look at each `fig-N.png` in the draft folder (use the Read tool on the images). 
 a sketch or overview figure that explains the idea without the paper; dense multi-panel
 result plots are a last resort. Propose one and say why. After the user agrees, copy it
 to `static/img/news/<slug>.png` (convert to `.jpg` with quality 88 if it is larger than
-about 180 KB) and set `image`, `image_alt` (chart type, what is plotted, takeaway) and
-`caption` (one sentence telling the reader what to look at). Software posts may keep
-the logo already set.
+about 180 KB) and set `image` and `image_alt` (chart type, what is plotted, takeaway). Software
+posts may keep the logo already set.
 
 ## 5. Write and finish
 
