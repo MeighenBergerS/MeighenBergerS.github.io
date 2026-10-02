@@ -37,7 +37,7 @@ highlights:
     figure: img/highlights/cp-phase.jpg
     alt: Oscillogram of the appearance probability versus neutrino energy and zenith angle, with the analysis region of interest marked.
   - paper: Meighen-Berger:2023xpr
-    title: Tau-neutrino appearance in JUNO
+    title: $\nu_\tau$ appearance in JUNO
     result: A new neutral-current signature lets JUNO observe atmospheric $\nu_\tau$ appearance at 5$\sigma$, at energies no other experiment reaches.
     figure: img/highlights/juno-tau.png
     alt: Bar chart of expected significance; JUNO reaches 5 sigma in five years, above KamLAND, SK, DeepCore and IceCube.
