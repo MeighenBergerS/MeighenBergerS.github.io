@@ -1,7 +1,7 @@
 \section{Invited Talks and Seminars}
 
 \denseouterlist{
-<% for t in talks.talks if t.kind in ('invited', 'seminar') %>
+<% for t in talks.talks if t.kind in ('invited', 'seminar') and not t.home %>
 \entry{\textbf{<< t.event|tex >>}, << t.city|tex >><% if t.country %>, << t.country|tex >><% endif %>, << t.year >>. \textit{<< t.title|tex >>}}
 <% endfor %>
 }

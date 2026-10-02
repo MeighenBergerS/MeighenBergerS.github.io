@@ -351,7 +351,7 @@ def compute_stats(papers, talks, teaching, software, github):
         "h_index": h_index(p["citations"] for p in inspire),
         "citations_main": sum(p["citations"] or 0 for p in curated),
         "h_index_main": h_index(p["citations"] for p in curated),
-        "invited_talks": sum(1 for t in talks["talks"] if t["kind"] in ("invited", "seminar")),
+        "invited_talks": sum(1 for t in talks["talks"] if t["kind"] in ("invited", "seminar") and not t.get("home")),
         "contributed_talks": sum(1 for t in talks["talks"] if t["kind"] in ("contributed", "poster")),
         "software": len(software),
         "stars": sum((github.get(s.get("repo")) or {}).get("stargazers_count") or 0 for s in software),
