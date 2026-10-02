@@ -1,0 +1,26 @@
+# Private source material (phone, nationality, reference contacts) — never publish
+*.zip
+private/*
+!private/*.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Build output
+_site/
+build/
+.cache/
+
+# LaTeX build artefacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz

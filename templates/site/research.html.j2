@@ -1,0 +1,36 @@
+{% extends "base.html.j2" %}
+{% from "macros.html.j2" import paper %}
+{% block title %}Research · {{ profile.name }}{% endblock %}
+{% block content %}
+<h1>Research</h1>
+<p class="lede">{{ research.intro|md }}</p>
+
+<nav class="toc" aria-label="Themes">
+  {% for t in research.themes %}<a href="#{{ t.id }}">{{ t.title }}</a>{% endfor %}
+</nav>
+
+{% for t in research.themes %}
+<section id="{{ t.id }}" class="theme">
+  <h2>{{ t.title }}</h2>
+  <p>{{ t.summary|md }}</p>
+  {% if t.highlights %}
+  <div class="cards">
+    {% for h in t.highlights if h.paper_obj %}
+    {% set p = h.paper_obj %}
+    <article class="card">
+      <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
+      <p>{{ h.result|md }}</p>
+      <p class="muted">{{ p.venue or ('Preprint, ' ~ p.year) }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% if t.papers %}
+  <details>
+    <summary>All {{ t.papers|length }} paper{{ 's' if t.papers|length != 1 }} in this theme</summary>
+    <ul class="papers">{% for p in t.papers %}{{ paper(p) }}{% endfor %}</ul>
+  </details>
+  {% endif %}
+</section>
+{% endfor %}
+{% endblock %}

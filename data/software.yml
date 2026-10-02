@@ -1,0 +1,35 @@
+intro: >-
+  Open simulation tools are a core research output. They exist to make the
+  phenomenology testable, and they are used by the neutrino-telescope community to model
+  detectors that do not yet exist and the environments they will be built in.
+
+# `repo` is owner/name on GitHub; stars and release info are fetched automatically.
+# `paper` is an INSPIRE texkey from papers.yml.
+software:
+  - name: Prometheus
+    repo: Harvard-Neutrino/prometheus
+    tagline: Open-source, end-to-end simulation framework for neutrino telescopes.
+    description: >-
+      Generates events and detection-module photon hits for user-defined detector
+      geometries in water or ice. Lead developer and current maintainer. Released
+      publicly (Comput. Phys. Commun. 2024) and adopted as a community baseline,
+      including for the NuBench event-reconstruction benchmark.
+    paper: Lazar:2023rol
+    themes: [simulation]
+  - name: Fennel
+    repo: MeighenBergerS/fennel
+    tagline: Fast parametric light-yield calculator.
+    description: >-
+      Predicts photon counts and timing distributions from muon tracks, electromagnetic
+      showers, and hadronic showers. Author and maintainer. Provides the light-yield
+      backend used in Prometheus.
+    themes: [simulation, transport]
+  - name: Fourth Day
+    repo: MeighenBergerS/fourth_day
+    tagline: Deep-sea bioluminescence simulation.
+    description: >-
+      Models the dominant optical background for water-based neutrino telescopes by
+      simulating water currents and the light emission of individual organisms. Author,
+      developed for STRAW and P-ONE site characterization.
+    paper: meighen2021bioluminescence
+    themes: [simulation]

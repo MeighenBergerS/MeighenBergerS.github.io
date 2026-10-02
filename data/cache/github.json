@@ -1,0 +1,32 @@
+{
+ "Harvard-Neutrino/prometheus": {
+  "stargazers_count": 23,
+  "forks_count": 18,
+  "pushed_at": "2026-09-21T14:58:24Z",
+  "html_url": "https://github.com/Harvard-Neutrino/prometheus",
+  "description": "A Python-based package for simulating neutrino telescopes.",
+  "latest_release": null
+ },
+ "MeighenBergerS/fennel": {
+  "stargazers_count": 1,
+  "forks_count": 1,
+  "pushed_at": "2026-09-14T20:49:03Z",
+  "html_url": "https://github.com/MeighenBergerS/fennel",
+  "description": "Light-yield calculation for cascades and tracks.",
+  "latest_release": {
+   "tag": "v1.1.1",
+   "date": "2021-11-24"
+  }
+ },
+ "MeighenBergerS/fourth_day": {
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "pushed_at": "2025-12-12T15:01:07Z",
+  "html_url": "https://github.com/MeighenBergerS/fourth_day",
+  "description": "Simulation code to model deep-sea organisms and the light measured from them by neutrino detectors.",
+  "latest_release": {
+   "tag": "1.0.0",
+   "date": "2021-06-28"
+  }
+ }
+}

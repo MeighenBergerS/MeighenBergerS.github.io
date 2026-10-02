@@ -1,0 +1,24 @@
+{% extends "base.html.j2" %}
+{% block title %}Talks · {{ profile.name }}{% endblock %}
+{% macro talk(t) %}
+<li>
+  <span class="talk-year">{{ t.year }}</span>
+  <span><strong>{{ t.event }}</strong>, {{ t.city }}{% if t.country %}, {{ t.country }}{% endif %}{% if t.kind == 'seminar' %} (seminar){% elif t.kind == 'poster' %} (poster){% endif %}<br>
+  <em>{{ t.title }}</em>
+  {% if t.url %} · <a href="{{ t.url }}">event</a>{% endif %}{% if t.slides %} · <a href="{{ t.slides }}">slides</a>{% endif %}</span>
+</li>
+{% endmacro %}
+{% block content %}
+<h1>Talks</h1>
+<h2>Invited talks and seminars</h2>
+<ul class="talks">{% for t in talks.talks if t.kind in ('invited','seminar') %}{{ talk(t) }}{% endfor %}</ul>
+<h2>Contributed talks</h2>
+<ul class="talks">{% for t in talks.talks if t.kind in ('contributed','poster') %}{{ talk(t) }}{% endfor %}</ul>
+{% if talks.contributed_note %}<p class="muted">{{ talks.contributed_note|md }}</p>{% endif %}
+<h2>Media and public engagement</h2>
+<ul class="plain">
+  {% for m in talks.media %}
+  <li><strong>{{ m.outlet }}</strong>{% if m.year %} ({{ m.year }}){% endif %}. {{ m.text|md }} <a href="{{ m.url }}">Read</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

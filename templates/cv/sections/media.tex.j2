@@ -1,0 +1,6 @@
+\section{Public Engagement and Media}
+\denseouterlist{
+<% for m in talks.media %>
+\entry{\textbf{<< m.outlet|tex >>}<% if m.year %> (<< m.year >>)<% endif %>. << m.text|tex >> \href{<< m.url >>}{link}}
+<% endfor %>
+}

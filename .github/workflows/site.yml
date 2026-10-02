@@ -1,0 +1,83 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"  # Mondays 06:00 UTC: refresh INSPIRE / arXiv / GitHub data
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit refreshed data/cache and data/metrics.csv
+  pages: write
+  id-token: write
+  issues: write     # open/update the "needs review" issue
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Fetch public data
+        if: github.event_name != 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python pipeline/fetch.py
+
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cache data/metrics.csv
+          git diff --cached --quiet || git commit -m "Refresh publication and software data" && git push
+
+      - name: Build site and CV sources
+        run: python pipeline/build.py
+
+      - name: Compile CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: build/cv
+
+      - run: cp build/cv/main.pdf _site/cv.pdf
+
+      - name: Open or update review issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Publications needing review"
+          n=$(gh issue list --state open --search "in:title \"$title\"" --json number -q '.[0].number')
+          if [ -s build/review.md ]; then
+            if [ -n "$n" ]; then gh issue edit "$n" --body-file build/review.md
+            else gh issue create --title "$title" --body-file build/review.md; fi
+          elif [ -n "$n" ]; then
+            gh issue close "$n" --comment "Everything reviewed."
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

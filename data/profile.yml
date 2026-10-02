@@ -1,0 +1,51 @@
+# Public identity. Private details (phone, nationality, references) live in
+# private/private.yml, which is git-ignored and only used for the private CV build.
+
+name: Stephan A. Meighen-Berger
+name_cv: Meighen-Berger, Stephan A.
+position: Postdoctoral Research Fellow in Neutrino Phenomenology
+affiliation: University of Iowa, Department of Physics and Astronomy
+email: stephan-meighen-berger@uiowa.edu
+site_url: https://meighenbergers.github.io
+photo:  # e.g. img/portrait.jpg (put the file in static/img/)
+
+ids:
+  inspire_bai: Stephan.Meighen.Berger.1
+  inspire_recid: 1828460
+  orcid: 0000-0001-6579-2000
+  github: MeighenBergerS
+
+links:
+  - {label: INSPIRE, url: "https://inspirehep.net/authors/1828460"}
+  - {label: ORCID, url: "https://orcid.org/0000-0001-6579-2000"}
+  - {label: arXiv, url: "https://arxiv.org/search/?searchtype=author&query=Meighen-Berger"}
+  - {label: GitHub, url: "https://github.com/MeighenBergerS"}
+
+# One-paragraph version for the landing page.
+bio: >-
+  I am a phenomenologist working at the interface of neutrino physics, dark matter,
+  and astroparticle theory. I develop the theoretical frameworks that turn
+  next-generation neutrino detectors into precision instruments for fundamental
+  physics, and the open simulation tools that make those predictions testable.
+  I am currently a postdoctoral fellow at the University of Iowa and an affiliate
+  at Fermilab.
+
+# Longer version used as "Research Profile" on the CV.
+research_profile: >-
+  I am a phenomenologist working at the interface of neutrino physics, dark matter,
+  and astroparticle theory. I develop the theoretical frameworks that turn
+  next-generation neutrino detectors into precision instruments for fundamental
+  physics, from leptonic CP violation with atmospheric neutrinos to new probes of
+  dark matter and physics beyond the Standard Model. This work rests on a second,
+  closely coupled effort: the theory of particle transport, cascade development,
+  and light production in detectors, which I have built into open simulation tools
+  now used across the field. My modelling is theoretical in nature but disciplined
+  by direct experience inside experiments, having worked within the IceCube, P-ONE,
+  and Borexino collaborations. The phenomenology it supports targets Hyper-K, DUNE,
+  JUNO, KM3NeT, IceCube, and P-ONE.
+
+collaborations: >-
+  **Collaboration membership.** P-ONE (2019 to present) and IceCube (2017 to 2023),
+  contributing atmospheric-cascade and bioluminescence background modelling, dark
+  matter and new-physics analyses. Earlier work with Borexino on cosmic muon
+  modulations.

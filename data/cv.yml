@@ -1,0 +1,157 @@
+# CV content that is not papers, talks, software or teaching.
+# Text fields use light Markdown: **bold**, *italic*, [text](url).
+
+highlights:
+  # Rendered as a template: {{ stats.* }} values are computed at build time.
+  - >-
+    **New measurement channels.** Proposed and developed the phenomenological
+    frameworks behind several new measurement strategies. These include leptonic CP
+    violation with sub-GeV atmospheric neutrinos, atmospheric tau-neutrino appearance
+    via neutral currents in JUNO, neutral-current solar neutrino detection in DUNE,
+    and dark matter searches using Jupiter as a target.
+  - >-
+    **Theory and BSM physics.** Independent theoretical work on dark matter and physics
+    beyond the Standard Model, including long-lived supersymmetric particles, dark
+    matter-nucleon interactions constrained by ultrahigh-energy cosmic ray
+    acceleration, and dark matter energy exchange in stars orbiting supermassive black
+    holes.
+  - >-
+    **Inside the experiments.** Collaboration member of IceCube, P-ONE, and Borexino,
+    providing the atmospheric-cascade and bioluminescence background models their
+    analyses depend on. My phenomenology for Hyper-K, DUNE, JUNO, and KM3NeT is
+    independent of those collaborations, but is built on that experience.
+  - >-
+    **Community software.** Lead developer and maintainer of **Prometheus**, the
+    open-source neutrino telescope simulation now used across the field, and author of
+    **Fennel** and **Fourth Day**.
+  - >-
+    **Independent visibility.** {{ stats.invited_talks }} invited talks and seminars,
+    including Stanford, Harvard, Texas A&M, Ohio State, UNSW, and the Mitchell
+    Conference.
+  - >-
+    **Mentoring.** Supervised {{ stats.supervision.phd_words }} PhD student,
+    {{ stats.supervision.masters_words }} Master's students, and
+    {{ stats.supervision.junior_words }} undergraduate or junior researchers. Graduate
+    lecturer in dark matter direct detection. Organized the Melbourne theory seminar
+    series.
+  - >-
+    **Funding and recognition.** Marie Curie Seal of Excellence (2021), Laby Early
+    Career Researcher Award, and an ARC Centre of Excellence for Dark Matter ECR Special
+    Initiatives grant.
+
+positions:
+  - institution: University of Iowa
+    country: USA
+    role: Postdoctoral Research Fellow
+    start: 2025-10
+    end:  # empty = current
+    details:
+      - Developing theoretical methods for atmospheric neutrinos and leptonic CP violation.
+      - Developing phenomenology targeting Hyper-K and DUNE.
+      - Supervising graduate research. Graduate lecturer in dark matter direct detection.
+  - institution: Fermi National Accelerator Laboratory
+    country: USA
+    role: Affiliate / User
+    start: 2026-02
+    end:
+    details:
+      - Supporting phenomenological work for the laboratory's neutrino program, including DUNE.
+  - institution: The University of Melbourne
+    country: Australia
+    role: Postdoctoral Research Fellow in Neutrino Phenomenology
+    start: 2022-09
+    end: 2025-08
+    details:
+      - Established an independent research program spanning neutrino phenomenology, dark matter theory, and detector simulation.
+      - Proposed new measurement channels for JUNO (tau-neutrino appearance) and DUNE (neutral-current solar neutrinos).
+      - Co-developed the Prometheus open-source neutrino telescope simulation. Supervised one PhD and one Master's student, and organized the theory seminar series (2023 to 2025).
+      - Attracted competitive early-career funding from the Laby ECR Award and the ARC CoE Dark Matter ECR Special Initiatives program.
+  - institution: The University of Melbourne
+    country: Australia
+    role: Honorary Fellow
+    start: 2025-10
+    end: 2026-06
+  - institution: Ohio State University (CCAPP)
+    country: USA
+    role: Affiliate Fellow
+    start: 2022-09
+    end: 2026-06
+
+education:
+  - institution: Technical University Munich
+    country: Germany
+    degree: "Dr. rer. nat. in Physics, *summa cum laude*. Advisor: Prof. Elisa Resconi"
+    years: 2017–2021
+    details:
+      - >-
+        Thesis: "Precision Background Modelling for Neutrino Detectors." Cascade-equation,
+        Monte Carlo, and machine-learning methods for particle transport in neutrino
+        detectors.
+  - institution: Technical University Munich
+    country: Germany
+    degree: "M.Sc. Physics. Advisor: Prof. Andreas Weiler"
+    years: 2014–2017
+  - institution: University of Innsbruck
+    country: Austria
+    degree: "B.Sc. Physics. Advisor: Prof. Gebhard Grübl"
+    years: 2011–2014
+
+awards:
+  - name: ARC Centre of Excellence for Dark Matter Particle Physics, ECR Special Initiatives Program
+    year: 2023
+    amount: 12,000 AUD
+    note: Competitive early-career grant supporting an independently proposed dark matter research project.
+  - name: Laby Early Career Researcher Award
+    year: 2023
+    amount: 4,000 AUD
+    note: School of Physics award recognizing outstanding early-career research at the University of Melbourne.
+  - name: Marie Curie Seal of Excellence
+    year: 2021
+    extra: project "Nu-Eyes"
+    note: European Commission recognition of a self-authored fellowship proposal rated above the funding threshold.
+  - name: TUM and Imperial College London Collaboration Fund
+    year: 2019
+    amount: $2,680
+    note: Seed funding for "Advanced mathematical models for the simulation chain of neutrino detectors."
+
+interdisciplinary:
+  intro: >-
+    The methods I develop for particle transport and Monte Carlo simulation transfer
+    beyond particle physics. The deep-sea optical work below is the origin of Fourth
+    Day and of the optical background model P-ONE relies on.
+  items:
+    - title: Polychromatic Population of Bioluminescent Organisms in the Deep Pacific Ocean
+      year: 2026
+      text: Four years of STRAW camera and PMT data in the Cascadia Basin, characterizing the chromatic, temporal, and tidal structure of deep-sea bioluminescence.
+      url: https://essopenarchive.org/doi/full/10.22541/essoar.15002512/v1
+      link_label: link
+    - title: Bioluminescence Modeling for Deep Sea Experiments
+      year: 2021
+      text: Simulation framework coupling water currents to organism light emission, released as the Fourth Day code.
+      url: https://arxiv.org/abs/2103.03816
+      link_label: arXiv
+    - title: Two-Year Optical Site Characterization for the Pacific Ocean Neutrino Experiment (P-ONE) in the Cascadia Basin
+      year: 2021
+      text: Deep-sea optical characterization establishing the P-ONE site.
+      url: https://arxiv.org/abs/2108.04961
+      link_label: arXiv
+    - title: The Impact of Digital Contact Tracing on the SARS-CoV-2 Pandemic
+      year: 2021
+      venue: EPJ Data Science
+      text: Agent-based Monte Carlo modelling of an epidemic, applying particle-physics simulation methods to a public health question.
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8290404/
+      link_label: link
+
+other_experience:
+  - >-
+    **Holo-Light**, Germany. Programmer (2017). Developed a precision VR input device,
+    the "Holo-Stylus," for the Microsoft HoloLens, and built and demonstrated a working
+    prototype.
+  - >-
+    **AVL Advanced Simulation Technologies**, Austria. Solver developer (2009, 2013,
+    2014). Acoustic modelling of car engines, improving a Fortran wave-based-technique
+    framework in its integration methods and coordinate systems.
+  - >-
+    **Austrian Red Cross**, Austria. Paramedic (2010/11). Paramedic training and duties
+    during civil service.
+  - "**Languages:** English and German (native)."

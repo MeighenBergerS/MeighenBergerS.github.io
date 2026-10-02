@@ -1,0 +1,29 @@
+\section{<< profile.name_cv|tex >>}
+
+<< profile.position|tex >>
+<% if private %>
+\hfill
+Nationality: << private.nationality|tex >>
+<% endif %>
+\\
+<< profile.affiliation|tex >>
+\hfill
+\href{mailto:<< profile.email >>}{<< profile.email|tex >>} \\
+\href{https://orcid.org/<< profile.ids.orcid >>}{ORCID: << profile.ids.orcid >>}
+\hfill
+<% if private %>
+<< private.phone|tex >> \\
+<% else %>
+\href{<< profile.site_url >>}{<< profile.site_url.split('//')[1]|tex >>} \\
+<% endif %>
+\href{https://inspirehep.net/authors/<< profile.ids.inspire_recid >>}{iNSPIRE}
+\hfill
+\href{https://github.com/<< profile.ids.github >>}{\faGithub\ << profile.ids.github >>}
+
+\vspace{2mm}
+
+\section{Research Profile}
+
+\small{
+<< profile.research_profile|tex >>
+}

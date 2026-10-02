@@ -1,0 +1,28 @@
+<% set levels = {'phd': 'PhD supervision', 'masters': "Master's supervision", 'junior': 'Undergraduate and junior supervision'} %>
+\section{Teaching and Mentoring}
+
+\small{
+\textbf{Summary.} << teaching.summary|tex >>
+}
+
+\vspace{2mm}
+
+\denseouterlist{
+\entry{<< teaching.lecturing[0]|tex >>}
+
+<% for lvl, label in levels.items() %>
+<% set ss = teaching.students|selectattr('level', 'equalto', lvl)|list %>
+<% if ss %>
+\entry{\textbf{<< label|tex >>}. <% for s in ss %><< s.name|tex >> (<< s.institution|tex >>), "<< s.title|tex >>"<% if s.note %>, << s.note|tex >><% endif %>.<% if not loop.last %> <% endif %><% endfor %>}
+
+<% endif %>
+<% endfor %>
+<% for l in teaching.lecturing[1:] %>
+\entry{<< l|tex >>}
+
+<% endfor %>
+<% for c in teaching.community %>
+\entry{<< c|tex >>}
+
+<% endfor %>
+}

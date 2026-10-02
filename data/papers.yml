@@ -1,0 +1,142 @@
+# Your notes on papers. Metadata (authors, journal, citations, arXiv) comes from
+# INSPIRE automatically; this file only holds what no API knows.
+#
+# Keys are INSPIRE texkeys (or keys in papers_extra.bib for non-INSPIRE papers).
+# Listed papers form "major contributions": the CV publication list and the
+# research page. Papers on INSPIRE with few authors that are neither listed here
+# nor in `hidden` are reported as "needs review" by the build.
+#
+#   contribution: short role statement (CV list, publications page)
+#   themes:       ids from research.yml
+#   label:        experiment tag shown for collaboration papers
+#   status:       override sub/pub/proc/preprint (normally derived from INSPIRE);
+#                 preprint = arXiv only, not submitted anywhere
+#   selected:     include in "Selected Works" with `summary` and `role`
+
+papers:
+  Beacom:2026mys:
+    contribution: Wrote the paper, developed the method, guided student
+    themes: [neutrino]
+    selected: true
+    summary: >-
+      Introduced a phenomenological framework showing that sub-GeV atmospheric neutrinos
+      provide competitive sensitivity to the CP-violating phase in next-generation
+      detectors, opening a measurement channel independent of accelerator systematics.
+    role: >-
+      Conceived the project, developed the formalism, designed the analysis strategy,
+      supervised the student implementation, co-wrote the manuscript.
+
+  Meighen-Berger:2026idy:
+    contribution: Wrote the paper and developed the method
+    themes: [bsm]
+
+  Meighen-Berger:2025hrq:
+    contribution: Wrote the paper and developed the method
+    themes: [bsm]
+    selected: true
+    summary: >-
+      Showed that dark matter-nucleon scattering would degrade cosmic-ray acceleration,
+      turning the existence of the observed UHECR spectrum into a new constraint on dark
+      matter interactions.
+    role: >-
+      Conceived the project, developed the theoretical framework, led the calculations,
+      wrote the manuscript.
+
+  Orsoe:2025yru:
+    contribution: Wrote the simulation code and generated the public data sets
+    themes: [simulation]
+
+  Meighen-Berger:2025pcq:
+    contribution: Co-wrote the paper, developed the idea, performed all calculations and sensitivity estimates
+    themes: [transport, neutrino]
+
+  Bhattacharjee:2025iip:
+    themes: [bsm]
+
+  Robles:2024tdh:
+    contribution: Co-wrote the paper, developed neutrino calculations and sensitivities
+    themes: [bsm]
+
+  Meighen-Berger:2024xbx:
+    contribution: Co-wrote the paper, developed the method
+    themes: [neutrino]
+    selected: true
+    summary: >-
+      Identified and quantified a neutral-current detection channel that substantially
+      extends DUNE's solar neutrino reach and flavor sensitivity.
+    role: >-
+      Conceived the project, developed the theoretical and detector-response framework,
+      led the analysis, co-wrote the manuscript.
+
+  Meighen-Berger:2023xpr:
+    contribution: Co-wrote the paper, developed the method
+    themes: [neutrino]
+    selected: true
+    summary: >-
+      Proposed a new signature, sub-GeV neutral-current interactions, giving JUNO access
+      to atmospheric tau-neutrino appearance.
+    role: >-
+      Conceived the project, developed the signal model, led the simulation and
+      analysis, co-wrote the manuscript.
+
+  Lazar:2023rol:
+    contribution: Developed the water-based simulation, co-developed the framework, wrote parts of the paper
+    themes: [simulation]
+    selected: true
+    summary: >-
+      Delivered the first public, geometry-agnostic simulation framework for neutrino
+      telescopes in water and ice, allowing proposed detector designs to be evaluated
+      without collaboration-internal software.
+    role: >-
+      Lead developer with J. Lazar, wrote the framework and the photon-propagation and
+      light-yield chain, co-wrote the manuscript. Now a community baseline, for example
+      in the NuBench reconstruction benchmark.
+
+  Desai:2023zsb:
+    contribution: Guided students, developed the idea, wrote parts of the paper
+    themes: [bsm]
+
+  meighen2021bioluminescence:
+    contribution: One of the leading authors, developed the bioluminescence framework
+    themes: [simulation]
+    status: preprint
+
+  P-ONE:2020ljt:
+    label: P-ONE
+    contribution: Calculated neutrino veto and estimated stau sensitivity
+    themes: [bsm]
+
+  Meighen-Berger:2020eun:
+    contribution: Wrote the paper, developed the method, constructed the simulation
+    themes: [bsm]
+    selected: true
+    summary: >-
+      Derived new limits on long-lived staus using neutrino telescope signatures,
+      establishing a BSM use case for these detectors.
+    role: >-
+      Conceived the project, developed the theoretical framework, led the simulations,
+      wrote the manuscript, supervised the follow-up student analysis in IceCube.
+
+  Agostini:2018fnx:
+    label: Borexino
+    contribution: Calculated the atmospheric flux variations
+    themes: [transport]
+
+  Schmidt-Dencker:2021xmg:
+    contribution: Guided student
+    themes: [bsm]
+
+  Meighen-Berger:2019lld:
+    contribution: Wrote the paper, developed the method, guided student
+    themes: [transport]
+
+  Holzapfel:2026ess:
+    contribution: Guided student
+    themes: [simulation]
+
+  Pollmann:2021epj:
+    contribution: Wrote one of the numerical models
+    themes: [interdisciplinary]
+
+# Papers you deliberately leave off the curated list (silences the review report).
+hidden: []

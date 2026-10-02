@@ -1,0 +1,26 @@
+summary: >-
+  I have supervised {{ stats.supervision.phd_words }} PhD student,
+  {{ stats.supervision.masters_words }} Master's students, and
+  {{ stats.supervision.junior_words }} undergraduate or junior research projects, and I
+  deliver graduate lectures in dark matter and particle physics. My mentoring model is
+  to give students a self-contained piece of a larger program, with a clear path to
+  publication. My PhD student's work on sub-GeV atmospheric CP violation grew directly
+  into a paper, and my former Bachelor student Kruteesh Desai went on to lead a
+  published dark matter search with IceCube and P-ONE.
+
+lecturing:
+  - "**Lecturer**, University of Iowa. Dark Matter Direct Detection (graduate lectures)."
+  - "**Teaching Assistant**, TUM. Experimental Physics 1, 3, and 4, and Theoretical Mechanics (summer course), 2018 to 2020."
+
+# level: phd, masters, junior
+students:
+  - {level: phd, name: Ho Man Yim, institution: Melbourne, title: Probing CP Violation with Sub-GeV Atmospheric Neutrinos}
+  - {level: masters, name: Jeongoh Park, institution: Melbourne, title: Dark Matter Annihilation Signals in JUNO}
+  - {level: masters, name: Jan Henrik Schmidt-Dencker, institution: TUM, title: Stau Search in IceCube, note: published as an ICRC proceeding}
+  - {level: junior, name: Kruteesh Desai, institution: TUM, title: Solar Atmospheric Neutrino Modelling}
+  - {level: junior, name: Fruzsina Mädlings, institution: TUM, title: Search for Muon Tracks in STRAW Deep-Sea Data}
+  - {level: junior, name: Mingyang Li, institution: TUM, title: Muons from Electromagnetic Showers}
+
+community:
+  - "**Research community.** Organized and ran the theory seminar series at the University of Melbourne for two years, 2023 to 2025."
+  - "**Group infrastructure.** Open tools supporting research training: **nestling** ([GitHub](https://github.com/MeighenBergerS/nestling)), an onboarding framework for new students, and **jc-ppi** ([GitHub](https://github.com/MeighenBergerS/jc-ppi)), for running a journal club."

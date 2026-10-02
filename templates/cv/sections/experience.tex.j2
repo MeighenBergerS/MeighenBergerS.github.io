@@ -1,0 +1,24 @@
+\section{Academic Appointments}
+
+\outerlist{
+<% for p in cv.positions %>
+
+\entrybig
+	{\textbf{<< p.institution|tex >>}}{<< p.country|tex >>}
+	{<< p.role|tex >>}{<< p.start|month >> -- << p.end|month >>}
+<% if p.details %>
+\innerlist{
+<% for d in p.details %>
+	\entry{<< d|tex >>}
+<% endfor %>
+}
+<% endif %>
+<% endfor %>
+
+}
+
+\vspace{1mm}
+
+\small{
+<< profile.collaborations|tex >>
+}

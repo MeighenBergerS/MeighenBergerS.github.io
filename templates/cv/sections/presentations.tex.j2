@@ -1,0 +1,10 @@
+\section{Contributed Talks}
+
+\denseouterlist{
+<% for t in talks.talks if t.kind in ('contributed', 'poster') %>
+\entry{\textbf{<< t.event|tex >>}, << t.city|tex >><% if t.country %>, << t.country|tex >><% endif %>. \textit{<< t.title|tex >>}<% if t.kind == 'poster' %> (poster)<% endif %>}
+<% endfor %>
+<% if talks.contributed_note %>
+\entry{<< talks.contributed_note|tex >>}
+<% endif %>
+}

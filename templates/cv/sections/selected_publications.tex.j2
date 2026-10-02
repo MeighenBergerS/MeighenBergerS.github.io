@@ -1,0 +1,24 @@
+\section{Selected Works and Contributions}
+
+\small{
+Grouped by research theme. Contribution statements describe my role. Full record on \href{https://inspirehep.net/authors/<< profile.ids.inspire_recid >>}{iNSPIRE}.
+}
+
+\vspace{2mm}
+
+<% for t in research.themes %>
+<% set sel = t.papers|selectattr('selected')|list %>
+<% if sel %>
+\textbf{\textcolor{color-title}{<< (t.cv_title or t.title)|tex >>}}
+\denseouterlist{
+<% for p in sel %>
+\entry{\textbf{<< (p.cv_title or p.title|titlecase)|tex >>} (<% if p.status == 'pub' and p.venue %><< p.venue|tex >><% else %><< p.year >>, submitted<% endif %>) \\
+<< p.summary|tex >> \\
+\textbf{Contribution:} << p.role|tex >>}
+
+<% endfor %>
+}
+
+\vspace{1mm}
+<% endif %>
+<% endfor %>

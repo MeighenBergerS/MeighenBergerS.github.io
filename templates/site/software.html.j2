@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block title %}Software · {{ profile.name }}{% endblock %}
+{% block content %}
+<h1>Software</h1>
+<p class="lede">{{ software.intro|md }}</p>
+<div class="cards">
+  {% for s in software.software %}
+  <article class="card software">
+    <h2><a href="https://github.com/{{ s.repo }}">{{ s.name }}</a></h2>
+    <p class="muted">{{ s.tagline }}</p>
+    <p>{{ s.description|md }}</p>
+    <p class="meta">
+      <a href="https://github.com/{{ s.repo }}">{{ s.repo }}</a>
+      {% if s.github.stargazers_count is not none and s.github.stargazers_count is defined %} · ★ {{ s.github.stargazers_count }}{% endif %}
+      {% if s.github.latest_release %} · {{ s.github.latest_release.tag }} ({{ s.github.latest_release.date }}){% endif %}
+      {% if s.paper_obj %} · <a href="{{ s.paper_obj.url }}">Paper</a>{% endif %}
+    </p>
+  </article>
+  {% endfor %}
+</div>
+{% endblock %}

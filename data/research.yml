@@ -1,0 +1,101 @@
+# Research page: one section per theme (`cv_title`/`cv_summary` are the shorter
+# versions used in the CV's "Research Themes" section). Papers are attached automatically via the
+# `themes:` tags in papers.yml; `highlights` pick a few to feature with a one-line
+# result. Text uses light Markdown.
+
+intro: >-
+  My work asks how the neutrino detectors now being built (Hyper-K, DUNE, JUNO,
+  KM3NeT, IceCube and P-ONE) can be pushed beyond their design goals: towards precision
+  oscillation physics, new probes of dark matter, and tests of physics beyond the
+  Standard Model. Making those predictions credible requires understanding how
+  particles and light move through the atmosphere, the Earth and the detector itself,
+  so a second strand of my research is particle transport and open simulation tools.
+
+themes:
+  - id: neutrino
+    title: Neutrino phenomenology and precision oscillation physics
+    cv_title: Neutrino phenomenology and precision oscillation physics
+    cv_summary: >-
+      Leptonic CP violation with sub-GeV atmospheric neutrinos (targeting Hyper-K and DUNE), tau-neutrino appearance and mass ordering (JUNO), solar neutrinos via neutral currents (DUNE).
+    summary: >-
+      Low-energy atmospheric and solar neutrinos are still an underused resource for
+      precision physics, mainly because current detectors lack the size and resolution
+      to exploit them. JUNO, DUNE and Hyper-K change that, and each brings something
+      unique: carbon's efficient neutron capture in JUNO, nuclear transitions in argon
+      at DUNE, and sheer size at Hyper-K. I develop the predictions and analysis
+      strategies that turn these features into new measurements, from leptonic CP
+      violation with sub-GeV atmospheric neutrinos to tau-neutrino appearance and
+      neutral-current solar neutrinos.
+    highlights:
+      - paper: Beacom:2026mys
+        result: Sub-GeV atmospheric neutrinos give competitive sensitivity to the CP-violating phase, independent of accelerator systematics.
+      - paper: Meighen-Berger:2023xpr
+        result: JUNO can be the first experiment to see atmospheric tau-neutrino appearance, via sub-GeV neutral-current interactions.
+      - paper: Meighen-Berger:2024xbx
+        result: Neutral-current detection on argon substantially extends DUNE's solar neutrino reach.
+
+  - id: bsm
+    title: Dark matter and physics beyond the Standard Model
+    cv_title: Dark matter and beyond-the-Standard-Model theory
+    cv_summary: >-
+      Long-lived particles and supersymmetry, dark matter-nucleon interactions probed through ultrahigh-energy cosmic ray acceleration, celestial and stellar probes (Jupiter, white dwarfs, stars near supermassive black holes), annihilation searches with neutrino telescopes.
+    summary: >-
+      Neutrino detectors are also excellent detectors for new physics. I use them, and
+      astrophysical systems more broadly, to constrain dark matter and new particles:
+      dark matter captured in Jupiter or annihilating in the Galaxy, dark matter
+      exchanging energy with stars near supermassive black holes, and new charged
+      particles produced in air showers that reach the detector directly. A recent
+      direction uses the very existence of ultrahigh-energy cosmic rays as a probe of
+      dark matter-nucleon interactions.
+    highlights:
+      - paper: Meighen-Berger:2025hrq
+        result: The observed UHECR spectrum constrains dark matter-nucleon scattering, since that scattering would spoil cosmic-ray acceleration.
+      - paper: Meighen-Berger:2020eun
+        result: First neutrino-telescope limits on long-lived staus, competitive with collider searches.
+      - paper: Robles:2024tdh
+        result: Water Cherenkov detectors can probe dark matter captured in Jupiter, reaching beyond direct-detection experiments.
+
+  - id: transport
+    title: Particle transport, cascades and atmospheric fluxes
+    cv_title: Particle transport, cascades, and detector theory
+    cv_summary: >-
+      Cascade equations and electromagnetic shower development, photon production and propagation, atmospheric flux modelling, cosmic-ray spectrum measurements with next-generation detectors.
+    summary: >-
+      Every prediction above rests on knowing the flux of particles reaching the
+      detector. I work on the theory of particle transport and cascade development, from
+      electromagnetic cascades in the atmosphere to the atmospheric neutrino flux and its
+      seasonal modulation, and on turning next-generation neutrino detectors into
+      instruments for measuring the cosmic-ray spectrum itself.
+    highlights:
+      - paper: Meighen-Berger:2025pcq
+        result: Next-generation neutrino detectors can measure the primary cosmic-ray spectrum precisely enough to distinguish between satellite measurements.
+      - paper: Agostini:2018fnx
+        result: Atmospheric flux modelling for ten years of Borexino cosmic-muon modulation data.
+
+  - id: simulation
+    title: Open simulation and deep-sea optics
+    cv_title: Simulation as a research tool
+    cv_summary: >-
+      Open, geometry-agnostic detector simulation (Prometheus, Fennel) and optical background modelling (Fourth Day, STRAW/P-ONE), built to make the phenomenology above testable before the detectors exist.
+    summary: >-
+      Detectors that do not yet exist can only be designed and evaluated with
+      simulation. I build open, geometry-agnostic tools for neutrino telescopes
+      (Prometheus, Fennel) and for their optical environment in the deep sea (Fourth
+      Day), and use them to provide public benchmarks for machine-learning
+      reconstruction. The deep-sea work grew into a study of bioluminescent life in the
+      Pacific in its own right.
+    highlights:
+      - paper: Lazar:2023rol
+        result: The first public, end-to-end neutrino-telescope simulation, now a community baseline.
+      - paper: Orsoe:2025yru
+        result: An open benchmark for deep-learning event reconstruction across neutrino telescopes.
+      - paper: Holzapfel:2026ess
+        result: Four years of deep-sea camera and PMT data reveal the chromatic and tidal structure of Pacific bioluminescence.
+
+  - id: interdisciplinary
+    title: Beyond particle physics
+    minor: true   # short section, no highlights
+    summary: >-
+      The Monte Carlo methods I use for particle transport carry over to other fields;
+      during the pandemic I applied them to an agent-based model of epidemic spread and
+      digital contact tracing.

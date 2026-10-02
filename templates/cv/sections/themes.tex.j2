@@ -1,0 +1,7 @@
+\section{Research Themes}
+
+\denseouterlist{
+<% for t in research.themes if t.cv_summary %>
+\entry{\textbf{<< t.title|tex >>.} << t.cv_summary|tex >>}
+<% endfor %>
+}

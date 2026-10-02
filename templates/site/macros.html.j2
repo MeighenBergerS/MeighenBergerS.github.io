@@ -1,0 +1,33 @@
+{% macro authors(p) -%}
+  {%- if p.authors and p.authors|length > 12 -%}
+    {%- set me = p.authors|select('self')|first -%}
+    {{ p.authors[:3]|join(', ') }}, …{% if me and me not in p.authors[:3] %}, <strong>{{ me }}</strong>, …{% endif %} ({{ p.authors|length }} authors)
+  {%- elif p.authors -%}
+    {%- for a in p.authors -%}
+      {%- if 'Meighen-Berger' in a %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% if not loop.last %}, {% endif -%}
+    {%- endfor -%}
+  {%- elif p.collaborations -%}
+    {{ p.collaborations|join(', ') }} Collaboration{% if p.collaborations|length > 1 %}s{% endif %} ({{ p.author_count }} authors)
+  {%- else -%}
+    {{ p.author_count }} authors
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro paper(p, contribution=true) %}
+<li class="paper">
+  <span class="paper-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span>
+  {% if p.label %}<span class="tag">{{ p.label }}</span>{% endif %}
+  <span class="paper-authors">{{ authors(p) }}</span>
+  <span class="paper-meta">
+    {% if p.journal %}{{ p.journal }}{% elif p.status in ('sub', 'preprint') %}Preprint ({{ p.year }}){% else %}{{ p.year }}{% endif %}
+    {% if p.arxiv %} · <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a>{% endif %}
+    {% if p.doi %} · <a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}
+    {% if p.citations %} · <span class="cites">{{ p.citations }} citation{{ 's' if p.citations != 1 }}</span>{% endif %}
+  </span>
+  {% if contribution and p.contribution %}<span class="paper-contribution">My contribution: {{ p.contribution }}</span>{% endif %}
+</li>
+{% endmacro %}
+
+{% macro stat(value, label) %}
+<div class="stat"><span class="stat-value">{{ value }}</span><span class="stat-label">{{ label }}</span></div>
+{% endmacro %}

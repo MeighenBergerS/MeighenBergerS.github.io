@@ -1,0 +1,58 @@
+{% extends "base.html.j2" %}
+{% block title %}CV · {{ profile.name }}{% endblock %}
+{% block content %}
+<div class="cv-head">
+  <h1>Curriculum Vitae</h1>
+  <a class="button primary" href="cv.pdf">Download PDF</a>
+</div>
+
+<h2>Selected highlights</h2>
+<ul class="plain">{% for h in cv.highlights %}<li>{{ h|md }}</li>{% endfor %}</ul>
+
+<h2>Academic appointments</h2>
+<ul class="timeline">
+  {% for p in cv.positions %}
+  <li>
+    <div class="when">{{ p.start|month }} – {{ p.end|month }}</div>
+    <div><strong>{{ p.role }}</strong>, {{ p.institution }}, {{ p.country }}
+      {% if p.details %}<ul>{% for d in p.details %}<li>{{ d|md }}</li>{% endfor %}</ul>{% endif %}</div>
+  </li>
+  {% endfor %}
+</ul>
+<p class="muted">{{ profile.collaborations|md }}</p>
+
+<h2>Education</h2>
+<ul class="timeline">
+  {% for e in cv.education %}
+  <li>
+    <div class="when">{{ e.years }}</div>
+    <div><strong>{{ e.institution }}</strong>, {{ e.country }}<br>{{ e.degree|md }}
+      {% if e.details %}<ul>{% for d in e.details %}<li>{{ d|md }}</li>{% endfor %}</ul>{% endif %}</div>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>Funding and awards</h2>
+<ul class="timeline">
+  {% for a in cv.awards %}
+  <li><div class="when">{{ a.year }}</div>
+    <div><strong>{{ a.name }}</strong>{% if a.amount %} ({{ a.amount }}){% endif %}{% if a.extra %}, {{ a.extra }}{% endif %}<br><span class="muted">{{ a.note }}</span></div></li>
+  {% endfor %}
+</ul>
+
+<h2>Teaching and mentoring</h2>
+<p>{{ teaching.summary|md }}</p>
+<ul class="plain">{% for l in teaching.lecturing %}<li>{{ l|md }}</li>{% endfor %}</ul>
+<h3>Supervised students</h3>
+<ul class="plain">
+  {% for s in teaching.students %}
+  <li><strong>{{ s.name }}</strong> ({{ {'phd':'PhD','masters':"Master's",'junior':'Undergraduate / junior'}[s.level] }}, {{ s.institution }}). <em>{{ s.title }}</em>{% if s.note %}, {{ s.note }}{% endif %}</li>
+  {% endfor %}
+</ul>
+<ul class="plain">{% for c in teaching.community %}<li>{{ c|md }}</li>{% endfor %}</ul>
+
+<h2>Additional experience</h2>
+<ul class="plain">{% for o in cv.other_experience %}<li>{{ o|md }}</li>{% endfor %}</ul>
+
+<p>Publications, software and talks have their own pages: <a href="publications.html">Publications</a>, <a href="software.html">Software</a>, <a href="talks.html">Talks</a>.</p>
+{% endblock %}

@@ -1,0 +1,556 @@
+[
+ {
+  "id": "2609.40188",
+  "title": "Estimating High-Energy Neutrino Effective Areas from Muon Propagation",
+  "published": "2026-09-30",
+  "authors": [
+   "Stephan A. Meighen-Berger"
+  ]
+ },
+ {
+  "id": "2607.19254",
+  "title": "Astrophysical Neutrino Sources as Colliders",
+  "published": "2026-07-21",
+  "authors": [
+   "Carlos A. Argüelles",
+   "P. S. Bhupal Dev",
+   "Bhaskar Dutta",
+   "Gonzalo Herrera",
+   "Nicholas Kamp",
+   "Jason Kumar",
+   "Stephan A. Meighen-Berger",
+   "Mudit Rai",
+   "Ian M. Shoemaker"
+  ]
+ },
+ {
+  "id": "2607.00840",
+  "title": "Dark matter energy exchange in stars orbiting supermassive black holes",
+  "published": "2026-07-01",
+  "authors": [
+   "Stephan A. Meighen-Berger",
+   "R. Andrew Gustafson",
+   "Nicole F. Bell",
+   "Jayden L. Newstead",
+   "Sandra Robles",
+   "Ian M. Shoemaker"
+  ]
+ },
+ {
+  "id": "2605.16721",
+  "title": "Towards Measuring the CP-Violating Phase with Atmospheric Neutrinos",
+  "published": "2026-05-16",
+  "authors": [
+   "John F. Beacom",
+   "Nicole F. Bell",
+   "Matthew J. Dolan",
+   "Stephan A. Meighen-Berger",
+   "Ho Man Yim"
+  ]
+ },
+ {
+  "id": "2512.18093",
+  "title": "New Multi-messenger Probe of Dark Matter-Nucleon Interactions from Ultra-high Energy Cosmic Ray Acceleration",
+  "published": "2025-12-19",
+  "authors": [
+   "Stephan A. Meighen-Berger",
+   "P. S. Bhupal Dev",
+   "Matheus Hostert"
+  ]
+ },
+ {
+  "id": "2511.13111",
+  "title": "NuBench: An Open Benchmark for Deep Learning-Based Event Reconstruction in Neutrino Telescopes",
+  "published": "2025-11-17",
+  "authors": [
+   "Rasmus F. Orsoe",
+   "Stephan Meighen-Berger",
+   "Jeffrey Lazar",
+   "Jorge Prado",
+   "Ivan Mozun-Mateo",
+   "Aske Rosted",
+   "Philip Weigel",
+   "Arturo Llorente Anaya"
+  ]
+ },
+ {
+  "id": "2505.13629",
+  "title": "Can local White Dwarfs constrain Dark Matter interactions?",
+  "published": "2025-05-19",
+  "authors": [
+   "Pooja Bhattacharjee",
+   "Sandra Robles",
+   "Stephan A. Meighen-Berger",
+   "Francesca Calore"
+  ]
+ },
+ {
+  "id": "2505.09111",
+  "title": "Measuring the Cosmic Ray Spectrum with Next Generation Neutrino Detectors",
+  "published": "2025-05-14",
+  "authors": [
+   "Stephan A. Meighen-Berger",
+   "Jayden L. Newstead",
+   "Louis E. Strigari"
+  ]
+ },
+ {
+  "id": "2411.04435",
+  "title": "Extending the Dark Matter Reach of Water Cherenkov Detectors using Jupiter",
+  "published": "2024-11-07",
+  "authors": [
+   "Sandra Robles",
+   "Stephan A. Meighen-Berger"
+  ]
+ },
+ {
+  "id": "2410.00330",
+  "title": "Enhancing DUNE's solar neutrino capabilities with neutral-current detection",
+  "published": "2024-10-01",
+  "authors": [
+   "Stephan A. Meighen-Berger",
+   "Jayden L. Newstead",
+   "John F. Beacom",
+   "Nicole F. Bell",
+   "Matthew J. Dolan"
+  ]
+ },
+ {
+  "id": "2311.01667",
+  "title": "New Signal of Atmospheric Tau Neutrino Appearance: Sub-GeV Neutral-Current Interactions in JUNO",
+  "published": "2023-11-03",
+  "authors": [
+   "Stephan A. Meighen-Berger",
+   "John F. Beacom",
+   "Nicole F. Bell",
+   "Matthew J. Dolan"
+  ]
+ },
+ {
+  "id": "2307.04427",
+  "title": "Observation of high-energy neutrinos from the Galactic plane",
+  "published": "2023-07-10",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2304.14526",
+  "title": "Prometheus: An Open-Source Neutrino Telescope Simulation",
+  "published": "2023-04-27",
+  "authors": [
+   "Jeffrey Lazar",
+   "Stephan Meighen-Berger",
+   "Christian Haack",
+   "David Kim",
+   "Santiago Giner",
+   "Carlos A. Argüelles"
+  ]
+ },
+ {
+  "id": "2303.15970",
+  "title": "A Search for IceCube sub-TeV Neutrinos Correlated with Gravitational-Wave Events Detected By LIGO/Virgo",
+  "published": "2023-03-28",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2303.13663",
+  "title": "Search for neutrino lines from dark matter annihilation and decay with IceCube",
+  "published": "2023-03-23",
+  "authors": [
+   " The IceCube Collaboration",
+   "R. Abbasi",
+   "M. Ackermann",
+   "et al."
+  ]
+ },
+ {
+  "id": "2303.04682",
+  "title": "Observation of Seasonal Variations of the Flux of High-Energy Atmospheric Neutrinos with IceCube",
+  "published": "2023-03-08",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2303.03316",
+  "title": "Constraining High-Energy Neutrino Emission from Supernovae with IceCube",
+  "published": "2023-03-06",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2302.10542",
+  "title": "Searching for Dark Matter Annihilation with IceCube and P-ONE",
+  "published": "2023-02-21",
+  "authors": [
+   "Kruteesh Desai",
+   "Ruohan Li",
+   "Stephan Meighen-Berger"
+  ]
+ },
+ {
+  "id": "2302.05459",
+  "title": "Limits on Neutrino Emission from GRB 221009A from MeV to PeV using the IceCube Neutrino Observatory",
+  "published": "2023-02-10",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2212.14526",
+  "title": "D-Egg: a Dual PMT Optical Module for IceCube",
+  "published": "2022-12-30",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2212.06810",
+  "title": "Search for sub-TeV Neutrino Emission from Novae with IceCube-DeepCore",
+  "published": "2022-12-13",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2212.06702",
+  "title": "A Search for Coincident Neutrino Emission from Fast Radio Bursts with Seven Years of IceCube Cascade Events",
+  "published": "2022-12-13",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2211.14184",
+  "title": "Searches for Neutrinos from LHAASO ultra-high-energy γ-ray sources using the IceCube Neutrino Observatory",
+  "published": "2022-11-25",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2211.09972",
+  "title": "Evidence for neutrino emission from the nearby active galaxy NGC 1068",
+  "published": "2022-11-18",
+  "authors": [
+   " IceCube Collaboration",
+   "R. Abbasi",
+   "M. Ackermann",
+   "et al."
+  ]
+ },
+ {
+  "id": "2210.04930",
+  "title": "Constraints on populations of neutrino sources from searches in the directions of IceCube neutrino alerts",
+  "published": "2022-10-10",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2209.03042",
+  "title": "Graph Neural Networks for Low-Energy Event Classification & Reconstruction in IceCube",
+  "published": "2022-09-07",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2208.09532",
+  "title": "IceCube search for neutrinos coincident with gravitational wave events from LIGO/Virgo run O3",
+  "published": "2022-08-19",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2207.04946",
+  "title": "Search for Astrophysical Neutrinos from 1FLE Blazars with IceCube",
+  "published": "2022-07-11",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2206.02054",
+  "title": "Searching for High-Energy Neutrino Emission from Galaxy Clusters with IceCube",
+  "published": "2022-06-04",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2205.12950",
+  "title": "Searches for Connections between Dark Matter and High-Energy Neutrinos with IceCube",
+  "published": "2022-05-25",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2205.11410",
+  "title": "Searches for Neutrinos from Gamma-Ray Bursts using the IceCube Neutrino Observatory",
+  "published": "2022-05-23",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2205.02258",
+  "title": "Framework and Tools for the Simulation and Analysis of the Radio Emission from Air Showers at IceCube",
+  "published": "2022-05-04",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2204.00612",
+  "title": "First Search for Unstable Sterile Neutrinos with the IceCube Neutrino Observatory",
+  "published": "2022-04-01",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2203.02303",
+  "title": "Low Energy Event Reconstruction in IceCube DeepCore",
+  "published": "2022-03-04",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2202.11722",
+  "title": "Search for High-Energy Neutrino Emission from Galactic X-ray Binaries with IceCube",
+  "published": "2022-02-23",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2201.12635",
+  "title": "Density of GeV muons in air showers measured with IceTop",
+  "published": "2022-01-29",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2201.07313",
+  "title": "Search for Spatial Correlations of Neutrinos with Ultra-High-Energy Cosmic Rays",
+  "published": "2022-01-18",
+  "authors": [
+   " The ANTARES collaboration",
+   "A. Albert",
+   "S. Alves",
+   "et al."
+  ]
+ },
+ {
+  "id": "2201.03566",
+  "title": "Strong constraints on neutrino nonstandard interactions from TeV-scale $ν_μ$ disappearance at IceCube",
+  "published": "2022-01-10",
+  "authors": [
+   " IceCube Collaboration",
+   "R. Abbasi",
+   "M. Ackermann",
+   "et al."
+  ]
+ },
+ {
+  "id": "2111.10299",
+  "title": "Improved Characterization of the Astrophysical Muon-Neutrino Flux with 9.5 Years of IceCube Data",
+  "published": "2021-11-19",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2111.10169",
+  "title": "A search for neutrino emission from cores of Active Galactic Nuclei",
+  "published": "2021-11-19",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2111.09970",
+  "title": "Search for GeV-scale Dark Matter Annihilation in the Sun with IceCube DeepCore",
+  "published": "2021-11-18",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2111.04654",
+  "title": "Search for Quantum Gravity Using Astrophysical Neutrino Flavour with IceCube",
+  "published": "2021-11-08",
+  "authors": [
+   "R. Abbasi",
+   "M. Ackermann",
+   "J. Adams",
+   "et al."
+  ]
+ },
+ {
+  "id": "2110.15051",
+  "title": "Detection of a particle shower at the Glashow resonance with IceCube",
+  "published": "2021-10-21",
+  "authors": [
+   " IceCube Collaboration",
+   "M. G. Aartsen",
+   "R. Abbasi",
+   "et al."
+  ]
+ },
+ {
+  "id": "2109.13719",
+  "title": "Search for Relativistic Magnetic Monopoles with Eight Years of IceCube Data",
+  "published": "2021-09-28",
+  "authors": [
+   " IceCube Collaboration",
+   "R. Abbasi",
+   "M. Ackermann",
+   "et al."
+  ]
+ },
+ {
+  "id": "2109.07885",
+  "title": "Dark Matter Hot Spots and Neutrino Telescopes",
+  "published": "2021-09-16",
+  "authors": [
+   "Stephan Meighen-Berger",
+   "Martina Karl"
+  ]
+ },
+ {
+  "id": "2109.05818",
+  "title": "Search for multi-flare neutrino emissions in 10 years of IceCube data from a catalog of sources",
+  "published": "2021-09-13",
+  "authors": [
+   " IceCube collaboration",
+   "R. Abbasi",
+   "M. Ackermann",
+   "et al."
+  ]
+ },
+ {
+  "id": "2108.04961",
+  "title": "Two-Year Optical Site Characterization for the Pacific Ocean Neutrino Experiment P-ONE in the Cascadia Basin",
+  "published": "2021-08-10",
+  "authors": [
+   "Nicolai Bailly",
+   "Jeannette Bedard",
+   "Michael Böhmer",
+   "et al."
+  ]
+ },
+ {
+  "id": "2107.10049",
+  "title": "Search for STaus in IceCube",
+  "published": "2021-07-21",
+  "authors": [
+   "Jan-Henrik Schmidt-Dencker",
+   "Stephan Meighen-Berger",
+   "Christian Haack"
+  ]
+ },
+ {
+  "id": "2107.06968",
+  "title": "The IceCube-Gen2 Collaboration -- Contributions to the 37th International Cosmic Ray Conference (ICRC2021)",
+  "published": "2021-07-14",
+  "authors": [
+   "IceCube-Gen2 Collaboration",
+   " :",
+   "R. Abbasi",
+   "et al."
+  ]
+ },
+ {
+  "id": "2107.06966",
+  "title": "The IceCube Collaboration -- Contributions to the 37th International Cosmic Ray Conference (ICRC2021)",
+  "published": "2021-07-14",
+  "authors": [
+   " IceCube Collaboration",
+   "R. Abbasi",
+   "M. Ackermann",
+   "et al."
+  ]
+ }
+]

@@ -1,0 +1,18 @@
+\section{Education}
+
+\outerlist{
+<% for e in cv.education %>
+
+\entrybig
+{\textbf{<< e.institution|tex >>}}{<< e.country|tex >>}
+{<< e.degree|tex >>}{<< e.years|tex >>}
+<% if e.details %>
+\innerlist{
+<% for d in e.details %>
+	\entry{<< d|tex >>}
+<% endfor %>
+}
+<% endif %>
+<% endfor %>
+
+}

@@ -1,0 +1,8 @@
+# Copy to private/private.yml (git-ignored) and fill in. Used only by
+#   python pipeline/build.py --private
+# which writes the full CV to build/cv-private/ (never published).
+
+phone: "+1 ..."
+nationality: Austrian / USA
+references:
+  - {name: "Prof. ...", institution: "...", email: "..."}

@@ -1,0 +1,16 @@
+\section{Public Software}
+
+\small{
+<< software.intro|tex >>
+}
+
+\vspace{2mm}
+
+\denseouterlist{
+<% for s in software.software %>
+
+\entry{\textbf{<< s.name|tex >>} \href{https://github.com/<< s.repo >>}{\faGithub} \\
+\textit{<< s.tagline|tex >>} << s.description|tex >>}
+<% endfor %>
+
+}

@@ -1,0 +1,14 @@
+\section{Interdisciplinary and Applied Work}
+
+\small{
+<< cv.interdisciplinary.intro|tex >>
+}
+
+\vspace{2mm}
+
+\denseouterlist{
+<% for i in cv.interdisciplinary['items'] %>
+\entry{\textbf{<< i.title|tex >>} (<% if i.venue %><< i.venue|tex >>, <% endif %><< i.year >>). << i.text|tex >> \href{<< i.url >>}{<< i.link_label >>}}
+
+<% endfor %>
+}

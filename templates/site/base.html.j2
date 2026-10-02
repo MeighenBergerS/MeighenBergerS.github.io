@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ profile.name }}{% endblock %}</title>
+  <meta name="description" content="{{ profile.name }}, {{ profile.position }}, {{ profile.affiliation }}.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body,{delimiters:[{left:'$',right:'$',display:false}],throwOnError:false})"></script>
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="site-name" href="index.html">{{ profile.name }}</a>
+      <nav aria-label="Main">
+        {% for slug, label in [('index','Home'),('research','Research'),('publications','Publications'),('software','Software'),('talks','Talks'),('cv','CV')] %}
+        <a href="{{ slug }}.html"{% if page == slug %} aria-current="page"{% endif %}>{{ label }}</a>
+        {% endfor %}
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="toggleTheme()">◐</button>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+{% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© {{ year }} {{ profile.name }}</span>
+      <span>Updated {{ updated }} · publication data from <a href="https://inspirehep.net/authors/{{ profile.ids.inspire_recid }}">INSPIRE</a></span>
+    </div>
+  </footer>
+  <script>
+    function toggleTheme(){
+      var r=document.documentElement, dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+      r.dataset.theme=dark?'light':'dark';
+      try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}
+    }
+  </script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

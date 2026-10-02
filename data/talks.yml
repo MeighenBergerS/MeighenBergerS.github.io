@@ -1,0 +1,52 @@
+# kind: invited (invited conference talk), seminar, contributed, poster
+# Add `url:` for a public announcement/agenda and `slides:` for public slides.
+
+talks:
+  - {year: 2026, kind: invited, event: Mitchell Conference, city: College Station, country: USA,
+     title: Towards Measuring CP Violation with Atmospheric Neutrinos}
+  - {year: 2026, kind: seminar, event: Stanford University, city: Stanford, country: USA,
+     title: Towards Measuring CP Violation with Atmospheric Neutrinos}
+  - {year: 2025, kind: invited, event: PPC, city: Deadwood, country: USA,
+     title: Three unique analyses for three new neutrino detectors}
+  - {year: 2024, kind: seminar, event: Harvard University, city: Boston, country: USA,
+     title: Three unique analyses for three new neutrino detectors}
+  - {year: 2024, kind: seminar, event: Texas A&M University, city: College Station, country: USA,
+     title: "Enhancing DUNE's solar neutrino capabilities with neutral-current detection"}
+  - {year: 2024, kind: seminar, event: University of New South Wales, city: Sydney, country: Australia,
+     title: Observing Atmospheric Tau Neutrino Appearance with JUNO}
+  - {year: 2023, kind: seminar, event: Ohio State University, city: Columbus, country: USA,
+     title: "Prometheus: Public Neutrino Telescope Simulation Software"}
+  - {year: 2023, kind: contributed, event: Phenomenology 2023, city: Pittsburgh, country: USA,
+     title: Searching for Dark Matter Annihilation with IceCube and P-ONE}
+  - {year: 2022, kind: invited, event: Dark Ghosts III, city: Granada, country: Spain,
+     title: Dark Matter Searches with IceCube}
+  - {year: 2022, kind: contributed, event: DSU 2022, city: Sydney, country: Australia,
+     title: Searching for Dark Matter Annihilation with IceCube and P-ONE}
+  - {year: 2021, kind: contributed, event: EPS-HEP 2021, city: online,
+     title: New constraints on supersymmetry using neutrino telescopes}
+  - {year: 2020, kind: invited, event: CORSIKA Workshop, city: Karlsruhe, country: Germany,
+     title: "CORSIKA: Beyond Air Showers"}
+  - {year: 2020, kind: invited, event: CORSIKA Workshop, city: Karlsruhe, country: Germany,
+     title: Electromagnetic Showers}
+  - {year: 2019, kind: invited, event: CORSIKA Workshop, city: Karlsruhe, country: Germany,
+     title: "EmCa: Electromagnetic Cascades Simulation Framework"}
+  - {year: 2019, kind: invited, event: "Workshop on Atmospheric Neutrino Production, MeV to PeV", city: Nagoya, country: Japan,
+     title: 3D Cascade Equations}
+  - {year: 2019, kind: poster, event: ICRC 2019, city: Madison, country: USA,
+     title: Atmospheric Muons from Electromagnetic Cascades}
+  - {year: 2019, kind: contributed, event: DPG 2019, city: Aachen, country: Germany,
+     title: "EmCa: Electromagnetic Cascades"}
+
+# Shown as a closing line under contributed talks on the CV.
+contributed_note: >-
+  In addition, eight contributed talks at IceCube, P-ONE, and SFB1258 collaboration
+  meetings and workshops, 2018 to 2020.
+
+media:
+  - outlet: ABC News
+    year: 2025
+    text: Interviewed on the KM3NeT ultra-high-energy neutrino detection.
+    url: https://www.abc.net.au/news/science/2025-02-13/neutrino-km3net-detector-mediterranean-sea-particle-physics/104922448
+  - outlet: Pursuit, University of Melbourne
+    text: 'Authored feature: "Neutrinos are the Sun''s secret messengers."'
+    url: https://pursuit.unimelb.edu.au/articles/neutrinos-are-the-suns-secret-messengers
