@@ -30,6 +30,29 @@ Paper metadata (authors, journal, citations) is never typed by hand: it comes fr
 INSPIRE. Counts in the prose ("12 invited talks", "two Master's students",
 "84 refereed papers") are computed at build time.
 
+## News posts
+
+Plain-English posts for new papers and software releases live in `data/news/`
+(one Markdown file each, front matter + text). Style rules: `docs/news-style.md`.
+
+Every Monday CI checks for new papers (yours, not large-collaboration papers) and new
+releases of the software in `software.yml`. For each one without a post it opens a
+pull request with a **draft**: metadata filled in, `draft: true`, plus the abstract,
+introduction and candidate figures from the arXiv source in `data/news/drafts/<slug>/`.
+No AI model runs in CI. To write the post:
+
+```bash
+gh pr checkout <number>
+claude                 # then: /news-post
+```
+
+`/news-post` (`.claude/skills/news-post/`) writes the text following the style guide,
+asks for your contribution tags if the paper is new, helps pick a figure, removes the
+draft flag and cleans up. Review, push, merge. Drafts never appear on the live site;
+preview them locally with `python pipeline/build.py --drafts`.
+
+To create drafts locally instead: `python pipeline/news_drafts.py`.
+
 ## Local build
 
 ```bash

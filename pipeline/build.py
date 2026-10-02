@@ -410,6 +410,68 @@ def metrics_history():
     return list(csv.DictReader(path.open())) if path.exists() else []
 
 
+# ---------------------------------------------------------------- news
+
+NEWS = DATA / "news"
+
+
+def md_paragraphs(text):
+    """Blank-line separated paragraphs of light markup -> HTML."""
+    paras = [" ".join(p.split()) for p in re.split(r"\n\s*\n", text.strip()) if p.strip()]
+    return "\n".join(f"<p>{to_html(p)}</p>" for p in paras)
+
+
+def load_news(by_key, software, include_drafts=False):
+    """data/news/*.md: YAML front matter between --- lines, then the post body."""
+    posts = []
+    for f in sorted(NEWS.glob("*.md")) if NEWS.exists() else []:
+        text = f.read_text(encoding="utf-8")
+        m = re.match(r"^---\n(.*?)\n---\n?(.*)$", text, re.S)
+        if not m:
+            raise SystemExit(f"{f.name}: missing front matter")
+        meta, body = yaml.safe_load(m.group(1)) or {}, m.group(2)
+        if meta.get("draft") and not include_drafts:
+            continue
+        if meta.get("image") and not (ROOT / "static" / meta["image"]).exists():
+            raise SystemExit(f"{f.name}: image {meta['image']} not found in static/")
+        date = meta["date"] if isinstance(meta["date"], dt.date) else dt.date.fromisoformat(str(meta["date"]))
+        post = dict(meta, slug=f.stem, date=date, body=body.strip(),
+                    body_html=md_paragraphs(body) if body.strip() else "",
+                    excerpt=to_html(" ".join(re.split(r"\n\s*\n", body.strip())[0].split())) if body.strip() else "",
+                    url=f"news/{f.stem}.html",
+                    paper_obj=by_key.get(meta.get("paper")),
+                    software_obj=next((s for s in software if s["name"] == meta.get("software")), None))
+        posts.append(post)
+    posts.sort(key=lambda p: (p["date"], p["slug"]), reverse=True)
+    return posts
+
+
+def atom_feed(posts, profile):
+    base = profile["site_url"].rstrip("/") + "/"
+    updated = (posts[0]["date"] if posts else dt.date.today()).isoformat() + "T00:00:00Z"
+    entries = []
+    for p in posts[:30]:
+        link = base + p["url"]
+        entries.append(f"""  <entry>
+    <title>{html.escape(p["title"])}</title>
+    <link href="{link}"/>
+    <id>{link}</id>
+    <updated>{p["date"].isoformat()}T00:00:00Z</updated>
+    <summary>{html.escape(re.sub(r"<[^>]+>", "", p["excerpt"]) or p["title"])}</summary>
+  </entry>""")
+    return f"""<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{html.escape(profile["name"])}: News</title>
+  <link href="{base}news.html"/>
+  <link rel="self" href="{base}feed.xml"/>
+  <id>{base}</id>
+  <updated>{updated}</updated>
+  <author><name>{html.escape(profile["name"])}</name></author>
+{chr(10).join(entries)}
+</feed>
+"""
+
+
 # ---------------------------------------------------------------- render
 
 def fmt_month(value):
@@ -429,6 +491,7 @@ def site_env():
                              trim_blocks=True, lstrip_blocks=True)
     env.filters["md"] = lambda s: jinja2.utils.markupsafe.Markup(to_html(s))
     env.filters["month"] = fmt_month
+    env.filters["nicedate"] = lambda d: f"{d.day} {d.strftime('%b %Y')}"
     env.filters["json"] = lambda v: jinja2.utils.markupsafe.Markup(json.dumps(v))
     env.tests["self"] = lambda name: SELF in name
     env.tests["contains"] = lambda seq, item: item in (seq or [])
@@ -453,12 +516,20 @@ def build_site(ctx):
         shutil.rmtree(SITE)
     shutil.copytree(ROOT / "static", SITE)
     env = site_env()
-    pages = ["index", "research", "publications", "software", "talks", "cv"]
+    pages = ["index", "research", "publications", "software", "talks", "news", "cv"]
     for page in pages:
-        out = env.get_template(f"{page}.html.j2").render(page=page, **ctx)
+        out = env.get_template(f"{page}.html.j2").render(page=page, root="", **ctx)
         (SITE / f"{page}.html").write_text(out, encoding="utf-8")
+    (SITE / "news").mkdir(exist_ok=True)
+    post_tpl = env.get_template("post.html.j2")
+    for post in ctx["news"]:
+        if post["type"] == "talk":
+            continue  # one-liners have no page of their own
+        out = post_tpl.render(page="news", root="../", post=post, **ctx)
+        (SITE / post["url"]).write_text(out, encoding="utf-8")
+    (SITE / "feed.xml").write_text(atom_feed(ctx["news"], ctx["profile"]), encoding="utf-8")
     (SITE / ".nojekyll").write_text("")
-    print(f"site: {len(pages)} pages -> {SITE.relative_to(ROOT)}/")
+    print(f"site: {len(pages)} pages, {len(ctx['news'])} news items -> {SITE.relative_to(ROOT)}/")
 
 
 def build_cv(ctx, out_dir, private=None):
@@ -481,6 +552,7 @@ def build_cv(ctx, out_dir, private=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--private", action="store_true", help="also build the private CV")
+    ap.add_argument("--drafts", action="store_true", help="include news posts marked draft (local preview)")
     args = ap.parse_args()
 
     profile, cvdata, talks = load("profile.yml"), load("cv.yml"), load("talks.yml")
@@ -506,8 +578,11 @@ def main():
         for h in t.get("highlights", []):
             h["paper_obj"] = by_key.get(h["paper"])
 
+    news = load_news(by_key, software["software"], include_drafts=args.drafts)
+
     today = dt.date.today()
     ctx = {
+        "news": news,
         "profile": profile, "cv": cvdata, "talks": talks, "teaching": teaching,
         "software": software, "research": research, "stats": stats,
         "papers": papers, "by_key": by_key,

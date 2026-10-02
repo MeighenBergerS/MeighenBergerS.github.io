@@ -1,5 +1,6 @@
 {% extends "base.html.j2" %}
 {% from "macros.html.j2" import paper %}
+{% from "news_macros.html.j2" import news_item %}
 {% block content %}
 <section class="hero">
   <div class="hero-text">
@@ -31,6 +32,15 @@
     </article>
     {% endfor %}
   </div>
+</section>
+{% endif %}
+
+{% set latest = news|rejectattr('type', 'equalto', 'talk')|list %}
+{% if latest %}
+<section>
+  <h2>Latest</h2>
+  <ul class="news-list">{% for n in latest[:3] %}{{ news_item(n) }}{% endfor %}</ul>
+  <p><a href="news.html">All news →</a></p>
 </section>
 {% endif %}
 
