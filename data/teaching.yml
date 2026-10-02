@@ -1,10 +1,10 @@
 summary: >-
-  I have supervised {{ stats.supervision.phd_words }} PhD student,
+  I have supervised {{ stats.supervision.phd_words }} PhD student{{ 's' if stats.supervision.phd != 1 }},
   {{ stats.supervision.masters_words }} Master's students, and
   {{ stats.supervision.junior_words }} undergraduate or junior research projects, and I
   deliver graduate lectures in dark matter and particle physics. My mentoring model is
   to give students a self-contained piece of a larger program, with a clear path to
-  publication. My PhD student's work on sub-GeV atmospheric CP violation grew directly
+  publication. My Melbourne PhD student's work on sub-GeV atmospheric CP violation grew directly
   into a paper, and my former Bachelor student Kruteesh Desai went on to lead a
   published dark matter search with IceCube and P-ONE.
 
@@ -14,6 +14,7 @@ lecturing:
 
 # level: phd, masters, junior
 students:
+  - {level: phd, name: Esmenaz Isik, institution: Iowa, title: Solar Atmospheric Neutrinos}
   - {level: phd, name: Ho Man Yim, institution: Melbourne, title: Probing CP Violation with Sub-GeV Atmospheric Neutrinos}
   - {level: masters, name: Jeongoh Park, institution: Melbourne, title: Dark Matter Annihilation Signals in JUNO}
   - {level: masters, name: Jan Henrik Schmidt-Dencker, institution: TUM, title: Stau Search in IceCube, note: published as an ICRC proceeding}
