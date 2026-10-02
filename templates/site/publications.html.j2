@@ -1,5 +1,5 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import paper %}
+{% from "macros.html.j2" import paper, stat %}
 {% block title %}Publications · {{ profile.name }}{% endblock %}
 {% block content %}
 <h1>Publications</h1>
@@ -12,6 +12,13 @@
   Papers from my membership in IceCube, P-ONE and Borexino are <a href="#experiments">listed separately</a>; the
   complete record is on <a href="https://inspirehep.net/authors/{{ profile.ids.inspire_recid }}">INSPIRE</a>.
 </p>
+
+<section class="stats" aria-label="Publication summary">
+  {{ stat(stats.curated, 'papers with a major contribution from me') }}
+  {{ stat(stats.citations_main, 'citations of those papers') }}
+  {{ stat("{:,}".format(stats.citations), 'citations across all ' ~ stats.records ~ ' papers') }}
+  {{ stat(stats.h_index, 'h-index across all ' ~ stats.records ~ ' papers') }}
+</section>
 
 <p class="role-legend">
   <span class="role role-wrote">Co-wrote the paper</span> written or co-written by me

@@ -1,5 +1,5 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import paper, stat %}
+{% from "macros.html.j2" import paper %}
 {% block content %}
 <section class="hero">
   <div class="hero-text">
@@ -13,13 +13,6 @@
     </p>
   </div>
   {% if profile.photo %}<img class="portrait" src="{{ profile.photo }}" alt="Portrait of {{ profile.name }}" width="200" height="200">{% endif %}
-</section>
-
-<section class="stats" aria-label="At a glance">
-  {{ stat(stats.led, 'papers built on ideas I developed') }}
-  {{ stat(stats.recent, 'major-contribution papers since ' ~ stats.recent_since) }}
-  {{ stat(stats.invited_talks, 'invited talks and seminars') }}
-  {{ stat(stats.supervision.phd, 'PhD students mentored') }}
 </section>
 
 {% if profile.highlights %}
