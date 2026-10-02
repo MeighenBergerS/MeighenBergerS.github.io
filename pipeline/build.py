@@ -326,7 +326,7 @@ def compute_stats(papers, talks, teaching, software, github):
         "refereed": sum(1 for p in inspire if p["refereed"]),
         "conference": sum(1 for p in inspire if p["doc_type"] == "conference paper"),
         "curated": len(curated),
-        "small": sum(1 for p in inspire if p["small"]),
+        "small": sum(1 for p in inspire if p["small"] and p["status"] != "thesis"),
         "citations": sum(p["citations"] or 0 for p in inspire),
         "h_index": h_index(p["citations"] for p in inspire),
         "citations_main": sum(p["citations"] or 0 for p in curated),

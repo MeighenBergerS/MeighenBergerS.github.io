@@ -23,7 +23,7 @@ papers:
     themes: [transport, simulation]
 
   Arguelles:2026rjr:
-    roles: [wrote, idea]
+    details: Developed the production of neutrinos from p-p and p-gamma interactions
     themes: [bsm]
 
   Beacom:2026mys:
@@ -95,7 +95,8 @@ papers:
       analysis, co-wrote the manuscript.
 
   Lazar:2023rol:
-    details: Developed the water-based simulation, co-developed the framework, wrote parts of the paper
+    roles: [wrote]
+    details: Developed the water-based simulation, co-developed the framework
     themes: [simulation]
     selected: true
     summary: >-
@@ -113,8 +114,7 @@ papers:
     themes: [simulation]
 
   Desai:2023zsb:
-    roles: [idea, mentored]
-    details: Wrote parts of the paper
+    roles: [wrote, idea, mentored]
     themes: [bsm]
 
   meighen2021bioluminescence:
@@ -145,6 +145,7 @@ papers:
   Meighen-Berger:2021hka:
     roles: [wrote, idea]
     themes: [bsm]
+    status: preprint
 
   Schmidt-Dencker:2021xmg:
     roles: [mentored]
@@ -157,6 +158,7 @@ papers:
   Meighen-Berger:2019cxt:
     roles: [wrote, idea]
     themes: [transport]
+    status: preprint
 
   Li:2026jgr:
     roles: [mentored]
