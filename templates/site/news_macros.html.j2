@@ -1,0 +1,21 @@
+{% macro news_item(n, root="") %}
+{% if n.type == 'talk' %}
+<li class="news-oneliner">
+  <span class="news-date">{{ n.date|nicedate }}</span>
+  <span class="news-kind kind-talk">Talk</span>
+  <span>{{ n.title }}</span>
+</li>
+{% else %}
+<li class="news-card">
+  {% if n.image %}<a class="news-thumb" href="{{ root }}{{ n.url }}"><img src="{{ root }}{{ n.image }}" alt="{{ n.image_alt or '' }}" loading="lazy"></a>{% endif %}
+  <div class="news-body">
+    <p class="news-meta"><span class="news-date">{{ n.date|nicedate }}</span>
+      <span class="news-kind kind-{{ n.type }}">{{ {'paper':'New paper','software':'Software'}.get(n.type, n.type|capitalize) }}</span>
+      {% if n.software and n.type == 'paper' %}<span class="news-kind kind-software">Software</span>{% endif %}</p>
+    <h3><a href="{{ root }}{{ n.url }}">{{ n.title }}</a></h3>
+    <p>{{ n.excerpt|safe }}</p>
+    <p><a href="{{ root }}{{ n.url }}">Read more →</a></p>
+  </div>
+</li>
+{% endif %}
+{% endmacro %}

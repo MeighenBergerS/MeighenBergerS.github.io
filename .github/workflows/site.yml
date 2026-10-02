@@ -12,6 +12,7 @@ permissions:
   pages: write
   id-token: write
   issues: write     # open/update the "needs review" issue
+  pull-requests: write  # open draft news-post PRs
 
 concurrency:
   group: pages
@@ -43,6 +44,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/cache data/metrics.csv
           git diff --cached --quiet || git commit -m "Refresh publication and software data" && git push
+
+      - name: Open draft news posts for new papers and releases
+        if: github.event_name != 'push'
+        continue-on-error: true  # a failed draft must not block the site deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pip install pypdfium2 pillow
+          python pipeline/news_drafts.py --open-prs
 
       - name: Build site and CV sources
         run: python pipeline/build.py
