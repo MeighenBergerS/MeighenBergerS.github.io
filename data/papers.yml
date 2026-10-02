@@ -27,8 +27,7 @@ papers:
     themes: [bsm]
 
   Beacom:2026mys:
-    roles: [wrote, mentored]
-    details: Developed the method
+    roles: [wrote, idea, mentored]
     themes: [neutrino]
     selected: true
     summary: >-
@@ -40,13 +39,11 @@ papers:
       supervised the student implementation, co-wrote the manuscript.
 
   Meighen-Berger:2026idy:
-    roles: [wrote]
-    details: Developed the method
+    roles: [wrote, idea]
     themes: [bsm]
 
   Meighen-Berger:2025hrq:
-    roles: [wrote]
-    details: Developed the method
+    roles: [wrote, idea]
     themes: [bsm]
     selected: true
     summary: >-
@@ -76,8 +73,7 @@ papers:
     themes: [bsm]
 
   Meighen-Berger:2024xbx:
-    roles: [wrote]
-    details: Developed the method
+    roles: [wrote, idea]
     themes: [neutrino]
     selected: true
     summary: >-
@@ -88,8 +84,7 @@ papers:
       led the analysis, co-wrote the manuscript.
 
   Meighen-Berger:2023xpr:
-    roles: [wrote]
-    details: Developed the method
+    roles: [wrote, idea]
     themes: [neutrino]
     selected: true
     summary: >-
@@ -132,8 +127,8 @@ papers:
     themes: [bsm]
 
   Meighen-Berger:2020eun:
-    roles: [wrote]
-    details: Developed the method, constructed the simulation
+    roles: [wrote, idea]
+    details: Constructed the simulation
     themes: [bsm]
     selected: true
     summary: >-
@@ -156,8 +151,7 @@ papers:
     themes: [bsm]
 
   Meighen-Berger:2019lld:
-    roles: [wrote, mentored]
-    details: Developed the method
+    roles: [wrote, idea, mentored]
     themes: [transport]
 
   Meighen-Berger:2019cxt:

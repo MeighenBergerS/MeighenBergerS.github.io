@@ -22,6 +22,10 @@
   --header-hover: #f985c1;
   --series-1: #e7298a;
   --series-2: #66a61e;
+  /* Contribution tags: magenta = writing, teal = idea, indigo = mentoring */
+  --role-wrote: #a8135f;    --role-wrote-bg: #fbe3ef;    --role-wrote-line: #f3b6d4;
+  --role-idea: #0d6b4f;     --role-idea-bg: #d9f2e9;     --role-idea-line: #a6dcc8;
+  --role-mentored: #343251; --role-mentored-bg: #e3e0fb; --role-mentored-line: #c3bef2;
   --grid: #e4e1f5;
   --axis: #c3bfe0;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -34,6 +38,9 @@
     --border: #36334f; --link: #5fe3b9; --link-hover: #f985c1; --heading: #d1ceff; --rule: #e7298a;
     --accent: #f985c1; --accent-soft: #3a2140; --header-bg: #25233d;
     --grid: #2e2c46; --axis: #45425f;
+    --role-wrote: #f985c1; --role-wrote-bg: #3d1f3a; --role-wrote-line: #6b2f5c;
+    --role-idea: #5fe3b9; --role-idea-bg: #163a31; --role-idea-line: #24604f;
+    --role-mentored: #d1ceff; --role-mentored-bg: #33305a; --role-mentored-line: #4d4985;
   }
 }
 :root[data-theme="dark"] {
@@ -42,6 +49,9 @@
   --border: #36334f; --link: #5fe3b9; --link-hover: #f985c1; --heading: #d1ceff; --rule: #e7298a;
   --accent: #f985c1; --accent-soft: #3a2140; --header-bg: #25233d;
   --grid: #2e2c46; --axis: #45425f;
+    --role-wrote: #f985c1; --role-wrote-bg: #3d1f3a; --role-wrote-line: #6b2f5c;
+    --role-idea: #5fe3b9; --role-idea-bg: #163a31; --role-idea-line: #24604f;
+    --role-mentored: #d1ceff; --role-mentored-bg: #33305a; --role-mentored-line: #4d4985;
 }
 
 * { box-sizing: border-box; }
@@ -121,7 +131,10 @@ summary { cursor: pointer; color: var(--link); }
 .paper-authors { color: var(--text-2); font-size: 0.92rem; }
 .paper-meta { color: var(--muted); font-size: 0.88rem; }
 .paper-contribution { display: flex !important; flex-wrap: wrap; align-items: baseline; gap: 4px 6px; margin-top: 3px; font-size: 0.85rem; color: var(--text-2); }
-.role { background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 0 9px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
+.role { border-radius: 999px; padding: 0 9px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; border: 1px solid transparent; }
+.role-wrote    { background: var(--role-wrote-bg);    color: var(--role-wrote);    border-color: var(--role-wrote-line); }
+.role-idea     { background: var(--role-idea-bg);     color: var(--role-idea);     border-color: var(--role-idea-line); }
+.role-mentored { background: var(--role-mentored-bg); color: var(--role-mentored); border-color: var(--role-mentored-line); }
 .paper-contribution .details { font-style: italic; }
 .paper > .tag { display: inline-block; margin-left: 6px; }
 .tag { font-size: 0.75rem; border: 1px solid var(--rule); color: var(--accent); border-radius: 4px; padding: 0 5px; vertical-align: 2px; }

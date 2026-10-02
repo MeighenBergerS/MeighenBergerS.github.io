@@ -26,7 +26,7 @@
   </span>
   {% if contribution and (p.role_tags or p.details) %}
   <span class="paper-contribution">
-    {% for t in p.role_tags %}<span class="role">{{ t }}</span>{% endfor %}
+    {% for key, label in p.role_tags %}<span class="role role-{{ key }}">{{ label }}</span>{% endfor %}
     {% if p.details %}<span class="details">{{ p.details }}</span>{% endif %}
   </span>
   {% endif %}

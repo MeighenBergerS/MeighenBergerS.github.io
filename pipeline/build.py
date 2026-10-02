@@ -259,8 +259,9 @@ def contribution(p):
     tags = []
     for r in ("wrote", "idea", "mentored"):  # fixed order
         if r in (p.get("roles") or []):
-            tags.append(("Wrote" if p["author_count"] == 1 else "Co-wrote") + " the paper" if r == "wrote" else ROLE_LABELS[r])
-    parts = tags + ([p["details"].rstrip(".")] if p.get("details") else [])
+            tags.append((r, ("Wrote" if p["author_count"] == 1 else "Co-wrote") + " the paper"
+                         if r == "wrote" else ROLE_LABELS[r]))
+    parts = [label for _, label in tags] + ([p["details"].rstrip(".")] if p.get("details") else [])
     text = ", ".join(parts[:1] + [x[0].lower() + x[1:] for x in parts[1:]])
     return tags, text
 
