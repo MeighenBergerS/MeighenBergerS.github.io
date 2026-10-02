@@ -1,21 +1,45 @@
 {% extends "base.html.j2" %}
 {% block title %}Software · {{ profile.name }}{% endblock %}
+{% macro meta(s) %}
+  {% set g = s.github %}
+  {% if g.pypi %}<span>v{{ g.pypi.version }}{% if g.pypi.date %} ({{ g.pypi.date[:7] }}){% endif %}</span>{% endif %}
+  {% if g.pushed_at %}<span>updated {{ g.pushed_at[:7] }}</span>{% endif %}
+  {% if g.stargazers_count %}<span>★ {{ g.stargazers_count }}</span>{% endif %}
+{% endmacro %}
+{% macro links(s) %}
+  {% if s.docs %}<a class="button primary" href="{{ s.docs }}">Docs</a>{% endif %}
+  <a class="button" href="https://github.com/{{ s.repo }}">GitHub</a>
+  {% if s.github.pypi %}<a class="button" href="{{ s.github.pypi.url }}">PyPI</a>{% endif %}
+  {% if s.paper_obj %}<a class="button" href="{{ s.paper_obj.url }}">Paper</a>{% endif %}
+{% endmacro %}
 {% block content %}
 <h1>Software</h1>
 <p class="lede">{{ software.intro|md }}</p>
-<div class="cards">
-  {% for s in software.software %}
+
+<div class="software-list">
+  {% for s in software.software if s.featured %}
   <article class="card software">
-    <h2><a href="https://github.com/{{ s.repo }}">{{ s.name }}</a></h2>
-    <p class="muted">{{ s.tagline }}</p>
-    <p>{{ s.description|md }}</p>
-    <p class="meta">
-      <a href="https://github.com/{{ s.repo }}">{{ s.repo }}</a>
-      {% if s.github.stargazers_count is not none and s.github.stargazers_count is defined %} · ★ {{ s.github.stargazers_count }}{% endif %}
-      {% if s.github.latest_release %} · {{ s.github.latest_release.tag }} ({{ s.github.latest_release.date }}){% endif %}
-      {% if s.paper_obj %} · <a href="{{ s.paper_obj.url }}">Paper</a>{% endif %}
-    </p>
+    {% if s.logo %}<img class="logo" src="{{ s.logo }}" alt="{{ s.name }} logo" loading="lazy">
+    {% else %}<div class="logo logo-text" aria-hidden="true">{{ s.name[:2] }}</div>{% endif %}
+    <div class="software-body">
+      <h2><a href="{{ s.docs or 'https://github.com/' ~ s.repo }}">{{ s.name }}</a></h2>
+      <p class="tagline">{{ s.tagline }}</p>
+      <p>{{ s.description|md }}</p>
+      <p class="actions">{{ links(s) }}</p>
+      <p class="meta">{{ meta(s) }}</p>
+    </div>
   </article>
   {% endfor %}
 </div>
+
+{% set earlier = software.software|rejectattr('featured')|list %}
+{% if earlier %}
+<h2>Earlier tools</h2>
+<ul class="plain">
+  {% for s in earlier %}
+  <li><strong><a href="https://github.com/{{ s.repo }}">{{ s.name }}</a></strong>. {{ s.tagline }} {{ s.description|md }}
+    <span class="meta">{{ meta(s) }}{% if s.github.pypi %} · <a href="{{ s.github.pypi.url }}">PyPI</a>{% endif %}{% if s.paper_obj %} · <a href="{{ s.paper_obj.url }}">Paper</a>{% endif %}</span></li>
+  {% endfor %}
+</ul>
+{% endif %}
 {% endblock %}

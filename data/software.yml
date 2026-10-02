@@ -1,13 +1,36 @@
 intro: >-
   Open simulation tools are a core research output. They exist to make the
   phenomenology testable, and they are used by the neutrino-telescope community to model
-  detectors that do not yet exist and the environments they will be built in.
+  detectors that do not yet exist and the environments they will be built in. Listed
+  here are the codes built for general use; analysis code for individual papers lives
+  on [GitHub](https://github.com/MeighenBergerS).
 
-# `repo` is owner/name on GitHub; stars and release info are fetched automatically.
-# `paper` is an INSPIRE texkey from papers.yml.
+# featured: true  -> large card on the Software page and listed in the CV.
+# featured: false -> "Earlier tools", a compact list.
+# `repo` (owner/name) and `pypi` are queried automatically for stars, version and
+# last update. `paper` is a key from papers.yml or any INSPIRE texkey.
 software:
+  - name: softpaws
+    featured: true
+    repo: MeighenBergerS/softpaws
+    pypi: softpaws
+    docs: https://meighenbergers.github.io/softpaws/
+    logo: img/software/softpaws.jpg
+    tagline: Neutrino-telescope effective areas from muon transport, without a detector simulation.
+    description: >-
+      Solves high-energy muon transport analytically and turns the muon range into the
+      volume a detector effectively watches, giving effective areas, event rates and
+      single-track energies. One code serves IceCube, KM3NeT/ARCA, P-ONE, TRIDENT and
+      Baikal-GVD, so published effective areas can be reproduced, explained and carried
+      to detectors that have not been simulated yet. Author and maintainer.
+    paper: Meighen-Berger:2026yls
+    themes: [simulation, transport]
+
   - name: Prometheus
+    featured: true
     repo: Harvard-Neutrino/prometheus
+    docs: https://harvard-neutrino.github.io/prometheus/
+    logo: img/software/prometheus.png
     tagline: Open-source, end-to-end simulation framework for neutrino telescopes.
     description: >-
       Generates events and detection-module photon hits for user-defined detector
@@ -16,20 +39,38 @@ software:
       including for the NuBench event-reconstruction benchmark.
     paper: Lazar:2023rol
     themes: [simulation]
+
   - name: Fennel
+    featured: true
     repo: MeighenBergerS/fennel
-    tagline: Fast parametric light-yield calculator.
+    pypi: fennel_seed
+    docs: https://meighenbergers.github.io/fennel/
+    logo: img/software/fennel.png
+    tagline: Fast parametric Cherenkov light yields for tracks and cascades.
     description: >-
       Predicts photon counts and timing distributions from muon tracks, electromagnetic
-      showers, and hadronic showers. Author and maintainer. Provides the light-yield
-      backend used in Prometheus.
+      showers, and hadronic showers in ice or water. Author and maintainer. Provides
+      the light-yield backend used in Prometheus.
     themes: [simulation, transport]
+
+  - name: bib-checker
+    featured: true
+    repo: MeighenBergerS/bib-checker
+    docs: https://meighenbergers.github.io/bib-checker/
+    tagline: Check a BibTeX file against INSPIRE and fix what is wrong.
+    description: >-
+      Command-line tool that checks every entry of a .bib file against InspireHEP,
+      flags missing or mismatched records, suggests canonical replacements and writes
+      a corrected file. Author and maintainer.
+
   - name: Fourth Day
+    featured: false
     repo: MeighenBergerS/fourth_day
+    pypi: fourth_day
     tagline: Deep-sea bioluminescence simulation.
     description: >-
       Models the dominant optical background for water-based neutrino telescopes by
-      simulating water currents and the light emission of individual organisms. Author,
-      developed for STRAW and P-ONE site characterization.
+      simulating water currents and the light emission of individual organisms.
+      Developed for STRAW and P-ONE site characterization.
     paper: meighen2021bioluminescence
     themes: [simulation]

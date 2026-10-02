@@ -23,7 +23,8 @@ highlights:
   - >-
     **Community software.** Lead developer and maintainer of **Prometheus**, the
     open-source neutrino telescope simulation now used across the field, and author of
-    **Fennel** and **Fourth Day**.
+    **softpaws** (analytic neutrino-telescope effective areas), **Fennel** (light yields)
+    and **bib-checker** (bibliography validation against INSPIRE).
   - >-
     **Independent visibility.** {{ stats.invited_talks }} invited talks and seminars,
     including Stanford, Harvard, Texas A&M, Ohio State, UNSW, and the Mitchell

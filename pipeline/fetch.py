@@ -123,9 +123,24 @@ def fetch_github(software):
             info["latest_release"] = {"tag": rel.get("tag_name"), "date": (rel.get("published_at") or "")[:10]}
         except Exception:
             info["latest_release"] = None
+        if s.get("pypi"):
+            info["pypi"] = fetch_pypi(s["pypi"])
         out[repo] = info
     (CACHE / "github.json").write_text(json.dumps(out, indent=1) + "\n")
     return out
+
+
+def fetch_pypi(name):
+    print(f"PyPI: {name}")
+    try:
+        d = json.loads(get(f"https://pypi.org/pypi/{name}/json"))
+    except Exception as exc:
+        print(f"  skipped ({exc})", file=sys.stderr)
+        return None
+    version = d["info"]["version"]
+    files = d.get("releases", {}).get(version) or []
+    date = min((f["upload_time"][:10] for f in files), default=None)
+    return {"version": version, "date": date, "url": f"https://pypi.org/project/{name}/"}
 
 
 def h_index(counts):

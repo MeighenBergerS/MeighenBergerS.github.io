@@ -7,9 +7,9 @@
 \vspace{2mm}
 
 \denseouterlist{
-<% for s in software.software %>
+<% for s in software.software if s.featured %>
 
-\entry{\textbf{<< s.name|tex >>} \href{https://github.com/<< s.repo >>}{\faGithub} \\
+\entry{\textbf{<< s.name|tex >>} \href{https://github.com/<< s.repo >>}{\faGithub}<% if s.docs %> \href{<< s.docs >>}{docs}<% endif %> \\
 \textit{<< s.tagline|tex >>} << s.description|tex >>}
 <% endfor %>
 
