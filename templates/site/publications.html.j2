@@ -6,6 +6,7 @@
 <p class="lede">
   {{ stats.refereed }} refereed papers and {{ stats.conference }} conference papers, most from my membership in
   IceCube and P-ONE. {{ stats.curated }} carry a major contribution from me; these are listed first, with my role.
+  Papers from experimental collaborations are <a href="#experiments">grouped by experiment</a> below.
   The complete record is on <a href="https://inspirehep.net/authors/{{ profile.ids.inspire_recid }}">INSPIRE</a>.
 </p>
 
@@ -28,7 +29,7 @@
   <details>
     <summary>Show as table</summary>
     <table>
-      <thead><tr><th>Year</th><th>Major contribution</th><th>Other small-author</th><th>Collaboration</th></tr></thead>
+      <thead><tr><th>Year</th><th>Major contribution</th><th>Other small-author</th><th>Experimental collaborations</th></tr></thead>
       <tbody>{% for r in chart_pubs %}<tr><td>{{ r.year }}</td><td>{{ r.main }}</td><td>{{ r.small }}</td><td>{{ r.collab }}</td></tr>{% endfor %}</tbody>
     </table>
   </details>
@@ -43,17 +44,28 @@
 {% endif %}
 {% endfor %}
 
-{% set others = papers|rejectattr('curated')|rejectattr('hidden')|selectattr('author_count','le',30)|rejectattr('status','equalto','thesis')|list %}
+{% set others = papers|rejectattr('curated')|rejectattr('hidden')|selectattr('experiment','none')|rejectattr('status','equalto','thesis')|list %}
 {% if others %}
 <h2>Other papers</h2>
 <ul class="papers">{% for p in others %}{{ paper(p) }}{% endfor %}</ul>
 {% endif %}
 
-{% set collab = papers|rejectattr('curated')|selectattr('author_count','gt',30)|list %}
-<details>
-  <summary>Collaboration papers ({{ collab|length }})</summary>
-  <ul class="papers compact">{% for p in collab %}{{ paper(p) }}{% endfor %}</ul>
-</details>
+<h2 id="experiments">Experimental collaborations</h2>
+<p class="muted">Papers from my membership in experimental collaborations, grouped by experiment. Papers with a
+substantial contribution from me are shown first, with my role.</p>
+{% for e in experiments %}
+<section id="exp-{{ e.slug }}">
+  <h3>{{ e.name }} <span class="muted">· {{ e.papers|length }} paper{{ 's' if e.papers|length != 1 }}</span></h3>
+  {% if e.curated %}<ul class="papers">{% for p in e.curated %}{{ paper(p) }}{% endfor %}</ul>{% endif %}
+  {% set rest = e.papers|rejectattr('curated')|list %}
+  {% if rest %}
+  <details>
+    <summary>{{ 'All' if not e.curated else 'Other' }} {{ e.name }} papers ({{ rest|length }})</summary>
+    <ul class="papers compact">{% for p in rest %}{{ paper(p) }}{% endfor %}</ul>
+  </details>
+  {% endif %}
+</section>
+{% endfor %}
 {% endblock %}
 {% block scripts %}
 <script>window.PUBS = {{ chart_pubs|json }};</script>

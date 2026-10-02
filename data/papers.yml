@@ -8,7 +8,6 @@
 #
 #   contribution: short role statement (CV list, publications page)
 #   themes:       ids from research.yml
-#   label:        experiment tag shown for collaboration papers
 #   status:       override sub/pub/proc/preprint (normally derived from INSPIRE);
 #                 preprint = arXiv only, not submitted anywhere
 #   selected:     include in "Selected Works" with `summary` and `role`
@@ -102,7 +101,6 @@ papers:
     status: preprint
 
   P-ONE:2020ljt:
-    label: P-ONE
     contribution: Calculated neutrino veto and estimated stau sensitivity
     themes: [bsm]
 
@@ -118,7 +116,6 @@ papers:
       wrote the manuscript, supervised the follow-up student analysis in IceCube.
 
   Agostini:2018fnx:
-    label: Borexino
     contribution: Calculated the atmospheric flux variations
     themes: [transport]
 
@@ -140,3 +137,24 @@ papers:
 
 # Papers you deliberately leave off the curated list (silences the review report).
 hidden: []
+
+# Experimental (collaboration) papers get their own section, grouped by experiment.
+# A paper's experiment is the first entry of `order` found in its INSPIRE
+# collaboration tags (after `aliases`); `assign` covers papers INSPIRE left untagged.
+experiments:
+  order: [P-ONE, IceCube-Gen2, IceCube, Borexino]
+  aliases:
+    "(IceCube Collaboration)*": IceCube
+    IceCube collaboration2: IceCube
+  assign:
+    Bailly:2021dxn: P-ONE
+    Bailly:2021mei: P-ONE
+    Rea:2021hjd: P-ONE
+    Abbasi:2022ypr: IceCube
+    Abbasi:2022uox: IceCube
+    Abbasi:2022uqr: IceCube
+    Abbasi:2022whi: IceCube
+    Abbasi:2021qfz: IceCube
+    Abbasi:2021miz: IceCube
+    Abbasi:2021kjd: IceCube
+    Abbasi:2021ryj: IceCube

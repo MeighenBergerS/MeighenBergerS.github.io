@@ -233,13 +233,29 @@ def load_papers():
         p["curated"] = True
         if note.get("status"):
             p["status"] = note["status"]
+    exp = notes.get("experiments") or {}
     for p in papers:
         p.setdefault("curated", False)
         p.setdefault("themes", [])
         p["hidden"] = bool(set(p["texkeys"]) & hidden)
         p["small"] = 0 < p["author_count"] < SMALL_AUTHOR_LIST
+        p["experiment"] = experiment_of(p, exp)
     papers.sort(key=lambda p: p["date"], reverse=True)
-    return papers, bib, missing
+    return papers, bib, missing, exp.get("order", [])
+
+
+def experiment_of(p, exp):
+    """The experiment a collaboration paper belongs to, or None for non-experimental papers."""
+    for k in p["texkeys"]:
+        if k in (exp.get("assign") or {}):
+            return exp["assign"][k]
+    aliases = exp.get("aliases") or {}
+    tags = {aliases.get(c, c) for c in p["collaborations"]}
+    return next((e for e in exp.get("order", []) if e in tags), None)
+
+
+def slug(name):
+    return re.sub(r"[^a-z0-9]+", "", name.lower())
 
 
 def make_cv_bib(papers, bib):
@@ -254,11 +270,10 @@ def make_cv_bib(papers, bib):
         # Use the curated key so the CV can cite it by the name in papers.yml.
         entry = re.sub(r"^(@\w+\{)\s*[^,\s]+", lambda m: m.group(1) + p["key"], entry, count=1)
         addendum = ""
-        if p.get("label"):
-            addendum += rf"\textcolor{{red}}{{{p['label']}}}: "
         if p.get("contribution"):
             addendum += "Contribution: " + tex_escape(p["contribution"])
-        fields = [f'keywords = "{p["status"]}"']
+        keyword = f"exp-{slug(p['experiment'])}" if p["experiment"] else p["status"]
+        fields = [f'keywords = "{keyword}"']
         if addendum:
             fields.append(f'addendum = "\\newline {addendum}"')
         body = entry.rstrip().rstrip("}").rstrip().rstrip(",")
@@ -309,11 +324,16 @@ def render_string(text, ctx):
 
 def review_report(papers, missing):
     lines = ["# Needs review", ""]
-    todo = [p for p in papers if p["recid"] and not p["curated"] and not p["hidden"]
+    todo = [p for p in papers if p["recid"] and not p["curated"] and not p["hidden"] and not p["experiment"]
             and p["author_count"] <= REVIEW_MAX_AUTHORS and p["status"] != "thesis"]
+    untagged = [p for p in papers if not p["experiment"] and not p["hidden"] and p["author_count"] > REVIEW_MAX_AUTHORS]
     if todo:
         lines += ["Papers on INSPIRE that are neither in `data/papers.yml` (`papers`) nor `hidden`:", ""]
         lines += [f"- [ ] `{p['key']}` ({p['date']}, {p['author_count']} authors) {p['title']} <{p['url']}>" for p in todo]
+        lines.append("")
+    if untagged:
+        lines += ["Large-author papers with no experiment (add them to `experiments.assign` in `data/papers.yml`):", ""]
+        lines += [f"- [ ] `{p['key']}` ({p['date']}, {p['author_count']} authors) {p['title']} <{p['url']}>" for p in untagged]
         lines.append("")
     arxiv = json.loads((CACHE / "arxiv.json").read_text(encoding="utf-8"))
     known = {p["arxiv"] for p in papers if p["arxiv"]}
@@ -335,9 +355,9 @@ def pubs_per_year(papers):
     """Counts per year for the publications chart: three disjoint groups."""
     rows = {}
     for p in papers:
-        if not p["recid"] and not p["curated"] or p["status"] == "thesis" or not p["year"]:
+        if not p["recid"] and not p["curated"] or p["status"] == "thesis" or not p["year"] or p["hidden"]:
             continue
-        group = "main" if p["curated"] else ("small" if p["author_count"] <= REVIEW_MAX_AUTHORS else "collab")
+        group = "collab" if p["experiment"] else ("main" if p["curated"] else "small")
         rows.setdefault(p["year"], {"main": 0, "small": 0, "collab": 0})[group] += 1
     years = range(min(rows), max(rows) + 1)
     return [{"year": y, **rows.get(y, {"main": 0, "small": 0, "collab": 0})} for y in years]
@@ -423,7 +443,8 @@ def main():
     profile, cvdata, talks = load("profile.yml"), load("cv.yml"), load("talks.yml")
     teaching, software, research = load("teaching.yml"), load("software.yml"), load("research.yml")
     github = json.loads((CACHE / "github.json").read_text()) if (CACHE / "github.json").exists() else {}
-    papers, bib, missing = load_papers()
+    papers, bib, missing, exp_order = load_papers()
+    talks["talks"].sort(key=lambda t: str(t.get("date") or t["year"]), reverse=True)
     stats = compute_stats(papers, talks, teaching, software["software"], github)
 
     # Fill computed numbers into prose.
@@ -445,7 +466,12 @@ def main():
         "profile": profile, "cv": cvdata, "talks": talks, "teaching": teaching,
         "software": software, "research": research, "stats": stats,
         "papers": papers, "by_key": by_key,
-        "curated": [p for p in papers if p["curated"]],
+        "curated": [p for p in papers if p["curated"] and not p["experiment"]],
+        "experiments": [
+            {"name": e, "slug": slug(e),
+             "papers": [p for p in papers if p["experiment"] == e and not p["hidden"]],
+             "curated": [p for p in papers if p["experiment"] == e and p["curated"]]}
+            for e in exp_order if any(p["experiment"] == e for p in papers)],
         "selected": [p for p in papers if p.get("selected")],
         "chart_pubs": pubs_per_year(papers), "metrics": metrics_history(),
         "updated": today.isoformat(), "year": today.year,

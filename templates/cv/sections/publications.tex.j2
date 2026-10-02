@@ -2,7 +2,7 @@
 \section{Publications}
 
 \small{
-<< stats.refereed >> published papers and << stats.conference >> conference papers in total, most arising from membership in IceCube and P-ONE. Of these, \textbf{<< stats.curated >> carry a major contribution from me}, and \textbf{<< stats.small >> are small-author-list works} (fewer than 10 authors). The full record is on \href{https://inspirehep.net/authors/<< profile.ids.inspire_recid >>}{iNSPIRE}. The list below contains the works to which I made significant and essential contributions. Collaboration papers are marked with the experiment's name.
+<< stats.refereed >> published papers and << stats.conference >> conference papers in total, most arising from membership in IceCube and P-ONE. Of these, \textbf{<< stats.curated >> carry a major contribution from me}, and \textbf{<< stats.small >> are small-author-list works} (fewer than 10 authors). The full record is on \href{https://inspirehep.net/authors/<< profile.ids.inspire_recid >>}{iNSPIRE}. The list below contains the works to which I made significant and essential contributions. Papers from experimental collaborations are listed separately, by experiment.
 }
 
 \vspace{2mm}
@@ -20,3 +20,13 @@
 
 \large{\textbf{\textcolor{black}{Proceedings}}}
 \printbibliography[keyword={proc}, heading=none]
+
+<% set exp_cv = experiments|selectattr('curated')|list %>
+<% if exp_cv %>
+\large{\textbf{\textcolor{black}{Experimental Collaborations}}}
+<% for e in exp_cv %>
+
+\small{\textbf{\textcolor{color-title}{<< e.name|tex >>}}}
+\printbibliography[keyword={exp-<< e.slug >>}, heading=none]
+<% endfor %>
+<% endif %>
