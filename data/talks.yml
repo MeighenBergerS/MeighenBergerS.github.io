@@ -3,6 +3,8 @@
 # Add `url:` for a public announcement/agenda and `slides:` for public slides.
 
 talks:
+  - {date: 2026-09-21, year: 2026, kind: seminar, event: University of Iowa, city: Iowa City, country: USA,
+     title: Probing Dark Matter Interactions Near Supermassive Black Holes}
   - {date: 2026-09-10, year: 2026, kind: seminar, event: Queen's University, city: Kingston, country: Canada,
      title: Probing Dark Matter Interactions Near Supermassive Black Holes}
   - {year: 2026, kind: invited, event: Mitchell Conference, city: College Station, country: USA,
