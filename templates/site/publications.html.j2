@@ -22,14 +22,14 @@
     <span class="chart-title">Papers per year <span class="muted">(excluding large-collaboration papers, see table)</span></span>
     <span class="legend" aria-hidden="true">
       <span><i class="swatch s1"></i>Major contribution</span>
-      <span><i class="swatch s2"></i>Other small-author</span>
+      {% if chart_pubs|sum(attribute='small') %}<span><i class="swatch s2"></i>Other papers</span>{% endif %}
     </span>
   </figcaption>
   <div class="chart-body"></div>
   <details>
     <summary>Show as table</summary>
     <table>
-      <thead><tr><th>Year</th><th>Major contribution</th><th>Other small-author</th><th>Experimental collaborations</th></tr></thead>
+      <thead><tr><th>Year</th><th>Major contribution</th><th>Other papers</th><th>Experimental collaborations</th></tr></thead>
       <tbody>{% for r in chart_pubs %}<tr><td>{{ r.year }}</td><td>{{ r.main }}</td><td>{{ r.small }}</td><td>{{ r.collab }}</td></tr>{% endfor %}</tbody>
     </table>
   </details>

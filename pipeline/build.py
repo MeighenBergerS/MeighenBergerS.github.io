@@ -233,6 +233,10 @@ def load_papers():
         p["curated"] = True
         if note.get("status"):
             p["status"] = note["status"]
+    for p in papers:
+        if p.get("curated"):
+            p["role_tags"], p["contribution"] = contribution(p)
+
     exp = notes.get("experiments") or {}
     for p in papers:
         p.setdefault("curated", False)
@@ -242,6 +246,23 @@ def load_papers():
         p["experiment"] = experiment_of(p, exp)
     papers.sort(key=lambda p: p["date"], reverse=True)
     return papers, bib, missing, exp.get("order", [])
+
+
+ROLE_LABELS = {"idea": "Developed the idea", "mentored": "Mentored student"}
+
+
+def contribution(p):
+    """Standard role tags plus free-text details -> (tags, one-line statement)."""
+    unknown = set(p.get("roles") or []) - set(ROLE_LABELS) - {"wrote"}
+    if unknown:
+        raise SystemExit(f"{p['key']}: unknown role(s) {sorted(unknown)}; use wrote, idea, mentored")
+    tags = []
+    for r in ("wrote", "idea", "mentored"):  # fixed order
+        if r in (p.get("roles") or []):
+            tags.append(("Wrote" if p["author_count"] == 1 else "Co-wrote") + " the paper" if r == "wrote" else ROLE_LABELS[r])
+    parts = tags + ([p["details"].rstrip(".")] if p.get("details") else [])
+    text = ", ".join(parts[:1] + [x[0].lower() + x[1:] for x in parts[1:]])
+    return tags, text
 
 
 def experiment_of(p, exp):

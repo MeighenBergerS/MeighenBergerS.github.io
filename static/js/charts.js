@@ -7,14 +7,16 @@
 
   var SERIES = [
     { key: "main", label: "Major contribution", cls: "s1", color: "var(--series-1)" },
-    { key: "small", label: "Other small-author", cls: "s2", color: "var(--series-2)" },
-  ];
+    { key: "small", label: "Other papers", cls: "s2", color: "var(--series-2)" },
+  ].filter(function (s) {  // drop a series with no papers at all
+    return data.some(function (d) { return d[s.key] > 0; });
+  });
   var W = 760, H = 260, M = { top: 8, right: 4, bottom: 24, left: 28 };
   var GAP = 2; // surface gap between stacked segments
   var NS = "http://www.w3.org/2000/svg";
   var body = fig.querySelector(".chart-body");
 
-  var max = Math.max.apply(null, data.map(function (d) { return d.main + d.small; }));
+  var max = Math.max.apply(null, data.map(function (d) { return d.main + d.small; })) || 1;
   var step = max > 20 ? 10 : max > 10 ? 5 : 2;
   var top = Math.ceil(max / step) * step;
   var iw = W - M.left - M.right, ih = H - M.top - M.bottom;

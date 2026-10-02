@@ -6,15 +6,29 @@
 # research page. Papers on INSPIRE with few authors that are neither listed here
 # nor in `hidden` are reported as "needs review" by the build.
 #
-#   contribution: short role statement (CV list, publications page)
+#   roles:        standard contribution tags, any of
+#                   wrote     -> "Wrote the paper" (sole author) / "Co-wrote the paper"
+#                   idea      -> "Developed the idea" (had the idea or helped develop it)
+#                   mentored  -> "Mentored student" (a student worked on it and/or led it)
+#   details:      specific statement of what you did (for smaller contributions, or
+#                 anything the tags do not cover); shown after the tags
 #   themes:       ids from research.yml
 #   status:       override sub/pub/proc/preprint (normally derived from INSPIRE);
 #                 preprint = arXiv only, not submitted anywhere
 #   selected:     include in "Selected Works" with `summary` and `role`
 
 papers:
+  Meighen-Berger:2026yls:
+    roles: [wrote, idea]
+    themes: [transport, simulation]
+
+  Arguelles:2026rjr:
+    roles: [wrote, idea]
+    themes: [bsm]
+
   Beacom:2026mys:
-    contribution: Co-wrote the paper, developed the method, guided student
+    roles: [wrote, mentored]
+    details: Developed the method
     themes: [neutrino]
     selected: true
     summary: >-
@@ -26,11 +40,13 @@ papers:
       supervised the student implementation, co-wrote the manuscript.
 
   Meighen-Berger:2026idy:
-    contribution: Wrote the paper and developed the method
+    roles: [wrote]
+    details: Developed the method
     themes: [bsm]
 
   Meighen-Berger:2025hrq:
-    contribution: Wrote the paper and developed the method
+    roles: [wrote]
+    details: Developed the method
     themes: [bsm]
     selected: true
     summary: >-
@@ -42,22 +58,26 @@ papers:
       wrote the manuscript.
 
   Orsoe:2025yru:
-    contribution: Wrote the simulation code and generated the public data sets
+    details: Wrote the simulation code and generated the public data sets
     themes: [simulation]
 
   Meighen-Berger:2025pcq:
-    contribution: Co-wrote the paper, developed the idea, performed all calculations and sensitivity estimates
+    roles: [wrote, idea]
+    details: Performed all calculations and sensitivity estimates
     themes: [transport, neutrino]
 
   Bhattacharjee:2025iip:
+    details: Worked on the neutrino calculations and predictions
     themes: [bsm]
 
   Robles:2024tdh:
-    contribution: Co-wrote the paper, developed neutrino calculations and sensitivities
+    roles: [wrote]
+    details: Developed the neutrino calculations and sensitivities
     themes: [bsm]
 
   Meighen-Berger:2024xbx:
-    contribution: Co-wrote the paper, developed the method
+    roles: [wrote]
+    details: Developed the method
     themes: [neutrino]
     selected: true
     summary: >-
@@ -68,7 +88,8 @@ papers:
       led the analysis, co-wrote the manuscript.
 
   Meighen-Berger:2023xpr:
-    contribution: Co-wrote the paper, developed the method
+    roles: [wrote]
+    details: Developed the method
     themes: [neutrino]
     selected: true
     summary: >-
@@ -79,7 +100,7 @@ papers:
       analysis, co-wrote the manuscript.
 
   Lazar:2023rol:
-    contribution: Developed the water-based simulation, co-developed the framework, wrote parts of the paper
+    details: Developed the water-based simulation, co-developed the framework, wrote parts of the paper
     themes: [simulation]
     selected: true
     summary: >-
@@ -91,21 +112,28 @@ papers:
       light-yield chain, co-wrote the manuscript. Now a community baseline, for example
       in the NuBench reconstruction benchmark.
 
+  Lazar:2025nps:
+    roles: [wrote]
+    details: Developed the training data set
+    themes: [simulation]
+
   Desai:2023zsb:
-    contribution: Guided students, developed the idea, wrote parts of the paper
+    roles: [idea, mentored]
+    details: Wrote parts of the paper
     themes: [bsm]
 
   meighen2021bioluminescence:
-    contribution: One of the leading authors, developed the bioluminescence framework
+    details: One of the leading authors, developed the bioluminescence framework
     themes: [simulation]
     status: preprint
 
   P-ONE:2020ljt:
-    contribution: Calculated neutrino veto and estimated stau sensitivity
+    details: Calculated neutrino veto and estimated stau sensitivity
     themes: [bsm]
 
   Meighen-Berger:2020eun:
-    contribution: Wrote the paper, developed the method, constructed the simulation
+    roles: [wrote]
+    details: Developed the method, constructed the simulation
     themes: [bsm]
     selected: true
     summary: >-
@@ -116,23 +144,32 @@ papers:
       wrote the manuscript, supervised the follow-up student analysis in IceCube.
 
   Agostini:2018fnx:
-    contribution: Calculated the atmospheric flux variations
+    details: Calculated the atmospheric flux variations
     themes: [transport]
 
+  Meighen-Berger:2021hka:
+    roles: [wrote, idea]
+    themes: [bsm]
+
   Schmidt-Dencker:2021xmg:
-    contribution: Guided student
+    roles: [mentored]
     themes: [bsm]
 
   Meighen-Berger:2019lld:
-    contribution: Wrote the paper, developed the method, guided student
+    roles: [wrote, mentored]
+    details: Developed the method
+    themes: [transport]
+
+  Meighen-Berger:2019cxt:
+    roles: [wrote, idea]
     themes: [transport]
 
   Li:2026jgr:
-    contribution: Guided student
+    roles: [mentored]
     themes: [simulation]
 
   Pollmann:2021epj:
-    contribution: Wrote one of the numerical models
+    details: Wrote one of the numerical models
     themes: [interdisciplinary]
 
 # Papers you deliberately leave off the curated list (silences the review report).

@@ -24,7 +24,12 @@
     {% if p.doi %} · <a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}
     {% if p.citations %} · <span class="cites">{{ p.citations }} citation{{ 's' if p.citations != 1 }}</span>{% endif %}
   </span>
-  {% if contribution and p.contribution %}<span class="paper-contribution">My contribution: {{ p.contribution }}</span>{% endif %}
+  {% if contribution and (p.role_tags or p.details) %}
+  <span class="paper-contribution">
+    {% for t in p.role_tags %}<span class="role">{{ t }}</span>{% endfor %}
+    {% if p.details %}<span class="details">{{ p.details }}</span>{% endif %}
+  </span>
+  {% endif %}
 </li>
 {% endmacro %}
 
