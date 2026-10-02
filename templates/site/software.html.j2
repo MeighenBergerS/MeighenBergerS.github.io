@@ -7,7 +7,7 @@
   {% if g.stargazers_count %}<span>★ {{ g.stargazers_count }}</span>{% endif %}
 {% endmacro %}
 {% macro links(s) %}
-  {% if s.docs %}<a class="button primary" href="{{ s.docs }}">Docs</a>{% endif %}
+  {% if s.docs %}<a class="button primary" href="{{ s.docs }}">{{ s.docs_label or 'Docs' }}</a>{% endif %}
   <a class="button" href="https://github.com/{{ s.repo }}">GitHub</a>
   {% if s.github.pypi %}<a class="button" href="{{ s.github.pypi.url }}">PyPI</a>{% endif %}
   {% if s.paper_obj %}<a class="button" href="{{ s.paper_obj.url }}">Paper</a>{% endif %}
@@ -16,8 +16,7 @@
 <h1>Software</h1>
 <p class="lede">{{ software.intro|md }}</p>
 
-<div class="software-list">
-  {% for s in software.software if s.featured %}
+{% macro card(s) %}
   <article class="card software">
     {% if s.logo %}<img class="logo" src="{{ s.logo }}" alt="{{ s.name }} logo" loading="lazy">
     {% else %}<div class="logo logo-text" aria-hidden="true">{{ s.name[:2] }}</div>{% endif %}
@@ -29,10 +28,22 @@
       <p class="meta">{{ meta(s) }}</p>
     </div>
   </article>
-  {% endfor %}
+{% endmacro %}
+
+<div class="software-list">
+  {% for s in software.software if s.section == 'featured' %}{{ card(s) }}{% endfor %}
 </div>
 
-{% set earlier = software.software|rejectattr('featured')|list %}
+{% set community = software.software|selectattr('section', 'equalto', 'community')|list %}
+{% if community %}
+<h2>Community contributions</h2>
+<p class="muted">Open tools for training students and running a research group.</p>
+<div class="software-list compact">
+  {% for s in community %}{{ card(s) }}{% endfor %}
+</div>
+{% endif %}
+
+{% set earlier = software.software|selectattr('section', 'equalto', 'earlier')|list %}
 {% if earlier %}
 <h2>Earlier tools</h2>
 <ul class="plain">

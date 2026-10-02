@@ -5,13 +5,15 @@ intro: >-
   here are the codes built for general use; analysis code for individual papers lives
   on [GitHub](https://github.com/MeighenBergerS).
 
-# featured: true  -> large card on the Software page and listed in the CV.
-# featured: false -> "Earlier tools", a compact list.
+# section: featured  -> large card on the Software page and listed in the CV.
+#          community -> "Community contributions": tools for training, teaching and
+#                       running a research group (smaller cards).
+#          earlier   -> "Earlier tools", a compact list.
 # `repo` (owner/name) and `pypi` are queried automatically for stars, version and
 # last update. `paper` is a key from papers.yml or any INSPIRE texkey.
 software:
   - name: softpaws
-    featured: true
+    section: featured
     repo: MeighenBergerS/softpaws
     pypi: softpaws
     docs: https://meighenbergers.github.io/softpaws/
@@ -27,7 +29,7 @@ software:
     themes: [simulation, transport]
 
   - name: Prometheus
-    featured: true
+    section: featured
     repo: Harvard-Neutrino/prometheus
     docs: https://harvard-neutrino.github.io/prometheus/
     logo: img/software/prometheus.png
@@ -41,7 +43,7 @@ software:
     themes: [simulation]
 
   - name: Fennel
-    featured: true
+    section: featured
     repo: MeighenBergerS/fennel
     pypi: fennel_seed
     docs: https://meighenbergers.github.io/fennel/
@@ -54,7 +56,7 @@ software:
     themes: [simulation, transport]
 
   - name: bib-checker
-    featured: true
+    section: featured
     repo: MeighenBergerS/bib-checker
     docs: https://meighenbergers.github.io/bib-checker/
     tagline: Check a BibTeX file against INSPIRE and fix what is wrong.
@@ -63,8 +65,32 @@ software:
       flags missing or mismatched records, suggests canonical replacements and writes
       a corrected file. Author and maintainer.
 
+  - name: nestling
+    section: community
+    repo: MeighenBergerS/nestling
+    docs: https://meighenbergers.github.io/nestling/
+    logo: img/software/nestling.png
+    tagline: A physics-first starting kit for early-career researchers.
+    description: >-
+      Short guides, templates, examples and exercises across seven tracks: arXiv and
+      reading papers, journal club, writing papers, Git and GitHub, coding practices,
+      plotting, and working with LLMs. Used to onboard new students. Author and
+      maintainer.
+
+  - name: jc-ppi
+    section: community
+    repo: MeighenBergerS/jc-ppi
+    docs: https://meighenbergers.github.io/jc-ppi/
+    docs_label: Website
+    logo: img/software/jc-ppi.svg
+    tagline: Iowa Particles & Plots Journal Club.
+    description: >-
+      Website and workflow for the journal club: members suggest papers as GitHub
+      issues, a bot fills in the details from INSPIRE, and the site groups them by week.
+      Runs entirely on GitHub Actions, with nothing to host. Author and maintainer.
+
   - name: Fourth Day
-    featured: false
+    section: earlier
     repo: MeighenBergerS/fourth_day
     pypi: fourth_day
     tagline: Deep-sea bioluminescence simulation.

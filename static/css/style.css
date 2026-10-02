@@ -187,3 +187,8 @@ summary { cursor: pointer; color: var(--link); }
 .card.software .meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; }
 @media (max-width: 600px) { .card.software { grid-template-columns: 1fr; } .card.software .logo { width: 72px; height: 72px; } }
 ul.plain .meta span + span::before { content: " · "; }
+.software-list.compact { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.software-list.compact .card.software { grid-template-columns: 64px 1fr; gap: 14px; border-left-color: var(--role-idea-line); }
+.software-list.compact .card.software .logo { width: 64px; height: 64px; padding: 4px; }
+.software-list.compact .card.software h2 { font-size: 1.15rem; }
+.software-list.compact .card.software .tagline { color: var(--role-idea); }
