@@ -140,6 +140,8 @@
   ]
  },
  {
+  "citation_count": 8,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "113",
@@ -153,8 +155,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 8,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "Meighen-Berger:2025hrq"
   ],
@@ -198,6 +198,8 @@
   ]
  },
  {
+  "citation_count": 0,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "21",
@@ -210,8 +212,6 @@
     "journal_title": "JINST"
    }
   ],
-  "citation_count": 0,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "Orsoe:2025yru"
   ],
@@ -262,6 +262,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2025",
@@ -277,8 +279,6 @@
     "cnum": "C25-07-14.11"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "Lazar:2025nps"
   ],
@@ -313,6 +313,8 @@
   ]
  },
  {
+  "citation_count": 5,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "pubinfo_freetext": "JCAP10(2025)093",
@@ -331,8 +333,6 @@
     "journal_title": "JCAP"
    }
   ],
-  "citation_count": 5,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "Bhattacharjee:2025iip"
   ],
@@ -419,6 +419,8 @@
   ]
  },
  {
+  "citation_count": 11,
+  "citation_count_without_self_citations": 11,
   "publication_info": [
    {
     "journal_volume": "112",
@@ -433,8 +435,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 11,
-  "citation_count_without_self_citations": 11,
   "texkeys": [
    "Robles:2024tdh"
   ],
@@ -488,6 +488,8 @@
   ]
  },
  {
+  "citation_count": 14,
+  "citation_count_without_self_citations": 11,
   "publication_info": [
    {
     "journal_volume": "135",
@@ -501,8 +503,6 @@
     "journal_title": "Phys.Rev.Lett."
    }
   ],
-  "citation_count": 14,
-  "citation_count_without_self_citations": 11,
   "texkeys": [
    "Meighen-Berger:2024xbx"
   ],
@@ -551,6 +551,8 @@
   ]
  },
  {
+  "citation_count": 50,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "18",
@@ -561,8 +563,6 @@
     "journal_title": "The Cryosphere"
    }
   ],
-  "citation_count": 50,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2024qxf"
   ],
@@ -593,6 +593,8 @@
   ]
  },
  {
+  "citation_count": 8,
+  "citation_count_without_self_citations": 6,
   "publication_info": [
    {
     "journal_volume": "109",
@@ -606,8 +608,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 8,
-  "citation_count_without_self_citations": 6,
   "texkeys": [
    "Meighen-Berger:2023xpr"
   ],
@@ -658,6 +658,8 @@
   ]
  },
  {
+  "citation_count": 442,
+  "citation_count_without_self_citations": 259,
   "publication_info": [
    {
     "journal_volume": "380",
@@ -672,8 +674,6 @@
     "journal_title": "Science"
    }
   ],
-  "citation_count": 442,
-  "citation_count_without_self_citations": 259,
   "texkeys": [
    "IceCube:2023ame",
    "Abbasi:2023bvn"
@@ -726,6 +726,8 @@
   ]
  },
  {
+  "citation_count": 19,
+  "citation_count_without_self_citations": 8,
   "publication_info": [
    {
     "journal_volume": "304",
@@ -738,8 +740,6 @@
     "journal_title": "Comput.Phys.Commun."
    }
   ],
-  "citation_count": 19,
-  "citation_count_without_self_citations": 8,
   "texkeys": [
    "Lazar:2023rol"
   ],
@@ -793,6 +793,8 @@
   ]
  },
  {
+  "citation_count": 31,
+  "citation_count_without_self_citations": 12,
   "publication_info": [
    {
     "journal_volume": "959",
@@ -819,8 +821,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 31,
-  "citation_count_without_self_citations": 12,
   "texkeys": [
    "IceCube:2023atb",
    "Abbasi:2023bfo"
@@ -881,6 +881,8 @@
   ]
  },
  {
+  "citation_count": 105,
+  "citation_count_without_self_citations": 83,
   "publication_info": [
    {
     "journal_volume": "108",
@@ -894,8 +896,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 105,
-  "citation_count_without_self_citations": 83,
   "texkeys": [
    "IceCube:2023ies"
   ],
@@ -942,6 +942,8 @@
   ]
  },
  {
+  "citation_count": 23,
+  "citation_count_without_self_citations": 9,
   "publication_info": [
    {
     "journal_volume": "83",
@@ -955,8 +957,6 @@
     "journal_title": "Eur.Phys.J.C"
    }
   ],
-  "citation_count": 23,
-  "citation_count_without_self_citations": 9,
   "texkeys": [
    "IceCube:2023qem",
    "Abbasi:2023cun"
@@ -1007,6 +1007,8 @@
   ]
  },
  {
+  "citation_count": 52,
+  "citation_count_without_self_citations": 32,
   "publication_info": [
    {
     "journal_volume": "949",
@@ -1020,8 +1022,6 @@
     "journal_title": "Astrophys.J.Lett."
    }
   ],
-  "citation_count": 52,
-  "citation_count_without_self_citations": 32,
   "texkeys": [
    "IceCube:2023esf",
    "Abbasi:2023enx"
@@ -1072,6 +1072,8 @@
   ]
  },
  {
+  "citation_count": 2,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "02",
@@ -1084,8 +1086,6 @@
     "journal_title": "JCAP"
    }
   ],
-  "citation_count": 2,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "Desai:2023zsb"
   ],
@@ -1133,6 +1133,8 @@
   ]
  },
  {
+  "citation_count": 82,
+  "citation_count_without_self_citations": 51,
   "publication_info": [
    {
     "journal_volume": "946",
@@ -1168,8 +1170,6 @@
     "journal_title": "Astrophys.J.Lett."
    }
   ],
-  "citation_count": 82,
-  "citation_count_without_self_citations": 51,
   "texkeys": [
    "IceCube:2023rhf",
    "Abbasi:2023xhh"
@@ -1232,6 +1232,8 @@
   ]
  },
  {
+  "citation_count": 30,
+  "citation_count_without_self_citations": 6,
   "publication_info": [
    {
     "journal_volume": "18",
@@ -1244,8 +1246,6 @@
     "journal_title": "JINST"
    }
   ],
-  "citation_count": 30,
-  "citation_count_without_self_citations": 6,
   "texkeys": [
    "IceCube:2022mng",
    "Abbasi:2022yxy"
@@ -1297,6 +1297,8 @@
   ]
  },
  {
+  "citation_count": 14,
+  "citation_count_without_self_citations": 12,
   "publication_info": [
    {
     "journal_volume": "946",
@@ -1310,8 +1312,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 14,
-  "citation_count_without_self_citations": 12,
   "texkeys": [
    "IceCube:2022mjy",
    "Abbasi:2022kjq"
@@ -1363,6 +1363,8 @@
   ]
  },
  {
+  "citation_count": 31,
+  "citation_count_without_self_citations": 7,
   "publication_info": [
    {
     "journal_volume": "953",
@@ -1389,8 +1391,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 31,
-  "citation_count_without_self_citations": 7,
   "texkeys": [
    "IceCube:2022lnv",
    "Abbasi:2022zru"
@@ -1445,6 +1445,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ECRS",
@@ -1461,8 +1463,6 @@
     "cnum": "C22-07-25.4"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2022aqx",
    "Koundal:2022tsq"
@@ -1510,6 +1510,8 @@
   ]
  },
  {
+  "citation_count": 15,
+  "citation_count_without_self_citations": 7,
   "publication_info": [
    {
     "journal_volume": "945",
@@ -1523,8 +1525,6 @@
     "journal_title": "Astrophys.J.Lett."
    }
   ],
-  "citation_count": 15,
-  "citation_count_without_self_citations": 7,
   "texkeys": [
    "IceCube:2022heu",
    "Abbasi:2022hra"
@@ -1575,6 +1575,8 @@
   ]
  },
  {
+  "citation_count": 751,
+  "citation_count_without_self_citations": 477,
   "publication_info": [
    {
     "journal_volume": "378",
@@ -1589,8 +1591,6 @@
     "journal_title": "Science"
    }
   ],
-  "citation_count": 751,
-  "citation_count_without_self_citations": 477,
   "texkeys": [
    "IceCube:2022der"
   ],
@@ -1650,6 +1650,8 @@
   ]
  },
  {
+  "citation_count": 26,
+  "citation_count_without_self_citations": 11,
   "publication_info": [
    {
     "journal_volume": "951",
@@ -1663,8 +1665,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 26,
-  "citation_count_without_self_citations": 11,
   "texkeys": [
    "IceCube:2022ham",
    "IceCubeCollaboration:2022fxl",
@@ -1716,6 +1716,8 @@
   ]
  },
  {
+  "citation_count": 72,
+  "citation_count_without_self_citations": 30,
   "publication_info": [
    {
     "journal_volume": "17",
@@ -1728,8 +1730,6 @@
     "journal_title": "JINST"
    }
   ],
-  "citation_count": 72,
-  "citation_count_without_self_citations": 30,
   "texkeys": [
    "Abbasi:2022ypr",
    "IceCube:2022njh",
@@ -1777,6 +1777,8 @@
   ]
  },
  {
+  "citation_count": 59,
+  "citation_count_without_self_citations": 27,
   "publication_info": [
    {
     "journal_volume": "944",
@@ -1790,8 +1792,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 59,
-  "citation_count_without_self_citations": 27,
   "texkeys": [
    "IceCube:2022mma",
    "Abbasi:2022rbd",
@@ -1844,6 +1844,8 @@
   ]
  },
  {
+  "citation_count": 44,
+  "citation_count_without_self_citations": 27,
   "publication_info": [
    {
     "journal_volume": "938",
@@ -1857,8 +1859,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 44,
-  "citation_count_without_self_citations": 27,
   "texkeys": [
    "Abbasi:2022uox",
    "IceCube:2022zbd",
@@ -1902,6 +1902,8 @@
   ]
  },
  {
+  "citation_count": 23,
+  "citation_count_without_self_citations": 17,
   "publication_info": [
    {
     "journal_volume": "938",
@@ -1923,8 +1925,6 @@
     "journal_title": "Astrophys.J.Lett."
    }
   ],
-  "citation_count": 23,
-  "citation_count_without_self_citations": 17,
   "texkeys": [
    "Abbasi:2022uqr",
    "IceCube:2022ccm",
@@ -1969,6 +1969,8 @@
   ]
  },
  {
+  "citation_count": 51,
+  "citation_count_without_self_citations": 32,
   "publication_info": [
    {
     "journal_volume": "10",
@@ -1981,8 +1983,6 @@
     "journal_title": "JCAP"
    }
   ],
-  "citation_count": 51,
-  "citation_count_without_self_citations": 32,
   "texkeys": [
    "IceCube:2022clp",
    "Smith:2022juk",
@@ -2032,6 +2032,8 @@
   ]
  },
  {
+  "citation_count": 104,
+  "citation_count_without_self_citations": 73,
   "publication_info": [
    {
     "journal_volume": "939",
@@ -2045,8 +2047,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 104,
-  "citation_count_without_self_citations": 73,
   "texkeys": [
    "Abbasi:2022whi",
    "IceCube:2022rlk",
@@ -2090,6 +2090,8 @@
   ]
  },
  {
+  "citation_count": 17,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "17",
@@ -2102,8 +2104,6 @@
     "journal_title": "JINST"
    }
   ],
-  "citation_count": 17,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2022dcd",
    "Abbasi:2022mqu"
@@ -2154,6 +2154,8 @@
   ]
  },
  {
+  "citation_count": 18,
+  "citation_count_without_self_citations": 8,
   "publication_info": [
    {
     "journal_volume": "129",
@@ -2169,8 +2171,6 @@
     "journal_title": "Phys.Rev.Lett."
    }
   ],
-  "citation_count": 18,
-  "citation_count_without_self_citations": 8,
   "texkeys": [
    "IceCubeCollaboration:2022tso",
    "IceCube:2022alt",
@@ -2226,6 +2226,8 @@
   ]
  },
  {
+  "citation_count": 6,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -2242,8 +2244,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 6,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2022wxw"
   ],
@@ -2276,6 +2276,8 @@
   ]
  },
  {
+  "citation_count": 42,
+  "citation_count_without_self_citations": 15,
   "publication_info": [
    {
     "journal_volume": "82",
@@ -2289,8 +2291,6 @@
     "journal_title": "Eur.Phys.J.C"
    }
   ],
-  "citation_count": 42,
-  "citation_count_without_self_citations": 15,
   "texkeys": [
    "IceCube:2022kff",
    "Abbasi:2022rsy"
@@ -2344,6 +2344,8 @@
   ]
  },
  {
+  "citation_count": 38,
+  "citation_count_without_self_citations": 23,
   "publication_info": [
    {
     "year": 2022
@@ -2360,8 +2362,6 @@
     "journal_title": "Astrophys.J.Lett."
    }
   ],
-  "citation_count": 38,
-  "citation_count_without_self_citations": 23,
   "texkeys": [
    "IceCube:2022jpz",
    "Abbasi:2022ezt"
@@ -2409,6 +2409,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "EPS-HEP2021",
@@ -2425,8 +2427,6 @@
     "cnum": "C21-07-26"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2022cka"
   ],
@@ -2459,6 +2459,8 @@
   ]
  },
  {
+  "citation_count": 45,
+  "citation_count_without_self_citations": 18,
   "publication_info": [
    {
     "journal_volume": "106",
@@ -2473,8 +2475,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 45,
-  "citation_count_without_self_citations": 18,
   "texkeys": [
    "IceCubeCollaboration:2022tla",
    "IceCube:2022zhn",
@@ -2533,6 +2533,8 @@
   ]
  },
  {
+  "citation_count": 28,
+  "citation_count_without_self_citations": 8,
   "publication_info": [
    {
     "journal_volume": "934",
@@ -2546,8 +2548,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 28,
-  "citation_count_without_self_citations": 8,
   "texkeys": [
    "IceCube:2022osb",
    "ANTARES:2022pdr"
@@ -2613,6 +2613,8 @@
   ]
  },
  {
+  "citation_count": 44,
+  "citation_count_without_self_citations": 28,
   "publication_info": [
    {
     "journal_volume": "129",
@@ -2627,8 +2629,6 @@
     "journal_title": "Phys.Rev.Lett."
    }
   ],
-  "citation_count": 44,
-  "citation_count_without_self_citations": 28,
   "texkeys": [
    "IceCube:2022ubv"
   ],
@@ -2682,6 +2682,8 @@
   ]
  },
  {
+  "citation_count": 6,
+  "citation_count_without_self_citations": 6,
   "publication_info": [
    {
     "journal_volume": "EPS-HEP2021",
@@ -2698,8 +2700,6 @@
     "cnum": "C21-07-26"
    }
   ],
-  "citation_count": 6,
-  "citation_count_without_self_citations": 6,
   "texkeys": [
    "IceCube:2022pbe"
   ],
@@ -2732,6 +2732,8 @@
   ]
  },
  {
+  "citation_count": 388,
+  "citation_count_without_self_citations": 213,
   "publication_info": [
    {
     "journal_volume": "928",
@@ -2745,8 +2747,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 388,
-  "citation_count_without_self_citations": 213,
   "texkeys": [
    "Abbasi:2021qfz",
    "IceCube:2021uhz",
@@ -2790,6 +2790,8 @@
   ]
  },
  {
+  "citation_count": 59,
+  "citation_count_without_self_citations": 34,
   "publication_info": [
    {
     "journal_volume": "106",
@@ -2803,8 +2805,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 59,
-  "citation_count_without_self_citations": 34,
   "texkeys": [
    "IceCube:2021pgw",
    "Abbasi:2021jyg"
@@ -2856,6 +2856,8 @@
   ]
  },
  {
+  "citation_count": 105,
+  "citation_count_without_self_citations": 75,
   "publication_info": [
    {
     "journal_volume": "105",
@@ -2870,8 +2872,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 105,
-  "citation_count_without_self_citations": 75,
   "texkeys": [
    "IceCube:2021xzo",
    "Abbasi:2021hyp"
@@ -2924,6 +2924,8 @@
   ]
  },
  {
+  "citation_count": 62,
+  "citation_count_without_self_citations": 34,
   "publication_info": [
    {
     "journal_volume": "18",
@@ -2946,8 +2948,6 @@
     "journal_title": "Nature Phys.S"
    }
   ],
-  "citation_count": 62,
-  "citation_count_without_self_citations": 34,
   "texkeys": [
    "IceCube:2021tdn",
    "Abbasi:2021jvy"
@@ -2996,6 +2996,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3012,8 +3014,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021ilz"
   ],
@@ -3058,6 +3058,8 @@
   ]
  },
  {
+  "citation_count": 61,
+  "citation_count_without_self_citations": 53,
   "publication_info": [
    {
     "journal_volume": "128",
@@ -3072,8 +3074,6 @@
     "journal_title": "Phys.Rev.Lett."
    }
   ],
-  "citation_count": 61,
-  "citation_count_without_self_citations": 53,
   "texkeys": [
    "IceCube:2021eye"
   ],
@@ -3157,6 +3157,8 @@
   ]
  },
  {
+  "citation_count": 53,
+  "citation_count_without_self_citations": 31,
   "publication_info": [
    {
     "journal_volume": "920",
@@ -3172,8 +3174,6 @@
     "journal_title": "Astrophys.J.Lett."
    }
   ],
-  "citation_count": 53,
-  "citation_count_without_self_citations": 31,
   "texkeys": [
    "IceCube:2021slf"
   ],
@@ -3223,6 +3223,8 @@
   ]
  },
  {
+  "citation_count": 8,
+  "citation_count_without_self_citations": 7,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3255,8 +3257,6 @@
     "cnum": "C21-05-18.1"
    }
   ],
-  "citation_count": 8,
-  "citation_count_without_self_citations": 7,
   "texkeys": [
    "Abbasi:2021miz",
    "Iovine:2021sor"
@@ -3289,6 +3289,8 @@
   ]
  },
  {
+  "citation_count": 16,
+  "citation_count_without_self_citations": 8,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3313,8 +3315,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 16,
-  "citation_count_without_self_citations": 8,
   "texkeys": [
    "VERITAS:2021mjg",
    "Satalecka:2021ijb"
@@ -3385,6 +3385,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3407,8 +3409,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021blz",
    "Kang:2021quj"
@@ -3454,6 +3454,8 @@
   ]
  },
  {
+  "citation_count": 7,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3476,8 +3478,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 7,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021okg",
    "Haungs:2021fjv"
@@ -3523,6 +3523,8 @@
   ]
  },
  {
+  "citation_count": 13,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3545,8 +3547,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 13,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "IceCube:2021htd"
   ],
@@ -3592,6 +3592,8 @@
   ]
  },
  {
+  "citation_count": 3,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3614,8 +3616,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 3,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021zse",
    "Borowka:2021ctd"
@@ -3662,6 +3662,8 @@
   ]
  },
  {
+  "citation_count": 7,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3684,8 +3686,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 7,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube-Gen2:2021wka",
    "Shimizu:2021lrq"
@@ -3732,6 +3732,8 @@
   ]
  },
  {
+  "citation_count": 41,
+  "citation_count_without_self_citations": 25,
   "publication_info": [
    {
     "journal_volume": "81",
@@ -3745,8 +3747,6 @@
     "journal_title": "Eur.Phys.J.C"
    }
   ],
-  "citation_count": 41,
-  "citation_count_without_self_citations": 25,
   "texkeys": [
    "Bailly:2021dxn",
    "Authors:2021htl"
@@ -3790,6 +3790,8 @@
   ]
  },
  {
+  "citation_count": 8,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3812,8 +3814,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 8,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "IceCube:2021keu",
    "Robertson:2021yfz"
@@ -3860,6 +3860,8 @@
   ]
  },
  {
+  "citation_count": 0,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3876,8 +3878,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 0,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "HAWC:2021rja",
    "Ayala:2021ptw"
@@ -3939,6 +3939,8 @@
   ]
  },
  {
+  "citation_count": 14,
+  "citation_count_without_self_citations": 5,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -3956,8 +3958,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 14,
-  "citation_count_without_self_citations": 5,
   "texkeys": [
    "IceCube-Gen2:2021jce",
    "Coleman:2021zst"
@@ -4009,6 +4009,8 @@
   ]
  },
  {
+  "citation_count": 6,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4026,8 +4028,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 6,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021oos"
   ],
@@ -4077,6 +4077,8 @@
   ]
  },
  {
+  "citation_count": 22,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4095,8 +4097,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 22,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube-Gen2:2021aek",
    "Schroeder:2021hrk"
@@ -4152,6 +4152,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4168,8 +4170,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "IceCube:2021aen"
   ],
@@ -4214,6 +4214,8 @@
   ]
  },
  {
+  "citation_count": 6,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4236,8 +4238,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 6,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube:2021koo",
    "Villarreal:2021nlg"
@@ -4284,6 +4284,8 @@
   ]
  },
  {
+  "citation_count": 33,
+  "citation_count_without_self_citations": 10,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4301,8 +4303,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 33,
-  "citation_count_without_self_citations": 10,
   "texkeys": [
    "IceCube:2021umt"
   ],
@@ -4353,6 +4353,8 @@
   ]
  },
  {
+  "citation_count": 2,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4375,8 +4377,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 2,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021vwl",
    "Lucarelli:2021kdv"
@@ -4422,6 +4422,8 @@
   ]
  },
  {
+  "citation_count": 2,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4438,8 +4440,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 2,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2021vlt"
   ],
@@ -4485,6 +4485,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4507,8 +4509,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021ltt",
    "Madsen:2021acx",
@@ -4557,6 +4557,8 @@
   ]
  },
  {
+  "citation_count": 10,
+  "citation_count_without_self_citations": 6,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4579,8 +4581,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 10,
-  "citation_count_without_self_citations": 6,
   "texkeys": [
    "IceCube:2021sog",
    "Jeong:2021chd"
@@ -4626,6 +4626,8 @@
   ]
  },
  {
+  "citation_count": 18,
+  "citation_count_without_self_citations": 16,
   "publication_info": [
    {
     "conference_record": {
@@ -4634,8 +4636,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 18,
-  "citation_count_without_self_citations": 16,
   "texkeys": [
    "IceCube:2021kuw"
   ],
@@ -4669,6 +4669,8 @@
   ]
  },
  {
+  "citation_count": 3,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4691,8 +4693,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 3,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021ahz"
   ],
@@ -4737,6 +4737,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4759,8 +4761,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021kcv"
   ],
@@ -4805,6 +4805,8 @@
   ]
  },
  {
+  "citation_count": 40,
+  "citation_count_without_self_citations": 5,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4827,8 +4829,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 40,
-  "citation_count_without_self_citations": 5,
   "texkeys": [
    "IceCube:2021eij",
    "Anderson:2021bll"
@@ -4876,6 +4876,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4898,8 +4900,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021wms",
    "Halliday:2021gbm"
@@ -4947,6 +4947,8 @@
   ]
  },
  {
+  "citation_count": 6,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -4969,8 +4971,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 6,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "Abbasi:2021kjd",
    "McNally:2021gez"
@@ -5008,6 +5008,8 @@
   ]
  },
  {
+  "citation_count": 9,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5025,8 +5027,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 9,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021gpn"
   ],
@@ -5078,6 +5078,8 @@
   ]
  },
  {
+  "citation_count": 0,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5094,8 +5096,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 0,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021acr",
    "IceCubeandMultimessengerDiversityNetwork:2021mmo"
@@ -5146,6 +5146,8 @@
   ]
  },
  {
+  "citation_count": 10,
+  "citation_count_without_self_citations": 5,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5168,8 +5170,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 10,
-  "citation_count_without_self_citations": 5,
   "texkeys": [
    "IceCube:2021dvc",
    "Minh:2021opc"
@@ -5217,6 +5217,8 @@
   ]
  },
  {
+  "citation_count": 5,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5239,8 +5241,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 5,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2021jfx",
    "Kang:2021kri"
@@ -5287,6 +5287,8 @@
   ]
  },
  {
+  "citation_count": 3,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5309,8 +5311,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 3,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021wvc"
   ],
@@ -5355,6 +5355,8 @@
   ]
  },
  {
+  "citation_count": 5,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5377,8 +5379,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 5,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021trt",
    "Tonnis:2021tnx"
@@ -5425,6 +5425,8 @@
   ]
  },
  {
+  "citation_count": 0,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5447,8 +5449,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 0,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021ogz",
    "OKeefe:2021bmb"
@@ -5495,6 +5495,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5517,8 +5519,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube:2021tdt",
    "Peters:2021afm"
@@ -5566,6 +5566,8 @@
   ]
  },
  {
+  "citation_count": 0,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "conference_record": {
@@ -5574,8 +5576,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 0,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "Schmidt-Dencker:2021xmg"
   ],
@@ -5615,6 +5615,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5637,8 +5639,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021kmu",
    "Halve:2021zaz"
@@ -5685,6 +5685,8 @@
   ]
  },
  {
+  "citation_count": 13,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5702,8 +5704,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 13,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "IceCube:2021jmr",
    "Ganster:2021vqs"
@@ -5752,6 +5752,8 @@
   ]
  },
  {
+  "citation_count": 28,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5774,8 +5776,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 28,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "IceCube:2021ydy",
    "Oehler:2021qla"
@@ -5821,6 +5821,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5838,8 +5840,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2021abh",
    "Nisa:2021zht"
@@ -5889,6 +5889,8 @@
   ]
  },
  {
+  "citation_count": 8,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5906,8 +5908,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 8,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "IceCube:2021mdb",
    "Rack-Helleis:2021dty"
@@ -5954,6 +5954,8 @@
   ]
  },
  {
+  "citation_count": 13,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -5976,8 +5978,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 13,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021lmu",
    "Chirkin:2021gyv"
@@ -6024,6 +6024,8 @@
   ]
  },
  {
+  "citation_count": 2,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6046,8 +6048,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 2,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021eth",
    "Hymon:2021tzs"
@@ -6094,6 +6094,8 @@
   ]
  },
  {
+  "citation_count": 7,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6111,8 +6113,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 7,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "IceCube:2021oiv"
   ],
@@ -6160,6 +6160,8 @@
   ]
  },
  {
+  "citation_count": 18,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6177,8 +6179,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 18,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021ixw"
   ],
@@ -6226,6 +6226,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6243,8 +6245,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021oyo",
    "Pizzuto:2021jju"
@@ -6293,6 +6293,8 @@
   ]
  },
  {
+  "citation_count": 7,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6310,8 +6312,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 7,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021ldz"
   ],
@@ -6361,6 +6361,8 @@
   ]
  },
  {
+  "citation_count": 9,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6378,8 +6380,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 9,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2021tuv",
    "Soldin:2021xpb"
@@ -6428,6 +6428,8 @@
   ]
  },
  {
+  "citation_count": 5,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6445,8 +6447,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 5,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021ads",
    "Veske:2021mjb"
@@ -6497,6 +6497,8 @@
   ]
  },
  {
+  "citation_count": 5,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6512,8 +6514,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 5,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2021jhz"
   ],
@@ -6559,6 +6559,8 @@
   ]
  },
  {
+  "citation_count": 15,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6576,8 +6578,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 15,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021ctg",
    "Mancina:2021zfu"
@@ -6623,6 +6623,8 @@
   ]
  },
  {
+  "citation_count": 12,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6640,8 +6642,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 12,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021xhi",
    "Rongen:2021uyv"
@@ -6691,6 +6691,8 @@
   ]
  },
  {
+  "citation_count": 9,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6708,8 +6710,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 9,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2021wbi",
    "Bellenghi:2021ubp"
@@ -6759,6 +6759,8 @@
   ]
  },
  {
+  "citation_count": 17,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6776,8 +6778,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 17,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "IceCube:2021uwf",
    "Gualda:2021ymm"
@@ -6826,6 +6826,8 @@
   ]
  },
  {
+  "citation_count": 5,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6843,8 +6845,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 5,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021kxg",
    "Karl:2021xud"
@@ -6893,6 +6893,8 @@
   ]
  },
  {
+  "citation_count": 29,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6910,8 +6912,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 29,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021epf",
    "Dujmovic:2021tpr"
@@ -6961,6 +6961,8 @@
   ]
  },
  {
+  "citation_count": 14,
+  "citation_count_without_self_citations": 7,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -6978,8 +6980,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 14,
-  "citation_count_without_self_citations": 7,
   "texkeys": [
    "IceCube:2021mzg",
    "Kontrimas:2021wyx"
@@ -7029,6 +7029,8 @@
   ]
  },
  {
+  "citation_count": 81,
+  "citation_count_without_self_citations": 44,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7046,8 +7048,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 81,
-  "citation_count_without_self_citations": 44,
   "texkeys": [
    "IceCube-Gen2:2021rkf",
    "Hallmann:2021kqk"
@@ -7096,6 +7096,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7113,8 +7115,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube:2021qyj",
    "Deoskar:2021imr"
@@ -7163,6 +7163,8 @@
   ]
  },
  {
+  "citation_count": 13,
+  "citation_count_without_self_citations": 8,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7180,8 +7182,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 13,
-  "citation_count_without_self_citations": 8,
   "texkeys": [
    "IceCube:2021mbf",
    "Sclafani:2021sjn"
@@ -7230,6 +7230,8 @@
   ]
  },
  {
+  "citation_count": 19,
+  "citation_count_without_self_citations": 2,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7247,8 +7249,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 19,
-  "citation_count_without_self_citations": 2,
   "texkeys": [
    "IceCube:2021qnf",
    "Coleman:2021uhp"
@@ -7298,6 +7298,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7315,8 +7317,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021zfm",
    "Correa:2021nop"
@@ -7365,6 +7365,8 @@
   ]
  },
  {
+  "citation_count": 6,
+  "citation_count_without_self_citations": 5,
   "publication_info": [
    {
     "journal_volume": "16",
@@ -7392,8 +7394,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 6,
-  "citation_count_without_self_citations": 5,
   "texkeys": [
    "IceCubecollaboration2:2021zto",
    "IceCube:2021rmo"
@@ -7462,6 +7462,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7479,8 +7481,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube-Gen2:2021pdk",
    "Clark:2021uwb"
@@ -7531,6 +7531,8 @@
   ]
  },
  {
+  "citation_count": 13,
+  "citation_count_without_self_citations": 11,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7548,8 +7550,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 13,
-  "citation_count_without_self_citations": 11,
   "texkeys": [
    "IceCube-Gen2:2021tmd",
    "Omeliukh:2021vsp"
@@ -7599,6 +7599,8 @@
   ]
  },
  {
+  "citation_count": 2,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7616,8 +7618,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 2,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021xps"
   ],
@@ -7666,6 +7666,8 @@
   ]
  },
  {
+  "citation_count": 3,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7683,8 +7685,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 3,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube:2021tep",
    "Ghadimi:2021btz"
@@ -7733,6 +7733,8 @@
   ]
  },
  {
+  "citation_count": 8,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7750,8 +7752,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 8,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube:2021imv"
   ],
@@ -7799,6 +7799,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7816,8 +7818,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021mpg",
    "Griswold:2021osi"
@@ -7867,6 +7867,8 @@
   ]
  },
  {
+  "citation_count": 14,
+  "citation_count_without_self_citations": 12,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7884,8 +7886,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 14,
-  "citation_count_without_self_citations": 12,
   "texkeys": [
    "IceCube:2021oqh",
    "Sharma:2021xwd"
@@ -7934,6 +7934,8 @@
   ]
  },
  {
+  "citation_count": 12,
+  "citation_count_without_self_citations": 6,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -7951,8 +7953,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 12,
-  "citation_count_without_self_citations": 6,
   "texkeys": [
    "IceCube-Gen2:2021qxw",
    "Basu:2021ueq"
@@ -8081,6 +8081,8 @@
   ]
  },
  {
+  "citation_count": 24,
+  "citation_count_without_self_citations": 7,
   "publication_info": [
    {
     "journal_volume": "926",
@@ -8094,8 +8096,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 24,
-  "citation_count_without_self_citations": 7,
   "texkeys": [
    "IceCube:2021waz",
    "ICECUBE:2021edr",
@@ -8142,6 +8142,8 @@
   ]
  },
  {
+  "citation_count": 7,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -8164,8 +8166,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 7,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021oxp",
    "Yu:2021rgp"
@@ -8212,6 +8212,8 @@
   ]
  },
  {
+  "citation_count": 71,
+  "citation_count_without_self_citations": 49,
   "publication_info": [
    {
     "journal_volume": "104",
@@ -8226,8 +8228,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 71,
-  "citation_count_without_self_citations": 49,
   "texkeys": [
    "IceCubeCollaboration:2021euf",
    "IceCube:2021abg",
@@ -8284,6 +8284,8 @@
   ]
  },
  {
+  "citation_count": 29,
+  "citation_count_without_self_citations": 10,
   "publication_info": [
    {
     "journal_volume": "113",
@@ -8298,8 +8300,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 29,
-  "citation_count_without_self_citations": 10,
   "texkeys": [
    "IceCube:2021ddq",
    "Abbasi:2021kft"
@@ -8351,6 +8351,8 @@
   ]
  },
  {
+  "citation_count": 309,
+  "citation_count_without_self_citations": 193,
   "publication_info": [
    {
     "journal_volume": "591",
@@ -8378,8 +8380,6 @@
     "journal_title": "Nature"
    }
   ],
-  "citation_count": 309,
-  "citation_count_without_self_citations": 193,
   "texkeys": [
    "IceCube:2021rpz"
   ],
@@ -8435,6 +8435,8 @@
   ]
  },
  {
+  "citation_count": 49,
+  "citation_count_without_self_citations": 12,
   "publication_info": [
    {
     "journal_volume": "16",
@@ -8447,8 +8449,6 @@
     "journal_title": "JINST"
    }
   ],
-  "citation_count": 49,
-  "citation_count_without_self_citations": 12,
   "texkeys": [
    "IceCube:2021oqo",
    "Abbasi:2021czc"
@@ -8500,6 +8500,8 @@
   ]
  },
  {
+  "citation_count": 122,
+  "citation_count_without_self_citations": 42,
   "publication_info": [
    {
     "journal_volume": "16",
@@ -8510,8 +8512,6 @@
     "journal_title": "JINST"
    }
   ],
-  "citation_count": 122,
-  "citation_count_without_self_citations": 42,
   "texkeys": [
    "Abbasi:2021ryj"
   ],
@@ -8589,6 +8589,8 @@
   ]
  },
  {
+  "citation_count": 23,
+  "citation_count_without_self_citations": 7,
   "publication_info": [
    {
     "journal_volume": "103",
@@ -8600,8 +8602,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 23,
-  "citation_count_without_self_citations": 7,
   "texkeys": [
    "IceCube:2021jwt",
    "Abbasi:2021vxg"
@@ -8652,6 +8652,8 @@
   ]
  },
  {
+  "citation_count": 5,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -8668,8 +8670,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 5,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube:2021cmo"
   ],
@@ -8702,6 +8702,8 @@
   ]
  },
  {
+  "citation_count": 2,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -8718,8 +8720,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 2,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021pue"
   ],
@@ -8752,6 +8752,8 @@
   ]
  },
  {
+  "citation_count": 0,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -8768,8 +8770,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 0,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021vxl"
   ],
@@ -8802,6 +8802,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -8818,8 +8820,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube:2021kod"
   ],
@@ -8852,6 +8852,8 @@
   ]
  },
  {
+  "citation_count": 12,
+  "citation_count_without_self_citations": 7,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -8868,8 +8870,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 12,
-  "citation_count_without_self_citations": 7,
   "texkeys": [
    "Rea:2021hjd"
   ],
@@ -8894,6 +8894,8 @@
   ]
  },
  {
+  "citation_count": 2,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -8910,8 +8912,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 2,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021pgi"
   ],
@@ -8944,6 +8944,8 @@
   ]
  },
  {
+  "citation_count": 5,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -8960,8 +8962,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 5,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube:2021eqb"
   ],
@@ -8994,6 +8994,8 @@
   ]
  },
  {
+  "citation_count": 1,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -9010,8 +9012,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 1,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "IceCube:2021hhk"
   ],
@@ -9044,6 +9044,8 @@
   ]
  },
  {
+  "citation_count": 3,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -9060,8 +9062,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 3,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "Bailly:2021mei"
   ],
@@ -9086,6 +9086,8 @@
   ]
  },
  {
+  "citation_count": 2,
+  "citation_count_without_self_citations": 1,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -9102,8 +9104,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 2,
-  "citation_count_without_self_citations": 1,
   "texkeys": [
    "P-ONE:2021tqe",
    "Bailly:2021dgx"
@@ -9134,6 +9134,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "journal_volume": "ICRC2021",
@@ -9150,8 +9152,6 @@
     "cnum": "C21-07-15"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "IceCube:2021qks",
    "Hill:2021zie"
@@ -9182,13 +9182,13 @@
   ]
  },
  {
+  "citation_count": 0,
+  "citation_count_without_self_citations": 0,
   "publication_info": [
    {
     "year": 2021
    }
   ],
-  "citation_count": 0,
-  "citation_count_without_self_citations": 0,
   "texkeys": [
    "Meighen-Berger:2021iab"
   ],
@@ -9209,6 +9209,8 @@
   ]
  },
  {
+  "citation_count": 46,
+  "citation_count_without_self_citations": 10,
   "publication_info": [
    {
     "journal_volume": "266",
@@ -9222,8 +9224,6 @@
     "journal_title": "Comput.Phys.Commun."
    }
   ],
-  "citation_count": 46,
-  "citation_count_without_self_citations": 10,
   "texkeys": [
    "IceCube:2020tcq",
    "Abbasi:2020mwj"
@@ -9276,6 +9276,8 @@
   ]
  },
  {
+  "citation_count": 42,
+  "citation_count_without_self_citations": 13,
   "publication_info": [
    {
     "journal_volume": "910",
@@ -9289,8 +9291,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 42,
-  "citation_count_without_self_citations": 13,
   "texkeys": [
    "IceCube:2020mzw",
    "Abbasi:2020aae"
@@ -9342,6 +9342,8 @@
   ]
  },
  {
+  "citation_count": 27,
+  "citation_count_without_self_citations": 11,
   "publication_info": [
    {
     "journal_volume": "911",
@@ -9357,8 +9359,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 27,
-  "citation_count_without_self_citations": 11,
   "texkeys": [
    "IceCube:2020nig",
    "Abbasi:2020dfi"
@@ -9409,6 +9409,8 @@
   ]
  },
  {
+  "citation_count": 21,
+  "citation_count_without_self_citations": 6,
   "publication_info": [
    {
     "journal_volume": "01",
@@ -9421,8 +9423,6 @@
     "journal_title": "JCAP"
    }
   ],
-  "citation_count": 21,
-  "citation_count_without_self_citations": 6,
   "texkeys": [
    "IceCube:2020qls",
    "Abbasi:2020ddb"
@@ -9477,6 +9477,8 @@
   ]
  },
  {
+  "citation_count": 546,
+  "citation_count_without_self_citations": 333,
   "publication_info": [
    {
     "journal_volume": "104",
@@ -9487,8 +9489,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 545,
-  "citation_count_without_self_citations": 331,
   "texkeys": [
    "IceCube:2020wum",
    "Abbasi:2020jmh"
@@ -9535,6 +9535,8 @@
   ]
  },
  {
+  "citation_count": 94,
+  "citation_count_without_self_citations": 53,
   "publication_info": [
    {
     "journal_volume": "104",
@@ -9547,8 +9549,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 94,
-  "citation_count_without_self_citations": 53,
   "texkeys": [
    "IceCube:2020rnc",
    "Abbasi:2020luf"
@@ -9595,6 +9595,8 @@
   ]
  },
  {
+  "citation_count": 142,
+  "citation_count_without_self_citations": 69,
   "publication_info": [
    {
     "journal_volume": "82",
@@ -9608,8 +9610,6 @@
     "journal_title": "Eur.Phys.J.C"
    }
   ],
-  "citation_count": 142,
-  "citation_count_without_self_citations": 69,
   "texkeys": [
    "IceCube:2020fpi",
    "IceCube:2022lbo",
@@ -9668,6 +9668,8 @@
   ]
  },
  {
+  "citation_count": 22,
+  "citation_count_without_self_citations": 5,
   "publication_info": [
    {
     "journal_volume": "906",
@@ -9679,8 +9681,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 22,
-  "citation_count_without_self_citations": 5,
   "texkeys": [
    "AMONTeam:2020otr",
    "AyalaSolares:2021ene",
@@ -9741,6 +9741,8 @@
   ]
  },
  {
+  "citation_count": 872,
+  "citation_count_without_self_citations": 530,
   "publication_info": [
    {
     "journal_volume": "48",
@@ -9750,8 +9752,6 @@
     "journal_title": "J.Phys.G"
    }
   ],
-  "citation_count": 872,
-  "citation_count_without_self_citations": 530,
   "texkeys": [
    "IceCube-Gen2:2020qha",
    "Aartsen:2020fgd"
@@ -9802,6 +9802,8 @@
   ]
  },
  {
+  "citation_count": 26,
+  "citation_count_without_self_citations": 13,
   "publication_info": [
    {
     "journal_volume": "103",
@@ -9811,8 +9813,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 26,
-  "citation_count_without_self_citations": 13,
   "texkeys": [
    "IceCube:2020bsn",
    "Aartsen:2020hzn"
@@ -9863,6 +9863,8 @@
   ]
  },
  {
+  "citation_count": 60,
+  "citation_count_without_self_citations": 32,
   "publication_info": [
    {
     "journal_volume": "102",
@@ -9871,8 +9873,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 60,
-  "citation_count_without_self_citations": 32,
   "texkeys": [
    "IceCube:2020yct"
   ],
@@ -9923,6 +9923,8 @@
   ]
  },
  {
+  "citation_count": 104,
+  "citation_count_without_self_citations": 58,
   "publication_info": [
    {
     "journal_volume": "102",
@@ -9932,8 +9934,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 104,
-  "citation_count_without_self_citations": 58,
   "texkeys": [
    "IceCube:2020tka",
    "Aartsen:2020fwb"
@@ -9984,6 +9984,8 @@
   ]
  },
  {
+  "citation_count": 130,
+  "citation_count_without_self_citations": 80,
   "publication_info": [
    {
     "journal_volume": "125",
@@ -9998,8 +10000,6 @@
     "journal_title": "Phys.Rev.Lett."
    }
   ],
-  "citation_count": 130,
-  "citation_count_without_self_citations": 80,
   "texkeys": [
    "IceCube:2020phf",
    "Aartsen:2020iky"
@@ -10050,6 +10050,8 @@
   ]
  },
  {
+  "citation_count": 319,
+  "citation_count_without_self_citations": 256,
   "publication_info": [
    {
     "journal_volume": "4",
@@ -10064,8 +10066,6 @@
     "journal_title": "Nature Astron."
    }
   ],
-  "citation_count": 319,
-  "citation_count_without_self_citations": 256,
   "texkeys": [
    "P-ONE:2020ljt",
    "Agostini:2020aar"
@@ -10110,6 +10110,8 @@
   ]
  },
  {
+  "citation_count": 14,
+  "citation_count_without_self_citations": 11,
   "publication_info": [
    {
     "journal_volume": "811",
@@ -10120,8 +10122,6 @@
     "journal_title": "Phys.Lett.B"
    }
   ],
-  "citation_count": 14,
-  "citation_count_without_self_citations": 11,
   "texkeys": [
    "Meighen-Berger:2020eun"
   ],
@@ -10174,6 +10174,8 @@
   ]
  },
  {
+  "citation_count": 67,
+  "citation_count_without_self_citations": 28,
   "publication_info": [
    {
     "journal_volume": "898",
@@ -10189,8 +10191,6 @@
     "journal_title": "Astrophys.J.Lett."
    }
   ],
-  "citation_count": 67,
-  "citation_count_without_self_citations": 28,
   "texkeys": [
    "IceCube:2020xks",
    "Aartsen:2020mla"
@@ -10237,6 +10237,8 @@
   ]
  },
  {
+  "citation_count": 57,
+  "citation_count_without_self_citations": 35,
   "publication_info": [
    {
     "journal_volume": "898",
@@ -10250,8 +10252,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 57,
-  "citation_count_without_self_citations": 35,
   "texkeys": [
    "IceCube:2020svz",
    "Aartsen:2020eof"
@@ -10293,6 +10293,8 @@
   ]
  },
  {
+  "citation_count": 93,
+  "citation_count_without_self_citations": 55,
   "publication_info": [
    {
     "journal_volume": "102",
@@ -10302,8 +10304,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 93,
-  "citation_count_without_self_citations": 55,
   "texkeys": [
    "ANTARES:2020leh",
    "Aartsen:2020tdl"
@@ -10360,6 +10360,8 @@
   ]
  },
  {
+  "citation_count": 54,
+  "citation_count_without_self_citations": 10,
   "publication_info": [
    {
     "journal_volume": "15",
@@ -10374,8 +10376,6 @@
     "journal_title": "JINST"
    }
   ],
-  "citation_count": 54,
-  "citation_count_without_self_citations": 10,
   "texkeys": [
    "IceCube:2020nwx"
   ],
@@ -10421,6 +10421,8 @@
   ]
  },
  {
+  "citation_count": 391,
+  "citation_count_without_self_citations": 236,
   "publication_info": [
    {
     "journal_volume": "125",
@@ -10433,8 +10435,6 @@
     "journal_title": "Phys.Rev.Lett."
    }
   ],
-  "citation_count": 391,
-  "citation_count_without_self_citations": 236,
   "texkeys": [
    "IceCube:2020acn",
    "Aartsen:2020aqd"
@@ -10476,6 +10476,8 @@
   ]
  },
  {
+  "citation_count": 60,
+  "citation_count_without_self_citations": 23,
   "publication_info": [
    {
     "journal_volume": "892",
@@ -10488,8 +10490,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 60,
-  "citation_count_without_self_citations": 23,
   "texkeys": [
    "ANTARES:2020srt",
    "Aartsen:2020xpf"
@@ -10537,6 +10537,8 @@
   ]
  },
  {
+  "citation_count": 48,
+  "citation_count_without_self_citations": 28,
   "publication_info": [
    {
     "journal_volume": "892",
@@ -10551,8 +10553,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 48,
-  "citation_count_without_self_citations": 28,
   "texkeys": [
    "IceCube:2020gbx",
    "Aartsen:2020vir"
@@ -10596,6 +10596,8 @@
   ]
  },
  {
+  "citation_count": 16,
+  "citation_count_without_self_citations": 12,
   "publication_info": [
    {
     "journal_volume": "ICRC2019",
@@ -10612,8 +10614,6 @@
     "cnum": "C19-07-24"
    }
   ],
-  "citation_count": 16,
-  "citation_count_without_self_citations": 12,
   "texkeys": [
    "IceCube:2020wxa",
    "Renzi:2019drf"
@@ -10666,14 +10666,14 @@
   ]
  },
  {
+  "citation_count": 24,
+  "citation_count_without_self_citations": 15,
   "publication_info": [
    {
     "pubinfo_freetext": "JCAP02(2021)025",
     "material": "publication"
    }
   ],
-  "citation_count": 24,
-  "citation_count_without_self_citations": 15,
   "texkeys": [
    "IceCube:2019ubb",
    "Aartsen:2019avh"
@@ -10715,6 +10715,8 @@
   ]
  },
  {
+  "citation_count": 15,
+  "citation_count_without_self_citations": 10,
   "publication_info": [
    {
     "journal_volume": "07",
@@ -10727,8 +10729,6 @@
     "journal_title": "JCAP"
    }
   ],
-  "citation_count": 15,
-  "citation_count_without_self_citations": 10,
   "texkeys": [
    "IceCube:2019yml",
    "Aartsen:2019xkn"
@@ -10774,6 +10774,8 @@
   ]
  },
  {
+  "citation_count": 84,
+  "citation_count_without_self_citations": 57,
   "publication_info": [
    {
     "journal_volume": "101",
@@ -10783,8 +10785,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 84,
-  "citation_count_without_self_citations": 57,
   "texkeys": [
    "IceCube-Gen2:2019fet",
    "Bezerra:2019dao"
@@ -10862,6 +10862,8 @@
   ]
  },
  {
+  "citation_count": 537,
+  "citation_count_without_self_citations": 322,
   "publication_info": [
    {
     "journal_volume": "124",
@@ -10874,8 +10876,6 @@
     "journal_title": "Phys.Rev.Lett."
    }
   ],
-  "citation_count": 537,
-  "citation_count_without_self_citations": 322,
   "texkeys": [
    "IceCube:2019cia",
    "Aartsen:2019fau"
@@ -10920,6 +10920,8 @@
   ]
  },
  {
+  "citation_count": 12,
+  "citation_count_without_self_citations": 3,
   "publication_info": [
    {
     "journal_volume": "15",
@@ -10934,8 +10936,6 @@
     "journal_title": "JINST"
    }
   ],
-  "citation_count": 12,
-  "citation_count_without_self_citations": 3,
   "texkeys": [
    "IceCube:2019yev",
    "Aartsen:2019fxp"
@@ -10983,6 +10983,8 @@
   ]
  },
  {
+  "citation_count": 4,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "ICRC2019",
@@ -10999,8 +11001,6 @@
     "cnum": "C19-07-24"
    }
   ],
-  "citation_count": 4,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "Meighen-Berger:2019lld"
   ],
@@ -11036,6 +11036,8 @@
   ]
  },
  {
+  "citation_count": 20,
+  "citation_count_without_self_citations": 12,
   "publication_info": [
    {
     "journal_volume": "893",
@@ -11051,8 +11053,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 20,
-  "citation_count_without_self_citations": 12,
   "texkeys": [
    "IceCube:2019xiu",
    "Aartsen:2019mbc"
@@ -11102,6 +11102,8 @@
   ]
  },
  {
+  "citation_count": 64,
+  "citation_count_without_self_citations": 8,
   "publication_info": [
    {
     "journal_volume": "10",
@@ -11116,8 +11118,6 @@
     "journal_title": "JCAP"
    }
   ],
-  "citation_count": 64,
-  "citation_count_without_self_citations": 8,
   "texkeys": [
    "IceCube:2019lxi",
    "Aartsen:2019jcj"
@@ -11165,6 +11165,8 @@
   ]
  },
  {
+  "citation_count": 35,
+  "citation_count_without_self_citations": 23,
   "publication_info": [
    {
     "journal_volume": "890",
@@ -11180,8 +11182,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 35,
-  "citation_count_without_self_citations": 23,
   "texkeys": [
    "IceCube:2019acm",
    "Aartsen:2019wbt"
@@ -11224,6 +11224,8 @@
   ]
  },
  {
+  "citation_count": 24,
+  "citation_count_without_self_citations": 8,
   "publication_info": [
    {
     "journal_volume": "891",
@@ -11237,8 +11239,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 24,
-  "citation_count_without_self_citations": 8,
   "texkeys": [
    "IceCube:2019scr",
    "Aartsen:2019sid"
@@ -11281,6 +11281,8 @@
   ]
  },
  {
+  "citation_count": 18,
+  "citation_count_without_self_citations": 10,
   "publication_info": [
    {
     "journal_volume": "80",
@@ -11291,8 +11293,6 @@
     "journal_title": "Eur.Phys.J.C"
    }
   ],
-  "citation_count": 18,
-  "citation_count_without_self_citations": 10,
   "texkeys": [
    "IceCube:2019lus",
    "Amole:2019coq"
@@ -11349,6 +11349,8 @@
   ]
  },
  {
+  "citation_count": 15,
+  "citation_count_without_self_citations": 12,
   "publication_info": [
    {
     "conference_record": {
@@ -11357,8 +11359,6 @@
     "cnum": "C19-07-24"
    }
   ],
-  "citation_count": 15,
-  "citation_count_without_self_citations": 12,
   "texkeys": [
    "IceCube:2019xdf",
    "Aartsen:2019kpk"
@@ -11426,6 +11426,8 @@
   ]
  },
  {
+  "citation_count": 110,
+  "citation_count_without_self_citations": 62,
   "publication_info": [
    {
     "journal_volume": "886",
@@ -11440,8 +11442,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 110,
-  "citation_count_without_self_citations": 62,
   "texkeys": [
    "IceCube:2019lzm",
    "Aartsen:2019epb"
@@ -11487,6 +11487,8 @@
   ]
  },
  {
+  "citation_count": 245,
+  "citation_count_without_self_citations": 156,
   "publication_info": [
    {
     "journal_volume": "100",
@@ -11498,8 +11500,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 245,
-  "citation_count_without_self_citations": 156,
   "texkeys": [
    "IceCube:2019hmk"
   ],
@@ -11548,6 +11548,8 @@
   ]
  },
  {
+  "citation_count": 57,
+  "citation_count_without_self_citations": 37,
   "publication_info": [
    {
     "journal_volume": "80",
@@ -11558,8 +11560,6 @@
     "journal_title": "Eur.Phys.J.C"
    }
   ],
-  "citation_count": 57,
-  "citation_count_without_self_citations": 38,
   "texkeys": [
    "IceCube:2019dyb",
    "Aartsen:2019eht",
@@ -11607,6 +11607,8 @@
   ]
  },
  {
+  "citation_count": 7,
+  "citation_count_without_self_citations": 4,
   "publication_info": [
    {
     "journal_volume": "116",
@@ -11618,8 +11620,6 @@
     "journal_title": "Astropart.Phys."
    }
   ],
-  "citation_count": 7,
-  "citation_count_without_self_citations": 4,
   "texkeys": [
    "IceCube:2019ndt",
    "Aartsen:2019ono"
@@ -11666,6 +11666,8 @@
   ]
  },
  {
+  "citation_count": 114,
+  "citation_count_without_self_citations": 74,
   "publication_info": [
    {
     "journal_volume": "880",
@@ -11678,8 +11680,6 @@
     "journal_title": "Astrophys.J."
    }
   ],
-  "citation_count": 114,
-  "citation_count_without_self_citations": 74,
   "texkeys": [
    "Fermi-LAT:2019hte",
    "Aartsen:2019gxs"
@@ -11732,6 +11732,8 @@
   ]
  },
  {
+  "citation_count": 32,
+  "citation_count_without_self_citations": 16,
   "publication_info": [
    {
     "journal_volume": "626",
@@ -11744,8 +11746,6 @@
     "journal_title": "Astron.Astrophys."
    }
   ],
-  "citation_count": 32,
-  "citation_count_without_self_citations": 16,
   "texkeys": [
    "Pan-STARRS:2019szg",
    "Kankare:2019bzi"
@@ -11797,6 +11797,8 @@
   ]
  },
  {
+  "citation_count": 207,
+  "citation_count_without_self_citations": 117,
   "publication_info": [
    {
     "journal_volume": "99",
@@ -11806,8 +11808,6 @@
     "journal_title": "Phys.Rev.D"
    }
   ],
-  "citation_count": 207,
-  "citation_count_without_self_citations": 117,
   "texkeys": [
    "IceCube:2019dqi",
    "Aartsen:2019tjl"
@@ -11848,6 +11848,8 @@
   ]
  },
  {
+  "citation_count": 59,
+  "citation_count_without_self_citations": 40,
   "publication_info": [
    {
     "journal_volume": "02",
@@ -11860,8 +11862,6 @@
     "journal_title": "JCAP"
    }
   ],
-  "citation_count": 59,
-  "citation_count_without_self_citations": 40,
   "texkeys": [
    "Borexino:2018pev",
    "Agostini:2018fnx"
