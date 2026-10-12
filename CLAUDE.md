@@ -21,7 +21,7 @@ python pipeline/build.py              # -> _site/, build/cv/, build/review.md
 python pipeline/build.py --drafts     # include draft news posts (local preview only)
 python pipeline/build.py --private    # also build/cv-private/ from private/private.yml
 python -m http.server -d _site        # preview at http://localhost:8000
-cd build/cv && latexmk -pdf main.tex  # CV PDF (full TeX Live with biber)
+cd build/cv && latexmk -pdf main.tex publist.tex  # CV and publication list (full TeX Live with biber)
 python pipeline/news_drafts.py        # create news drafts for new papers and releases
 ```
 
