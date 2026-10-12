@@ -4,24 +4,13 @@
 % Bibliography style
 \usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=none,dashed=false,defernumbers=true]{biblatex}
 \bibliography{papers}
-\setlength{\bibitemsep}{2pt}
-\setlength{\biblabelsep}{6pt}
-% Contribution (field usera) on its own line, after the entry's final period.
-\renewbibmacro*{finentry}{\finentry\iffieldundef{usera}{}{\par\nopagebreak
-  {\textcolor{color-title}{Contribution:} \printfield{usera}}}}
 
 % Theme
 \def\theme{MidnightBlue}
 
 \usepackage{simplecv}
-\usepackage{needspace}  % keep publication headings with their first entry
-\usepackage[most]{tcolorbox}
-\newtcolorbox{pubgroup}[1]{breakable, enhanced, colback=color-title!4, colframe=color-title!70,
-  boxrule=0.5pt, arc=2pt, left=4pt, right=4pt, top=3pt, bottom=3pt,
-  coltitle=white, fonttitle=\bfseries\small, toptitle=1pt, bottomtitle=1pt, title={#1},
-  before skip=6pt, after skip=4pt}
 
-\boldname{Meighen-Berger}{Stephan Andrew}{N.}
+\boldname{Meighen-Berger}{Stephan}{S.}
 
 \begin{document}
 

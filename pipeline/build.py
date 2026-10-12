@@ -308,24 +308,40 @@ def slug(name):
     return re.sub(r"[^a-z0-9]+", "", name.lower())
 
 
-def make_cv_bib(papers, bib):
-    """papers.bib for the CV: curated papers, with contribution and keywords injected."""
+def cv_keyword(p):
+    """Bibliography group of a paper in the CV: its experiment, else its first theme."""
+    if p["experiment"]:
+        return f"exp-{slug(p['experiment'])}"
+    if p["themes"]:
+        return f"theme-{p['themes'][0]}"
+    raise SystemExit(f"{p['key']}: no `themes` in data/papers.yml, needed to place it in the CV")
+
+
+def publist_keyword(p):
+    """Group of a paper in the publication list."""
+    if p["status"] == "thesis":
+        return "pl-thesis"
+    if p["experiment"]:
+        return "pl-exp"
+    return {"pub": "pl-pub", "sub": "pl-sub", "preprint": "pl-preprint", "proc": "pl-proc"}[p["status"]]
+
+
+# INSPIRE abbreviates schools in thesis records; the full name reads better in a CV.
+SCHOOL_NAMES = {"Munich, Tech. U.": "Technical University of Munich"}
+
+
+def make_bib(papers, bib, keyword):
+    """A .bib of the given papers, with contribution, status note and group keyword injected."""
     out = []
     for p in papers:
-        if not p["in_cv"]:
-            continue
         entry = next((bib[k] for k in p["texkeys"] if k in bib), None)
         if entry is None:
             continue
         # Use the curated key so the CV can cite it by the name in papers.yml.
         entry = re.sub(r"^(@\w+\{)\s*[^,\s]+", lambda m: m.group(1) + p["key"], entry, count=1)
-        if p["experiment"]:
-            keyword = f"exp-{slug(p['experiment'])}"
-        elif p["themes"]:
-            keyword = f"theme-{p['themes'][0]}"
-        else:
-            raise SystemExit(f"{p['key']}: no `themes` in data/papers.yml, needed to place it in the CV")
-        fields = [f'keywords = "{keyword}"']
+        for short, full in SCHOOL_NAMES.items():
+            entry = entry.replace(f'school = "{short}"', f'school = "{full}"')
+        fields = [f'keywords = "{keyword(p)}"']
         if p.get("accepted") and not p.get("accepted_stale"):
             fields += [f'journal = "{p["accepted"]["journal"]}"', 'note = "accepted"']
         elif p["status"] in ("sub", "preprint"):
@@ -531,7 +547,8 @@ def build_cv(ctx, out_dir, private=None):
         out = out_dir / str(rel)[: -len(".j2")]
         out.write_text(env.get_template(str(rel)).render(**cctx), encoding="utf-8")
     (out_dir / "papers.bib").write_text(ctx["cv_bib"], encoding="utf-8")
-    print(f"cv: sources -> {out_dir.relative_to(ROOT)}/ (compile with latexmk -pdf main.tex)")
+    (out_dir / "publist.bib").write_text(ctx["publist_bib"], encoding="utf-8")
+    print(f"cv: sources -> {out_dir.relative_to(ROOT)}/ (latexmk -pdf main.tex publist.tex)")
 
 
 def main():
@@ -582,7 +599,13 @@ def main():
             for e in exp_order if any(p["experiment"] == e for p in papers)],
         "chart_pubs": pubs_per_year(papers), "metrics": metrics_history(),
         "updated": today.isoformat(), "year": today.year,
-        "cv_bib": make_cv_bib(papers, bib),
+        "cv_bib": make_bib([p for p in papers if p["in_cv"]], bib, cv_keyword),
+        # Publication list: every curated paper (collaboration papers only where
+        # curated, i.e. with a direct contribution), plus the thesis.
+        "publist_bib": make_bib([p for p in papers if p["curated"] or p["status"] == "thesis"],
+                                bib, publist_keyword),
+        "publist_count": sum(1 for p in papers if p["curated"]),
+        "publist_groups": {publist_keyword(p) for p in papers if p["curated"] or p["status"] == "thesis"},
     }
 
     build_site(ctx)

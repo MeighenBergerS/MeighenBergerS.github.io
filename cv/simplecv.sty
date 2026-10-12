@@ -145,12 +145,30 @@
   \def\firstinit{#3}}
 \boldname{}{}{}
 
+% Bold by family name only: biblatex stores given names with initials in a form that
+% does not compare equal to plain text, and no co-author shares the family name.
 \renewcommand{\mkbibnamegiven}[1]{%
-  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-  {\mkbibbold{#1}}{#1}%
+  \ifdefequal{\lastname}{\namepartfamily}{\mkbibbold{#1}}{#1}%
 }
 
 \renewcommand{\mkbibnamefamily}[1]{%
-  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-  {\mkbibbold{#1}}{#1}%
+  \ifdefequal{\lastname}{\namepartfamily}{\mkbibbold{#1}}{#1}%
 }
+% Publication groups (CV and publication list): a tinted box per group.
+\usepackage{needspace}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{pubgroup}[1]{breakable, enhanced, colback=color-title!4, colframe=color-title!70,
+  boxrule=0.5pt, arc=2pt, left=4pt, right=4pt, top=3pt, bottom=3pt,
+  coltitle=white, fonttitle=\bfseries\small, toptitle=1pt, bottomtitle=1pt, title={#1},
+  before skip=6pt, after skip=4pt}
+
+% Bibliography layout, when biblatex is loaded before this package.
+\makeatletter
+\@ifpackageloaded{biblatex}{%
+  \setlength{\bibitemsep}{2pt}
+  \setlength{\biblabelsep}{6pt}
+  % Contribution (field usera) on its own line, after the entry's final period.
+  \renewbibmacro*{finentry}{\finentry\iffieldundef{usera}{}{\par\nopagebreak
+    {\textcolor{color-title}{Contribution:} \printfield{usera}}}}
+}{}
+\makeatother
