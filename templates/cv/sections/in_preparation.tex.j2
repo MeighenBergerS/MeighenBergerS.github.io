@@ -1,0 +1,11 @@
+\needspace{13\baselineskip}
+\begin{pubgroup}{In preparation}
+\small
+\begin{itemize}[leftmargin=*,topsep=0pt,itemsep=2pt,parsep=0pt]
+<% for p in private.in_preparation %>
+\item << p.authors|tex >>, ``<< p.title|tex >>''. \\
+\textcolor{color-title}{Scope:} << p.note|tex >><% if p.contribution %> \\
+\textcolor{color-title}{Contribution:} << p.contribution|tex >><% endif %>
+<% endfor %>
+\end{itemize}
+\end{pubgroup}

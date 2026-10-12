@@ -6,3 +6,6 @@ phone: "+1 ..."
 nationality: Austrian / USA
 references:
   - {name: "Prof. ...", institution: "...", email: "..."}
+# Optional: papers not yet on arXiv, shown as "In preparation" after the publications.
+in_preparation:
+  - {authors: "A. Author, **S. A. Meighen-Berger**, and B. Author", title: "...", note: "One line on the scope, no results.", contribution: "Co-wrote the paper, developed the idea"}

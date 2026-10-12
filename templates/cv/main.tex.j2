@@ -40,6 +40,9 @@
 
 \needspace{12\baselineskip}
 \import{sections/}{publications.tex}
+<% if private and private.in_preparation %>
+\import{sections/}{in_preparation.tex}
+<% endif %>
 <% if private %>
 \import{sections/}{references.tex}
 <% endif %>
