@@ -57,13 +57,15 @@ jobs:
       - name: Build site and CV sources
         run: python pipeline/build.py
 
-      - name: Compile CV
+      - name: Compile CV and publication list
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex
+          root_file: |
+            main.tex
+            publist.tex
           working_directory: build/cv
 
-      - run: cp build/cv/main.pdf _site/cv.pdf
+      - run: cp build/cv/main.pdf _site/cv.pdf && cp build/cv/publist.pdf _site/publications.pdf
 
       - name: Open or update review issue
         env:

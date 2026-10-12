@@ -2,7 +2,10 @@
 {% from "macros.html.j2" import paper, stat %}
 {% block title %}Publications · {{ profile.name }}{% endblock %}
 {% block content %}
-<h1>Publications</h1>
+<div class="cv-head">
+  <h1>Publications</h1>
+  <a class="button primary" href="publications.pdf">Download PDF</a>
+</div>
 {% set led = curated|selectattr('roles')|selectattr('roles', 'contains', 'idea')|list %}
 {% set further = curated|reject('in', led)|list %}
 <p class="lede">
