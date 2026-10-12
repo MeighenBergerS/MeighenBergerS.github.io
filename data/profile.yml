@@ -61,22 +61,5 @@ bio: >-
   I am currently a postdoctoral fellow at the University of Iowa and an affiliate
   at Fermilab.
 
-# Longer version used as "Research Profile" on the CV.
-research_profile: >-
-  I am a phenomenologist working on neutrino and dark matter physics. I find the
-  measurements next-generation neutrino detectors weren't designed for, and show they
-  can make them. My work has two main directions. The first is new measurements with
-  neutrinos, from leptonic CP violation with sub-GeV atmospheric neutrinos to
-  $\nu_\tau$ appearance in JUNO and neutral-current solar neutrinos in DUNE. The second
-  is new probes of dark matter and physics beyond the Standard Model, with the same
-  detectors and with astrophysical systems. Both rest on particle transport, atmospheric fluxes, and
-  detector modelling that I build into open tools now used across the field, and on
-  direct experience inside the IceCube, P-ONE, and Borexino collaborations, which
-  keeps the predictions honest about backgrounds and systematics. The phenomenology
-  targets JUNO, Hyper-K, DUNE, KM3NeT, IceCube, and P-ONE.
-
 collaborations: >-
-  **Collaboration membership.** P-ONE (2019 to present) and IceCube (2017 to 2023),
-  contributing atmospheric-cascade and bioluminescence background modelling, dark
-  matter and new-physics analyses. Earlier work with Borexino on cosmic muon
-  modulations.
+  **Former member.** P-ONE (2019 to 2022) and IceCube (2017 to 2023).

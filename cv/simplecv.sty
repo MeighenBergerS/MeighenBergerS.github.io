@@ -105,15 +105,16 @@
 \titleformat{\section}{
     \scshape\raggedright\Large\color{color-title}}{}{0em}{}[\color{color-title}\titlerule
     \vspace{-\smallskipamount}]
+\titlespacing*{\section}{0pt}{2.2ex plus .5ex minus .3ex}{1.6ex}
 
 % Footer
 \fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
 
 % Lists
 \newcommand{\outerlist}[1]{
-    \begin{itemize}[leftmargin=*] #1 \end{itemize}}
+    \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=3pt,parsep=0pt] #1 \end{itemize}}
 \newcommand{\denseouterlist}[1]{
-    \begin{itemize}[leftmargin=*,itemsep=0pt] #1 \end{itemize}}
+    \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt,parsep=0pt] #1 \end{itemize}}
 \newcommand{\innerlist}[1]{
     \begin{itemize}[topsep=0pt] #1 \end{itemize}}
 \newcommand{\orderedouterlist}[1]{
@@ -121,6 +122,7 @@
 
 % List items
 \newcommand{\entry}[1]{\item\small{#1}}
+\newcommand{\entryline}[2]{\item\small{#1}\hfill\small{#2}}  % one line, right-aligned detail
 \newcommand{\entryextra}[1]{\textcolor{color-detail}{\entry{#1}}}
 \newcommand{\entrylabeled}[2][]{\item[#1]\small{#2}}
 

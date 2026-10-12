@@ -17,9 +17,9 @@ highlights:
     (white dwarfs, stars orbiting supermassive black holes), and the first
     neutrino-telescope limits on long-lived supersymmetric particles.
   - >-
-    **Predictions that hold up at the detector level.** Collaboration member of
-    IceCube, P-ONE, and Borexino, providing the atmospheric-cascade and bioluminescence
-    background models their analyses depend on. My phenomenology for Hyper-K, DUNE,
+    **Predictions that hold up at the detector level.** Former member of
+    P-ONE and IceCube, where I provided the atmospheric-cascade and
+    bioluminescence background models their analyses depend on. My phenomenology for Hyper-K, DUNE,
     JUNO, and KM3NeT is independent of those collaborations, but is built on that
     experience.
   - >-
@@ -48,27 +48,16 @@ positions:
     role: Postdoctoral Research Fellow
     start: 2025-10
     end:  # empty = current
-    details:
-      - Developing theoretical methods for atmospheric neutrinos and leptonic CP violation.
-      - Developing phenomenology targeting Hyper-K and DUNE.
-      - Supervising graduate research. Graduate lecturer in dark matter direct detection.
   - institution: Fermi National Accelerator Laboratory
     country: USA
     role: Affiliate / User
     start: 2026-02
     end:
-    details:
-      - Supporting phenomenological work for the laboratory's neutrino program, including DUNE.
   - institution: The University of Melbourne
     country: Australia
     role: Postdoctoral Research Fellow in Neutrino Phenomenology
     start: 2022-09
     end: 2025-08
-    details:
-      - Established an independent research program spanning neutrino phenomenology, dark matter theory, and detector simulation.
-      - Proposed new measurement channels for JUNO ($\nu_\tau$ appearance) and DUNE (neutral-current solar neutrinos).
-      - Co-developed the Prometheus open-source neutrino telescope simulation. Supervised one PhD and one Master's student, and organized the theory seminar series (2023 to 2025).
-      - Attracted competitive early-career funding from the Laby ECR Award and the ARC CoE Dark Matter ECR Special Initiatives program.
   - institution: The University of Melbourne
     country: Australia
     role: Honorary Fellow
@@ -117,34 +106,15 @@ awards:
     amount: $2,680
     note: Seed funding for "Advanced mathematical models for the simulation chain of neutrino detectors."
 
-interdisciplinary:
-  intro: >-
-    The methods I develop for particle transport and Monte Carlo simulation transfer
-    beyond particle physics. The deep-sea optical work below is the origin of Fourth
-    Day and of the optical background model P-ONE relies on.
-  items:
-    - title: Polychromatic Population of Bioluminescent Organisms in the Deep Pacific Ocean
-      year: 2026
-      text: Four years of STRAW camera and PMT data in the Cascadia Basin, characterizing the chromatic, temporal, and tidal structure of deep-sea bioluminescence.
-      venue: J. Geophys. Res. Oceans
-      url: https://doi.org/10.1029/2025JC023267
-      link_label: link
-    - title: Bioluminescence Modeling for Deep Sea Experiments
-      year: 2021
-      text: Simulation framework coupling water currents to organism light emission, released as the Fourth Day code.
-      url: https://arxiv.org/abs/2103.03816
-      link_label: arXiv
-    - title: Two-Year Optical Site Characterization for the Pacific Ocean Neutrino Experiment (P-ONE) in the Cascadia Basin
-      year: 2021
-      text: Deep-sea optical characterization establishing the P-ONE site.
-      url: https://arxiv.org/abs/2108.04961
-      link_label: arXiv
-    - title: The Impact of Digital Contact Tracing on the SARS-CoV-2 Pandemic
-      year: 2021
-      venue: EPJ Data Science
-      text: Agent-based Monte Carlo modelling of an epidemic, applying particle-physics simulation methods to a public health question.
-      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8290404/
-      link_label: link
+# "Community Engagement" on the CV: workshops, schools and service, one entry each.
+community:
+  - >-
+    **Computing Workshop**, ARC Centre of Excellence for Dark Matter Particle Physics,
+    2024. One of the hosts, and lecturer on "Detector Simulations" and "Advanced
+    Python". Part of the ECR Special Initiatives Program (2023).
+  - >-
+    **Theory seminar series**, University of Melbourne, 2023 to 2025. Organized and ran
+    the series for two years.
 
 other_experience:
   - >-
@@ -153,7 +123,7 @@ other_experience:
     prototype.
   - >-
     **AVL Advanced Simulation Technologies**, Austria. Solver developer (2009, 2013,
-    2014). Acoustic modelling of car engines, improving a Fortran wave-based-technique
+    2014). Acoustic modeling of car engines, improving a Fortran wave-based-technique
     framework in its integration methods and coordinate systems.
   - >-
     **Austrian Red Cross**, Austria. Paramedic (2010/11). Paramedic training and duties

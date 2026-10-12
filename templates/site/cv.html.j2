@@ -14,8 +14,7 @@
   {% for p in cv.positions %}
   <li>
     <div class="when">{{ p.start|month }} – {{ p.end|month }}</div>
-    <div><strong>{{ p.role }}</strong>, {{ p.institution }}, {{ p.country }}
-      {% if p.details %}<ul>{% for d in p.details %}<li>{{ d|md }}</li>{% endfor %}</ul>{% endif %}</div>
+    <div><strong>{{ p.role }}</strong>, {{ p.institution }}, {{ p.country }}</div>
   </li>
   {% endfor %}
 </ul>
@@ -50,6 +49,9 @@
   {% endfor %}
 </ul>
 <ul class="plain">{% for c in teaching.community %}<li>{{ c|md }}</li>{% endfor %}</ul>
+
+<h2>Community engagement</h2>
+<ul class="plain">{% for c in cv.community %}<li>{{ c|md }}</li>{% endfor %}</ul>
 
 <h2>Additional experience</h2>
 <ul class="plain">{% for o in cv.other_experience %}<li>{{ o|md }}</li>{% endfor %}</ul>

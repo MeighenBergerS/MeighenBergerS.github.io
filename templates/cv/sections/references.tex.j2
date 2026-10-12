@@ -1,6 +1,8 @@
+\needspace{7\baselineskip}
 \section{References}
-\begin{itemize}
+
+\denseouterlist{
 <% for r in private.references %>
-    \item << r.name|tex >>, << r.institution|tex >> \hfill \href{mailto:<< r.email >>}{<< r.email|tex >>}
+\entryline{<< r.name|tex >>, << r.institution|tex >>}{\href{mailto:<< r.email >>}{<< r.email|tex >>}}
 <% endfor %>
-\end{itemize}
+}

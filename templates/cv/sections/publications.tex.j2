@@ -1,32 +1,30 @@
 \nocite{*}
-\section{Publications}
+\section{Selected Publications}
 
 \small{
-<< stats.refereed >> published papers and << stats.conference >> conference papers in total, most arising from membership in IceCube and P-ONE. Of these, \textbf{<< stats.curated >> carry a major contribution from me}, and \textbf{<< stats.small >> are small-author-list works} (fewer than 10 authors). The full record is on \href{https://inspirehep.net/authors/<< profile.ids.inspire_recid >>}{iNSPIRE}. The list below contains the works to which I made significant and essential contributions. Papers from experimental collaborations are listed separately, by experiment.
+<< stats.refereed >> published papers and << stats.conference >> conference papers in total. Of these, \textbf{<< stats.curated >> carry a major contribution from me}, and \textbf{<< stats.small >> are small-author-list works} (fewer than 10 authors). The full record is on \href{https://inspirehep.net/authors/<< profile.ids.inspire_recid >>}{INSPIRE}. Below is a selected list of my works grouped by topic.
 }
 
-\vspace{2mm}
+\vspace{1mm}
 
-\large{\textbf{\textcolor{black}{Submitted}}}
-\printbibliography[keyword={sub}, heading=none]
-
-<% if curated|selectattr('status', 'equalto', 'preprint')|list %>
-\large{\textbf{\textcolor{black}{Preprints}}}
-\printbibliography[keyword={preprint}, heading=none]
+<% for t in research.themes %>
+<% if curated|selectattr('in_cv')|selectattr('themes')|selectattr('themes.0', 'equalto', t.id)|list %>
+\needspace{6\baselineskip}
+\begin{pubgroup}{<< (t.cv_title or t.title)|tex >>}
+\small
+\printbibliography[keyword={theme-<< t.id >>}, heading=none]
+\end{pubgroup}
 
 <% endif %>
-\large{\textbf{\textcolor{black}{Published}}}
-\printbibliography[keyword={pub}, heading=none]
-
-\large{\textbf{\textcolor{black}{Proceedings}}}
-\printbibliography[keyword={proc}, heading=none]
-
-<% set exp_cv = experiments|selectattr('curated')|list %>
+<% endfor %>
+<% set exp_cv = experiments|selectattr('in_cv')|list %>
 <% if exp_cv %>
-\large{\textbf{\textcolor{black}{Experimental Collaborations}}}
+\needspace{6\baselineskip}
+\begin{pubgroup}{Experimental collaborations}
+\small
 <% for e in exp_cv %>
-
-\small{\textbf{\textcolor{color-title}{<< e.name|tex >>}}}
+\textbf{\textcolor{color-title}{<< e.name|tex >>}}
 \printbibliography[keyword={exp-<< e.slug >>}, heading=none]
 <% endfor %>
+\end{pubgroup}
 <% endif %>

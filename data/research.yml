@@ -1,9 +1,9 @@
-# Research page: one section per theme (`cv_title`/`cv_summary` are the shorter
-# versions used in the CV's "Research Themes" section). Papers are attached automatically via the
+# Research page: one section per theme (`cv_title` is the shorter
+# heading that groups the CV's publication list). Papers are attached automatically via the
 # `themes:` tags in papers.yml; `highlights` pick a few to feature with a one-line
 # result. Text uses light Markdown and $...$ math (e.g. $\nu_\tau$).
 #   supporting: true -> shown as the method behind the main themes
-#   minor: true      -> short section at the end, no highlights, not on the CV
+#   minor: true      -> short section at the end, no highlights
 
 intro: >-
   Next-generation neutrino detectors (JUNO, Hyper-Kamiokande, DUNE, and neutrino
@@ -17,8 +17,6 @@ themes:
   - id: neutrino
     title: New measurements with neutrinos
     cv_title: Neutrino phenomenology and precision oscillation physics
-    cv_summary: >-
-      Leptonic CP violation with sub-GeV atmospheric neutrinos (targeting Hyper-K and DUNE), $\nu_\tau$ appearance (JUNO), solar neutrinos via neutral currents (DUNE), and the cosmic-ray spectrum measured through atmospheric neutrinos.
     summary: >-
       Low-energy atmospheric and solar neutrinos are still an underused resource for
       precision physics, mainly because current detectors lack the size and resolution
@@ -41,8 +39,6 @@ themes:
   - id: bsm
     title: Dark matter and new physics with neutrino detectors
     cv_title: Dark matter and beyond-the-Standard-Model physics
-    cv_summary: >-
-      Dark matter captured in Jupiter and annihilating in the Galaxy, dark matter-nucleon interactions probed through ultrahigh-energy cosmic-ray acceleration, stellar probes (white dwarfs, stars near supermassive black holes), and long-lived particles produced in air showers.
     summary: >-
       Neutrino detectors are also excellent detectors for new physics. I use them, and
       astrophysical systems more broadly, to constrain dark matter and new particles.
@@ -63,8 +59,6 @@ themes:
     supporting: true
     title: Particle transport and open simulation
     cv_title: Particle transport and open simulation
-    cv_summary: >-
-      Analytic muon transport and telescope effective areas (softpaws), atmospheric fluxes and cascades, and open, geometry-agnostic detector simulation (Prometheus, Fennel) with public benchmarks, built to make the phenomenology above testable before the detectors exist.
     summary: >-
       A proposed measurement is only useful if it survives realistic backgrounds and
       detector response. I work on the transport of particles and light through the
@@ -82,9 +76,10 @@ themes:
 
   - id: side
     title: Side projects
+    cv_title: Interdisciplinary and applied work
     minor: true
     summary: >-
-      The same Monte Carlo methods carry over to other fields. Modelling deep-sea
+      The same Monte Carlo methods carry over to other fields. Modeling deep-sea
       bioluminescence, the optical background for ocean neutrino telescopes, grew into a
       study of bioluminescent life in the Pacific. During the pandemic, I applied them to
       an agent-based model of epidemic spread and digital contact tracing.

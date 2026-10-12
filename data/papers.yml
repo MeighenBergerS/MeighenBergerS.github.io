@@ -16,7 +16,11 @@
 #   themes:       ids from research.yml
 #   status:       override sub/pub/proc/preprint (normally derived from INSPIRE);
 #                 preprint = arXiv only, not submitted anywhere
-#   selected:     include in "Selected Works" with `summary` and `role`
+#   cv:           false -> on the website only, not in the CV list. Proceedings
+#                 (status proc) are never in the CV list.
+#   accepted:     {journal: Phys. Rev. D, doi: 10.1103/...} for a paper accepted
+#                 before INSPIRE lists the journal; shown as published (accepted).
+#                 The build asks you to remove it once INSPIRE has the journal.
 
 papers:
   Meighen-Berger:2026yls:
@@ -30,14 +34,6 @@ papers:
   Beacom:2026mys:
     roles: [wrote, idea, mentored]
     themes: [neutrino]
-    selected: true
-    summary: >-
-      Introduced a phenomenological framework showing that sub-GeV atmospheric neutrinos
-      provide competitive sensitivity to the CP-violating phase in next-generation
-      detectors, opening a measurement channel independent of accelerator systematics.
-    role: >-
-      Conceived the project, developed the formalism, designed the analysis strategy,
-      supervised the student implementation, co-wrote the manuscript.
 
   Meighen-Berger:2026idy:
     roles: [wrote, idea]
@@ -46,14 +42,6 @@ papers:
   Meighen-Berger:2025hrq:
     roles: [wrote, idea]
     themes: [bsm]
-    selected: true
-    summary: >-
-      Showed that dark matter-nucleon scattering would degrade cosmic-ray acceleration,
-      turning the existence of the observed UHECR spectrum into a new constraint on dark
-      matter interactions.
-    role: >-
-      Conceived the project, developed the theoretical framework, led the calculations,
-      wrote the manuscript.
 
   Orsoe:2025yru:
     details: Wrote the simulation code and generated the public data sets
@@ -61,6 +49,7 @@ papers:
 
   Meighen-Berger:2025pcq:
     roles: [wrote, idea]
+    accepted: {journal: Phys. Rev. D, doi: 10.1103/bk55-z2mq}
     themes: [neutrino]
 
   Bhattacharjee:2025iip:
@@ -75,38 +64,15 @@ papers:
   Meighen-Berger:2024xbx:
     roles: [wrote, idea]
     themes: [neutrino]
-    selected: true
-    summary: >-
-      Identified and quantified a neutral-current detection channel that substantially
-      extends DUNE's solar neutrino reach and flavor sensitivity.
-    role: >-
-      Conceived the project, developed the theoretical and detector-response framework,
-      led the analysis, co-wrote the manuscript.
 
   Meighen-Berger:2023xpr:
     roles: [wrote, idea]
     themes: [neutrino]
-    selected: true
-    summary: >-
-      Proposed a new signature, sub-GeV neutral-current interactions, giving JUNO access
-      to atmospheric $\nu_\tau$ appearance.
-    role: >-
-      Conceived the project, developed the signal model, led the simulation and
-      analysis, co-wrote the manuscript.
 
   Lazar:2023rol:
     roles: [wrote]
     details: Developed the water-based simulation, co-developed the framework
     themes: [tools]
-    selected: true
-    summary: >-
-      Delivered the first public, geometry-agnostic simulation framework for neutrino
-      telescopes in water and ice, allowing proposed detector designs to be evaluated
-      without collaboration-internal software.
-    role: >-
-      Lead developer with J. Lazar, wrote the framework and the photon-propagation and
-      light-yield chain, co-wrote the manuscript. Now a community baseline, for example
-      in the NuBench reconstruction benchmark.
 
   Lazar:2025nps:
     roles: [wrote]
@@ -129,13 +95,6 @@ papers:
   Meighen-Berger:2020eun:
     roles: [wrote, idea]
     themes: [bsm]
-    selected: true
-    summary: >-
-      Derived new limits on long-lived staus using neutrino telescope signatures,
-      establishing a BSM use case for these detectors.
-    role: >-
-      Conceived the project, developed the theoretical framework, led the simulations,
-      wrote the manuscript, supervised the follow-up student analysis in IceCube.
 
   Agostini:2018fnx:
     details: Calculated the atmospheric flux variations
@@ -145,6 +104,7 @@ papers:
     roles: [wrote, idea]
     themes: [bsm]
     status: preprint
+    cv: false
 
   Schmidt-Dencker:2021xmg:
     roles: [mentored]
@@ -158,6 +118,7 @@ papers:
     roles: [wrote, idea]
     themes: [tools]
     status: preprint
+    cv: false
 
   Li:2026jgr:
     roles: [mentored]

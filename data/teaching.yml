@@ -24,5 +24,4 @@ students:
   - {level: junior, name: Mingyang Li, institution: TUM, title: Muons from Electromagnetic Showers}
 
 community:
-  - "**Research community.** Organized and ran the theory seminar series at the University of Melbourne for two years, 2023 to 2025."
   - "**Group infrastructure.** Two open tools support research training. **nestling** ([GitHub](https://github.com/MeighenBergerS/nestling)) is an onboarding framework for new students, and **jc-ppi** ([GitHub](https://github.com/MeighenBergerS/jc-ppi)) runs a journal club."

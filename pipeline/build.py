@@ -210,7 +210,7 @@ def paper_from_bib(key, entry):
     arxiv, doi = bib_field(entry, "eprint"), bib_field(entry, "doi")
     return {
         "key": key, "texkeys": [key], "recid": None,
-        "title": bib_field(entry, "title"),
+        "title": (bib_field(entry, "title") or "").replace("---", "\u2014").replace("--", "\u2013"),
         "authors": authors if len(authors) <= REVIEW_MAX_AUTHORS else None,
         "author_count": len(authors), "collaborations": [],
         "date": year, "year": int(year), "journal": f"{journal} ({year})" if journal else None,
@@ -250,9 +250,17 @@ def load_papers():
         p["curated"] = True
         if note.get("status"):
             p["status"] = note["status"]
+        acc = note.get("accepted")
+        if acc and p["journal"]:
+            p["accepted_stale"] = True
+        elif acc:
+            p.update(status="pub", journal=f"{acc['journal']} (accepted)", venue=f"{acc['journal']}, accepted",
+                     doi=p["doi"] or acc.get("doi"))
     for p in papers:
         if p.get("curated"):
             p["role_tags"], p["contribution"] = contribution(p)
+    for p in papers:
+        p["in_cv"] = bool(p.get("curated")) and p["status"] != "proc" and p.get("cv", True) is not False
 
     exp = notes.get("experiments") or {}
     for p in papers:
@@ -304,20 +312,26 @@ def make_cv_bib(papers, bib):
     """papers.bib for the CV: curated papers, with contribution and keywords injected."""
     out = []
     for p in papers:
-        if not p["curated"]:
+        if not p["in_cv"]:
             continue
         entry = next((bib[k] for k in p["texkeys"] if k in bib), None)
         if entry is None:
             continue
         # Use the curated key so the CV can cite it by the name in papers.yml.
         entry = re.sub(r"^(@\w+\{)\s*[^,\s]+", lambda m: m.group(1) + p["key"], entry, count=1)
-        addendum = ""
-        if p.get("contribution"):
-            addendum += "Contribution: " + to_tex(p["contribution"])
-        keyword = f"exp-{slug(p['experiment'])}" if p["experiment"] else p["status"]
+        if p["experiment"]:
+            keyword = f"exp-{slug(p['experiment'])}"
+        elif p["themes"]:
+            keyword = f"theme-{p['themes'][0]}"
+        else:
+            raise SystemExit(f"{p['key']}: no `themes` in data/papers.yml, needed to place it in the CV")
         fields = [f'keywords = "{keyword}"']
-        if addendum:
-            fields.append(f'addendum = "\\newline {addendum}"')
+        if p.get("accepted") and not p.get("accepted_stale"):
+            fields += [f'journal = "{p["accepted"]["journal"]}"', 'note = "accepted"']
+        elif p["status"] in ("sub", "preprint"):
+            fields.append(f'note = "{"submitted" if p["status"] == "sub" else "preprint"}"')
+        if p.get("contribution"):
+            fields.append(f'usera = "{to_tex(p["contribution"])}"')
         body = entry.rstrip().rstrip("}").rstrip().rstrip(",")
         out.append(body + ",\n    " + ",\n    ".join(fields) + "\n}\n")
     return "\n".join(out)
@@ -383,6 +397,11 @@ def review_report(papers, missing):
     if fresh:
         lines += ["Preprints on arXiv not (yet) on INSPIRE:", ""]
         lines += [f"- [ ] arXiv:{e['id']} ({e['published']}) {e['title']}" for e in fresh]
+        lines.append("")
+    stale = [p for p in papers if p.get("accepted_stale")]
+    if stale:
+        lines += ["Accepted papers now with a journal on INSPIRE (remove `accepted` in `data/papers.yml`):", ""]
+        lines += [f"- [ ] `{p['key']}` {p['journal']}" for p in stale]
         lines.append("")
     if missing:
         lines += ["Keys in `data/papers.yml` with no matching record:", ""]
@@ -555,9 +574,9 @@ def main():
         "experiments": [
             {"name": e, "slug": slug(e),
              "papers": [p for p in papers if p["experiment"] == e and not p["hidden"]],
-             "curated": [p for p in papers if p["experiment"] == e and p["curated"]]}
+             "curated": [p for p in papers if p["experiment"] == e and p["curated"]],
+             "in_cv": [p for p in papers if p["experiment"] == e and p["in_cv"]]}
             for e in exp_order if any(p["experiment"] == e for p in papers)],
-        "selected": [p for p in papers if p.get("selected")],
         "chart_pubs": pubs_per_year(papers), "metrics": metrics_history(),
         "updated": today.isoformat(), "year": today.year,
         "cv_bib": make_cv_bib(papers, bib),
