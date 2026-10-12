@@ -106,8 +106,12 @@ awards:
     amount: $2,680
     note: Seed funding for "Advanced mathematical models for the simulation chain of neutrino detectors."
 
-# "Community Engagement" on the CV: workshops, schools and service, one entry each.
+# "Service and Community Engagement" on the CV: refereeing, workshops, schools and
+# service, one entry each.
 community:
+  - >-
+    **Referee** for *Physical Review Letters* and *Journal of Cosmology and
+    Astroparticle Physics*.
   - >-
     **Computing Workshop**, ARC Centre of Excellence for Dark Matter Particle Physics,
     2024. One of the hosts, and lecturer on "Detector Simulations" and "Advanced
