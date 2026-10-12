@@ -56,7 +56,7 @@ software:
     themes: [simulation, transport]
 
   - name: bib-checker
-    section: featured
+    section: community
     repo: MeighenBergerS/bib-checker
     docs: https://meighenbergers.github.io/bib-checker/
     tagline: Check a BibTeX file against INSPIRE and fix what is wrong.
