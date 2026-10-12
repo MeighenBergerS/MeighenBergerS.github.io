@@ -108,7 +108,8 @@
 \titlespacing*{\section}{0pt}{2.2ex plus .5ex minus .3ex}{1.6ex}
 
 % Footer
-\fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\definecolor{color-pagetotal}{HTML}{E7298A}
+\fancyfoot[R]{Page \thepage \hspace{1pt} of \textcolor{color-pagetotal}{\pageref*{LastPage}}}
 
 % Lists
 \newcommand{\outerlist}[1]{
