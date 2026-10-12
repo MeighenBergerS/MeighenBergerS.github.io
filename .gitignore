@@ -2,6 +2,8 @@
 *.zip
 private/*
 !private/*.example
+upcoming/*
+Cover_Letter_Generic.pdf
 
 # Python
 __pycache__/
