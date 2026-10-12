@@ -3,7 +3,7 @@
 {% macro talk(t) %}
 <li>
   <span class="talk-year">{{ t.year }}</span>
-  <span><strong>{{ t.event }}</strong>, {{ t.city }}{% if t.country %}, {{ t.country }}{% endif %}{% if t.kind == 'seminar' %} (seminar){% elif t.kind == 'poster' %} (poster){% endif %}<br>
+  <span><strong>{{ t.event }}</strong>, {{ t.city }}{% if t.country %}, {{ t.country }}{% endif %}{% if t.kind == 'seminar' %} (seminar){% elif t.kind == 'poster' %} (poster){% endif %}{% if t.upcoming %}, upcoming {{ t.date.strftime('%-d %b') }}{% endif %}<br>
   <em>{{ t.title }}</em>
   {% if t.url %} · <a href="{{ t.url }}">event</a>{% endif %}{% if t.slides %} · <a href="{{ t.slides }}">slides</a>{% endif %}</span>
 </li>

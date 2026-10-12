@@ -365,7 +365,8 @@ def compute_stats(papers, talks, teaching, software, github):
         "h_index": h_index(p["citations"] for p in inspire),
         "citations_main": sum(p["citations"] or 0 for p in curated),
         "h_index_main": h_index(p["citations"] for p in curated),
-        "invited_talks": sum(1 for t in talks["talks"] if t["kind"] in ("invited", "seminar") and not t.get("home")),
+        "invited_talks": sum(1 for t in talks["talks"] if t["kind"] in ("invited", "seminar")
+                            and not t.get("home") and not t["upcoming"]),
         "contributed_talks": sum(1 for t in talks["talks"] if t["kind"] in ("contributed", "poster")),
         "software": len(software),
         "stars": sum((github.get(s.get("repo")) or {}).get("stargazers_count") or 0 for s in software),
@@ -454,7 +455,7 @@ def load_news(by_key, software, include_drafts=False):
         if meta.get("image") and not (ROOT / "static" / meta["image"]).exists():
             raise SystemExit(f"{f.name}: image {meta['image']} not found in static/")
         date = meta["date"] if isinstance(meta["date"], dt.date) else dt.date.fromisoformat(str(meta["date"]))
-        post = dict(meta, slug=f.stem, date=date, body=body.strip(),
+        post = dict(meta, slug=f.stem, date=date, body=body.strip(), upcoming=date > dt.date.today(),
                     body_html=md_paragraphs(body) if body.strip() else "",
                     url=f"news.html#{f.stem}",
                     paper_obj=by_key.get(meta.get("paper")),
@@ -544,6 +545,8 @@ def main():
     github = json.loads((CACHE / "github.json").read_text()) if (CACHE / "github.json").exists() else {}
     papers, bib, missing, exp_order = load_papers()
     talks["talks"].sort(key=lambda t: str(t.get("date") or t["year"]), reverse=True)
+    for t in talks["talks"]:
+        t["upcoming"] = bool(t.get("date")) and t["date"] > dt.date.today()
     stats = compute_stats(papers, talks, teaching, software["software"], github)
 
     # Fill computed numbers into prose.

@@ -18,7 +18,7 @@
 {% if n.type == 'talk' %}
 <li class="news-oneliner" id="{{ n.slug }}">
   <span class="news-date">{{ n.date|nicedate }}</span>
-  <span class="news-kind kind-talk">Talk</span>
+  <span class="news-kind kind-talk">{{ "Upcoming talk" if n.upcoming else "Talk" }}</span>
   <span>{{ n.title }}</span>
 </li>
 {% else %}

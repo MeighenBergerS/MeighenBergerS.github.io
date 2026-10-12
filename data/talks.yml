@@ -2,9 +2,14 @@
 # home: true -> talk at your own institution: shown on the website, but not counted
 #               as an invited talk and not listed on the CV
 # `date:` (YYYY-MM-DD) is optional; talks are sorted newest first by date, then year.
+# A talk dated after the build day is marked upcoming and not yet counted.
 # Add `url:` for a public announcement/agenda and `slides:` for public slides.
 
 talks:
+  - {date: 2026-12-02, year: 2026, kind: seminar, event: TRIUMF, city: Vancouver, country: Canada,
+     title: Particle Transport for Neutrino Detectors}
+  - {date: 2026-10-28, year: 2026, kind: seminar, event: York University, city: Toronto, country: Canada,
+     title: Three unique analyses for three new neutrino detectors}
   - {date: 2026-09-21, year: 2026, kind: seminar, home: true, event: University of Iowa, city: Iowa City, country: USA,
      title: Probing Dark Matter Interactions Near Supermassive Black Holes}
   - {date: 2026-09-10, year: 2026, kind: seminar, event: Queen's University, city: Kingston, country: Canada,
