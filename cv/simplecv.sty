@@ -170,5 +170,11 @@
   % Contribution (field usera) on its own line, after the entry's final period.
   \renewbibmacro*{finentry}{\finentry\iffieldundef{usera}{}{\par\nopagebreak
     {\textcolor{color-title}{Contribution:} \printfield{usera}}}}
+  % Marks before the authors: dagger for papers I led (field userb), asterisk for
+  % papers with a student I mentored (field userc). The notes explain them.
+  \renewbibmacro*{begentry}{%
+    \iffieldundef{userb}{}{\textcolor{color-title}{\textdagger}}%
+    \iffieldundef{userc}{}{\textcolor{color-title}{*}}%
+    \iffieldundef{userb}{\iffieldundef{userc}{}{\addspace}}{\addspace}}
 }{}
 \makeatother

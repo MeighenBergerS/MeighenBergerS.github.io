@@ -15,6 +15,7 @@ import html
 import json
 import re
 import shutil
+import unicodedata
 from pathlib import Path
 
 import jinja2
@@ -294,6 +295,24 @@ def contribution(p):
     return tags, text
 
 
+def family_key(name):
+    """'S. A. Meighen-Berger' -> 'meighen-berger', for comparing author order."""
+    family = " ".join(w for w in name.split() if not w.endswith("."))
+    return unicodedata.normalize("NFKD", family.replace("Ø", "O").replace("ø", "o")).encode("ascii", "ignore").decode().lower()
+
+
+def led(p):
+    """Whether I led the paper: `lead` in papers.yml, else my name first and the
+    list out of alphabetical order (hep-ph lists are alphabetical otherwise)."""
+    if p.get("lead") is not None:
+        return bool(p["lead"])
+    authors = p["authors"] or []
+    if not authors or SELF not in authors[0]:
+        return False
+    keys = [family_key(a) for a in authors]
+    return len(keys) == 1 or keys != sorted(keys)
+
+
 def experiment_of(p, exp):
     """The experiment a collaboration paper belongs to, or None for non-experimental papers."""
     for k in p["texkeys"]:
@@ -348,6 +367,10 @@ def make_bib(papers, bib, keyword):
             fields.append(f'note = "{"submitted" if p["status"] == "sub" else "preprint"}"')
         if p.get("contribution"):
             fields.append(f'usera = "{to_tex(p["contribution"])}"')
+        if p.get("curated") and led(p):
+            fields.append('userb = "lead"')
+        if "mentored" in (p.get("roles") or []):
+            fields.append('userc = "student"')
         body = entry.rstrip().rstrip("}").rstrip().rstrip(",")
         out.append(body + ",\n    " + ",\n    ".join(fields) + "\n}\n")
     return "\n".join(out)

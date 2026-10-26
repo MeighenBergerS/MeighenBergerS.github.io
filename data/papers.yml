@@ -13,6 +13,10 @@
 #   details:      specific statement of what you did, for smaller contributions;
 #                 shown after the tags. Ignored when `idea` is set: developing the
 #                 idea needs no further description.
+#   lead:         true/false -> whether I led the paper, marked with a dagger in
+#                 the CV. Default: my name first and the author list out of
+#                 alphabetical order. Set it where the order cannot tell.
+#                 Papers with `mentored` get an asterisk in the CV.
 #   themes:       ids from research.yml
 #   status:       override sub/pub/proc/preprint (normally derived from INSPIRE);
 #                 preprint = arXiv only, not submitted anywhere
@@ -33,6 +37,7 @@ papers:
 
   Beacom:2026mys:
     roles: [wrote, idea, mentored]
+    lead: true
     themes: [neutrino]
 
   Meighen-Berger:2026idy:
@@ -49,6 +54,7 @@ papers:
 
   Meighen-Berger:2025pcq:
     roles: [wrote, idea]
+    lead: true
     accepted: {journal: Phys. Rev. D, doi: 10.1103/bk55-z2mq}
     themes: [neutrino]
 
@@ -112,6 +118,7 @@ papers:
 
   Meighen-Berger:2019lld:
     roles: [wrote, idea, mentored]
+    lead: false
     themes: [tools]
 
   Meighen-Berger:2019cxt:
