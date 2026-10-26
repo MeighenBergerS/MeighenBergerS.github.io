@@ -1,7 +1,14 @@
-\section{Selected Talks}
+<% set groups = [('seminar', 'Seminars and colloquia'), ('invited', 'Invited conference talks'), ('contributed', 'Contributed talks')] %>
+\section{Talks}
 
+<% for kind, label in groups %>
+<% set ts = talks.talks|selectattr('kind', 'equalto', kind)|rejectattr('home')|list %>
+<% if ts %>
+\textbf{\textcolor{color-title}{<< label|tex >>}}
 \denseouterlist{
-<% for t in talks.talks if t.kind in ('invited', 'seminar') and not t.home %>
-\entry{Invited Talk, \textbf{<< t.event|tex >>}, << t.year >>. \textit{<< t.title|tex >>}}
+<% for t in ts %>
+\entry{\textbf{<< t.event|tex >>}<% if t.year|string not in t.event %>, << t.year >><% endif %>. \textit{<< t.title|tex >>}}
 <% endfor %>
 }
+<% endif %>
+<% endfor %>
