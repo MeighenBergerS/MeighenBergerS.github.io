@@ -44,6 +44,7 @@ papers:
 
   Meighen-Berger:2026idy:
     roles: [wrote, idea]
+    accepted: {journal: Phys. Rev. D, doi: 10.1103/2ghs-4mk6}
     themes: [bsm]
 
   Meighen-Berger:2025hrq:
