@@ -15,7 +15,7 @@
 \href{https://inspirehep.net/authors/<< profile.ids.inspire_recid >>}{INSPIRE}
 \hfill
 \href{https://github.com/<< profile.ids.github >>}{\faGithub\ << profile.ids.github >>}
-<% if private %>
+<% if private and private.nationality %>
 \\
 Nationality: << private.nationality|tex >>
 <% endif %>
