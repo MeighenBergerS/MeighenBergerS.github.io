@@ -17,7 +17,7 @@ A5. Group by content, one file per kind (`talks.yml`, `teaching.yml`, ...).
     A new field is documented in the comment block at the top of its file.
 A6. Templates hold layout only. The site templates live in `templates/site/`,
     the CV in `templates/cv/`, one LaTeX section per file in `sections/`.
-A7. Private data (phone, nationality, references) lives only in `private/`,
-    which is git-ignored. Only `--private` reads it, and its output is never published.
+A7. Private data (phone, nationality, references, names of mentored students) lives only
+    in `private/`, which is git-ignored. Only `--private` reads it, and its output is never published.
 A8. `data/cache/` and `data/metrics.csv` are written by CI. Edit them by hand only to fix a fetch.
 A9. Drafts (`draft: true`, `data/news/drafts/`) never reach the live site.

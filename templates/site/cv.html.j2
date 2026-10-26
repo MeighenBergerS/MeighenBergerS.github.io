@@ -18,6 +18,17 @@
   </li>
   {% endfor %}
 </ul>
+{% if cv.affiliations %}
+<h2>Affiliations</h2>
+<ul class="timeline">
+  {% for p in cv.affiliations %}
+  <li>
+    <div class="when">{{ p.start|month }} – {{ p.end|month }}</div>
+    <div><strong>{{ p.role }}</strong>, {{ p.institution }}, {{ p.country }}</div>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
 <p class="muted">{{ profile.collaborations|md }}</p>
 
 <h2>Education</h2>
@@ -35,19 +46,13 @@
 <ul class="timeline">
   {% for a in cv.awards %}
   <li><div class="when">{{ a.year }}</div>
-    <div><strong>{{ a.name }}</strong>{% if a.amount %} ({{ a.amount }}){% endif %}{% if a.extra %}, {{ a.extra }}{% endif %}<br><span class="muted">{{ a.note }}</span></div></li>
+    <div><strong>{{ a.name }}</strong>{% if a.type or a.amount %} ({% if a.type %}{{ a.type }}{% if a.amount %}, {% endif %}{% endif %}{% if a.amount %}{{ a.amount }}{% endif %}){% endif %}{% if a.extra %}, {{ a.extra }}{% endif %}<br><span class="muted">{{ a.note }}</span></div></li>
   {% endfor %}
 </ul>
 
 <h2>Teaching and mentoring</h2>
 <p>{{ teaching.summary|md }}</p>
 <ul class="plain">{% for l in teaching.lecturing %}<li>{{ l|md }}</li>{% endfor %}</ul>
-<h3>Supervised students</h3>
-<ul class="plain">
-  {% for s in teaching.students %}
-  <li><strong>{{ s.name }}</strong> ({{ {'phd':'PhD','masters':"Master's",'junior':'Undergraduate / junior'}[s.level] }}, {{ s.institution }}){% if s.title %}. <em>{{ s.title }}</em>{% endif %}{% if s.note %}, {{ s.note }}{% endif %}</li>
-  {% endfor %}
-</ul>
 <ul class="plain">{% for c in teaching.community %}<li>{{ c|md }}</li>{% endfor %}</ul>
 
 <h2>Service and community engagement</h2>

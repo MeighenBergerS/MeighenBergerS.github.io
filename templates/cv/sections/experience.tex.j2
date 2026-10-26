@@ -5,6 +5,16 @@
 \entryline{\textbf{<< p.institution|tex >>}, << p.role|tex >>}{<< p.start|month >> -- << p.end|month >>}
 <% endfor %>
 }
+<% if cv.affiliations %>
+
+\section{Affiliations}
+
+\denseouterlist{
+<% for p in cv.affiliations %>
+\entryline{\textbf{<< p.institution|tex >>}, << p.role|tex >>}{<< p.start|month >> -- << p.end|month >>}
+<% endfor %>
+}
+<% endif %>
 
 \vspace{1mm}
 

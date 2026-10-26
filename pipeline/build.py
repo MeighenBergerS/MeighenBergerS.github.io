@@ -15,6 +15,7 @@ import html
 import json
 import re
 import shutil
+import unicodedata
 from pathlib import Path
 
 import jinja2
@@ -26,6 +27,7 @@ CACHE = DATA / "cache"
 SITE = ROOT / "_site"
 BUILD = ROOT / "build"
 SELF = "Meighen-Berger"
+SUPERVISION_LEVELS = ("phd", "masters", "junior")  # keys of `supervision` in teaching.yml
 SMALL_AUTHOR_LIST = 10  # "small-author-list works": fewer than this many authors
 REVIEW_MAX_AUTHORS = 30  # unlisted papers below this author count are flagged for review
 
@@ -261,6 +263,9 @@ def load_papers():
             p["role_tags"], p["contribution"] = contribution(p)
     for p in papers:
         p["in_cv"] = bool(p.get("curated")) and p["status"] != "proc" and p.get("cv", True) is not False
+        # Proceedings led by a student I mentored: a separate CV group, outside the topic groups.
+        p["student_proc"] = (bool(p.get("curated")) and p["status"] == "proc"
+                             and "mentored" in (p.get("roles") or []) and p.get("cv", True) is not False)
 
     exp = notes.get("experiments") or {}
     for p in papers:
@@ -294,6 +299,24 @@ def contribution(p):
     return tags, text
 
 
+def family_key(name):
+    """'S. A. Meighen-Berger' -> 'meighen-berger', for comparing author order."""
+    family = " ".join(w for w in name.split() if not w.endswith("."))
+    return unicodedata.normalize("NFKD", family.replace("Ø", "O").replace("ø", "o")).encode("ascii", "ignore").decode().lower()
+
+
+def led(p):
+    """Whether I led the paper: `lead` in papers.yml, else my name first and the
+    list out of alphabetical order (hep-ph lists are alphabetical otherwise)."""
+    if p.get("lead") is not None:
+        return bool(p["lead"])
+    authors = p["authors"] or []
+    if not authors or SELF not in authors[0]:
+        return False
+    keys = [family_key(a) for a in authors]
+    return len(keys) == 1 or keys != sorted(keys)
+
+
 def experiment_of(p, exp):
     """The experiment a collaboration paper belongs to, or None for non-experimental papers."""
     for k in p["texkeys"]:
@@ -310,6 +333,8 @@ def slug(name):
 
 def cv_keyword(p):
     """Bibliography group of a paper in the CV: its experiment, else its first theme."""
+    if p.get("student_proc"):
+        return "student-proc"
     if p["experiment"]:
         return f"exp-{slug(p['experiment'])}"
     if p["themes"]:
@@ -348,6 +373,10 @@ def make_bib(papers, bib, keyword):
             fields.append(f'note = "{"submitted" if p["status"] == "sub" else "preprint"}"')
         if p.get("contribution"):
             fields.append(f'usera = "{to_tex(p["contribution"])}"')
+        if p.get("curated") and led(p):
+            fields.append('userb = "lead"')
+        if "mentored" in (p.get("roles") or []):
+            fields.append('userc = "student"')
         body = entry.rstrip().rstrip("}").rstrip().rstrip(",")
         out.append(body + ",\n    " + ",\n    ".join(fields) + "\n}\n")
     return "\n".join(out)
@@ -370,7 +399,7 @@ def h_index(counts):
 def compute_stats(papers, talks, teaching, software, github):
     inspire = [p for p in papers if p["recid"]]
     curated = [p for p in papers if p["curated"]]
-    sup = {lvl: sum(1 for s in teaching["students"] if s["level"] == lvl) for lvl in ("phd", "masters", "junior")}
+    sup = {lvl: teaching["supervision"][lvl] for lvl in SUPERVISION_LEVELS}
     return {
         "records": len(inspire),
         "refereed": sum(1 for p in inspire if p["refereed"]),
@@ -599,7 +628,7 @@ def main():
             for e in exp_order if any(p["experiment"] == e for p in papers)],
         "chart_pubs": pubs_per_year(papers), "metrics": metrics_history(),
         "updated": today.isoformat(), "year": today.year,
-        "cv_bib": make_bib([p for p in papers if p["in_cv"]], bib, cv_keyword),
+        "cv_bib": make_bib([p for p in papers if p["in_cv"] or p["student_proc"]], bib, cv_keyword),
         # Publication list: every curated paper (collaboration papers only where
         # curated, i.e. with a direct contribution), plus the thesis.
         "publist_bib": make_bib([p for p in papers if p["curated"] or p["status"] == "thesis"],
@@ -614,7 +643,13 @@ def main():
         private_path = ROOT / "private" / "private.yml"
         if not private_path.exists():
             raise SystemExit("private/private.yml not found (see private/private.yml.example)")
-        build_cv(ctx, BUILD / "cv-private", yaml.safe_load(private_path.read_text(encoding="utf-8")))
+        private = yaml.safe_load(private_path.read_text(encoding="utf-8"))
+        for lvl in SUPERVISION_LEVELS:
+            n = sum(1 for s in private.get("students") or [] if s["level"] == lvl)
+            if n != ctx["teaching"]["supervision"][lvl]:
+                raise SystemExit(f"private/private.yml: {n} `students` at level {lvl}, but "
+                                 f"data/teaching.yml `supervision` says {ctx['teaching']['supervision'][lvl]}; make them agree")
+        build_cv(ctx, BUILD / "cv-private", private)
 
     report = review_report(papers, missing)
     (BUILD / "review.md").write_text(report)

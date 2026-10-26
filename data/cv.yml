@@ -1,6 +1,11 @@
 # CV content that is not papers, talks, software or teaching.
 # Text fields use light Markdown: **bold**, *italic*, [text](url), and $...$ for
 # inline math such as $\nu_\tau$ or $p\gamma$ (prefer Greek letters over spelled-out names).
+#
+# positions: employment only (postdocs, faculty). affiliations: affiliate, user and
+# honorary roles, listed separately so they do not read as appointments.
+# awards: `type` says what kind of support it was (for example "Travel grant",
+# "Workshop grant", "Recognition"), shown before the amount.
 
 highlights:
   # Rendered as a template: {{ stats.* }} values are computed at build time.
@@ -32,8 +37,8 @@ highlights:
     including Stanford, Harvard, Queen's, Texas A&M, Ohio State, UNSW, and the Mitchell
     Conference.
   - >-
-    **Mentoring.** Supervised {{ stats.supervision.phd_words }} PhD student{{ 's' if stats.supervision.phd != 1 }},
-    {{ stats.supervision.masters_words }} Master's students, and
+    **Mentoring.** Mentored {{ stats.supervision.phd_words }} PhD student{{ 's' if stats.supervision.phd != 1 }}.
+    Co-supervised {{ stats.supervision.masters_words }} Master's students and
     {{ stats.supervision.junior_words }} undergraduate or junior researchers. Graduate
     lecturer in dark matter direct detection. Organized the Melbourne theory seminar
     series.
@@ -48,16 +53,18 @@ positions:
     role: Postdoctoral Research Fellow
     start: 2025-10
     end:  # empty = current
-  - institution: Fermi National Accelerator Laboratory
-    country: USA
-    role: Affiliate / User
-    start: 2026-02
-    end:
   - institution: The University of Melbourne
     country: Australia
     role: Postdoctoral Research Fellow in Neutrino Phenomenology
     start: 2022-09
     end: 2025-08
+
+affiliations:
+  - institution: Fermi National Accelerator Laboratory
+    country: USA
+    role: Affiliate / User
+    start: 2026-02
+    end:
   - institution: The University of Melbourne
     country: Australia
     role: Honorary Fellow
@@ -91,18 +98,22 @@ education:
 awards:
   - name: ARC Centre of Excellence for Dark Matter Particle Physics, ECR Special Initiatives Program
     year: 2023
+    type: Workshop grant
     amount: 12,000 AUD
-    note: Competitive early-career grant supporting an independently proposed dark matter research project.
+    note: Competitive early-career grant to set up a computing workshop.
   - name: Laby Early Career Researcher Award
     year: 2023
+    type: Travel grant
     amount: 4,000 AUD
     note: School of Physics award recognizing outstanding early-career research at the University of Melbourne.
   - name: Marie Curie Seal of Excellence
     year: 2021
+    type: Recognition
     extra: project "Nu-Eyes"
     note: European Commission recognition of a self-authored fellowship proposal rated above the funding threshold.
   - name: TUM and Imperial College London Collaboration Fund
     year: 2019
+    type: Seed grant
     amount: $2,680
     note: Seed funding for "Advanced mathematical models for the simulation chain of neutrino detectors."
 

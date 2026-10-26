@@ -2,7 +2,7 @@
 \section{Selected Publications}
 
 \small{
-<< stats.refereed >> published papers and << stats.conference >> conference papers in total. Of these, \textbf{<< stats.curated >> carry a major contribution from me}, and \textbf{<< stats.small >> are small-author-list works} (fewer than 10 authors). The full record is on \href{https://inspirehep.net/authors/<< profile.ids.inspire_recid >>}{INSPIRE}. Below is a selected list of my works grouped by topic.
+Selected works, grouped by topic. \textbf{<< stats.curated >> papers carry a major contribution from me}, and \textbf{<< stats.small >> of my papers have fewer than 10 authors}. In hep-ph, authors are usually listed alphabetically, so the order does not show who led. \textcolor{color-title}{\textdagger} marks papers I led, and \textcolor{color-title}{*} marks papers with a student I mentored. My full record of << stats.refereed >> published papers and << stats.conference >> conference papers, most of them IceCube and P-ONE collaboration papers, is on \href{https://inspirehep.net/authors/<< profile.ids.inspire_recid >>}{INSPIRE}.
 }
 
 \vspace{1mm}
@@ -26,5 +26,12 @@
 \textbf{\textcolor{color-title}{<< e.name|tex >>}}
 \printbibliography[keyword={exp-<< e.slug >>}, heading=none]
 <% endfor %>
+\end{pubgroup}
+<% endif %>
+<% if papers|selectattr('student_proc')|list %>
+\needspace{6\baselineskip}
+\begin{pubgroup}{Proceedings by students I mentored}
+\small
+\printbibliography[keyword={student-proc}, heading=none]
 \end{pubgroup}
 <% endif %>
