@@ -27,6 +27,7 @@ CACHE = DATA / "cache"
 SITE = ROOT / "_site"
 BUILD = ROOT / "build"
 SELF = "Meighen-Berger"
+SUPERVISION_LEVELS = ("phd", "masters", "junior")  # keys of `supervision` in teaching.yml
 SMALL_AUTHOR_LIST = 10  # "small-author-list works": fewer than this many authors
 REVIEW_MAX_AUTHORS = 30  # unlisted papers below this author count are flagged for review
 
@@ -398,7 +399,7 @@ def h_index(counts):
 def compute_stats(papers, talks, teaching, software, github):
     inspire = [p for p in papers if p["recid"]]
     curated = [p for p in papers if p["curated"]]
-    sup = {lvl: sum(1 for s in teaching["students"] if s["level"] == lvl) for lvl in ("phd", "masters", "junior")}
+    sup = {lvl: teaching["supervision"][lvl] for lvl in SUPERVISION_LEVELS}
     return {
         "records": len(inspire),
         "refereed": sum(1 for p in inspire if p["refereed"]),
@@ -642,7 +643,13 @@ def main():
         private_path = ROOT / "private" / "private.yml"
         if not private_path.exists():
             raise SystemExit("private/private.yml not found (see private/private.yml.example)")
-        build_cv(ctx, BUILD / "cv-private", yaml.safe_load(private_path.read_text(encoding="utf-8")))
+        private = yaml.safe_load(private_path.read_text(encoding="utf-8"))
+        for lvl in SUPERVISION_LEVELS:
+            n = sum(1 for s in private.get("students") or [] if s["level"] == lvl)
+            if n != ctx["teaching"]["supervision"][lvl]:
+                raise SystemExit(f"private/private.yml: {n} `students` at level {lvl}, but "
+                                 f"data/teaching.yml `supervision` says {ctx['teaching']['supervision'][lvl]}; make them agree")
+        build_cv(ctx, BUILD / "cv-private", private)
 
     report = review_report(papers, missing)
     (BUILD / "review.md").write_text(report)
