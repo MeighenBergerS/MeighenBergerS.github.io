@@ -3,9 +3,14 @@
 # which writes the full CV to build/cv-private/ (never published).
 
 phone: "+1 ..."
+# Optional. Leave it out where a CV usually has none, as in the US.
 nationality: Austrian / USA
 references:
   - {name: "Prof. ...", institution: "...", email: "..."}
 # Optional: papers not yet on arXiv, shown as "In preparation" after the publications.
 in_preparation:
   - {authors: "A. Author, **S. A. Meighen-Berger**, and B. Author", title: "...", note: "One line on the scope, no results.", contribution: "Co-wrote the paper, developed the idea"}
+# Mentored students, shown only in the private CV. The counts per level must match
+# `supervision` in data/teaching.yml. level: phd, masters, junior
+students:
+  - {level: phd, name: "...", institution: "...", title: "..."}
