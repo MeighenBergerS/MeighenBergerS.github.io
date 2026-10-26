@@ -28,3 +28,10 @@ Selected works, grouped by topic. \textbf{<< stats.curated >> papers carry a maj
 <% endfor %>
 \end{pubgroup}
 <% endif %>
+<% if papers|selectattr('student_proc')|list %>
+\needspace{6\baselineskip}
+\begin{pubgroup}{Proceedings by students I mentored}
+\small
+\printbibliography[keyword={student-proc}, heading=none]
+\end{pubgroup}
+<% endif %>

@@ -262,6 +262,9 @@ def load_papers():
             p["role_tags"], p["contribution"] = contribution(p)
     for p in papers:
         p["in_cv"] = bool(p.get("curated")) and p["status"] != "proc" and p.get("cv", True) is not False
+        # Proceedings led by a student I mentored: a separate CV group, outside the topic groups.
+        p["student_proc"] = (bool(p.get("curated")) and p["status"] == "proc"
+                             and "mentored" in (p.get("roles") or []) and p.get("cv", True) is not False)
 
     exp = notes.get("experiments") or {}
     for p in papers:
@@ -329,6 +332,8 @@ def slug(name):
 
 def cv_keyword(p):
     """Bibliography group of a paper in the CV: its experiment, else its first theme."""
+    if p.get("student_proc"):
+        return "student-proc"
     if p["experiment"]:
         return f"exp-{slug(p['experiment'])}"
     if p["themes"]:
@@ -622,7 +627,7 @@ def main():
             for e in exp_order if any(p["experiment"] == e for p in papers)],
         "chart_pubs": pubs_per_year(papers), "metrics": metrics_history(),
         "updated": today.isoformat(), "year": today.year,
-        "cv_bib": make_bib([p for p in papers if p["in_cv"]], bib, cv_keyword),
+        "cv_bib": make_bib([p for p in papers if p["in_cv"] or p["student_proc"]], bib, cv_keyword),
         # Publication list: every curated paper (collaboration papers only where
         # curated, i.e. with a direct contribution), plus the thesis.
         "publist_bib": make_bib([p for p in papers if p["curated"] or p["status"] == "thesis"],

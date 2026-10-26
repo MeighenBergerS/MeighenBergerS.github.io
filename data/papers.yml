@@ -21,7 +21,9 @@
 #   status:       override sub/pub/proc/preprint (normally derived from INSPIRE);
 #                 preprint = arXiv only, not submitted anywhere
 #   cv:           false -> on the website only, not in the CV list. Proceedings
-#                 (status proc) are never in the CV list.
+#                 (status proc) are never in the topic groups of the CV. Those
+#                 with `mentored` appear in their own group, "Proceedings by
+#                 students I mentored".
 #   accepted:     {journal: Phys. Rev. D, doi: 10.1103/...} for a paper accepted
 #                 before INSPIRE lists the journal; shown as published (accepted).
 #                 The build asks you to remove it once INSPIRE has the journal.
