@@ -37,8 +37,8 @@ highlights:
     including Stanford, Harvard, Queen's, Texas A&M, Ohio State, UNSW, and the Mitchell
     Conference.
   - >-
-    **Mentoring.** Supervised {{ stats.supervision.phd_words }} PhD student{{ 's' if stats.supervision.phd != 1 }},
-    {{ stats.supervision.masters_words }} Master's students, and
+    **Mentoring.** Mentored {{ stats.supervision.phd_words }} PhD student{{ 's' if stats.supervision.phd != 1 }}.
+    Co-supervised {{ stats.supervision.masters_words }} Master's students and
     {{ stats.supervision.junior_words }} undergraduate or junior researchers. Graduate
     lecturer in dark matter direct detection. Organized the Melbourne theory seminar
     series.

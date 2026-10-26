@@ -1,12 +1,12 @@
 summary: >-
-  I have supervised {{ stats.supervision.phd_words }} PhD student{{ 's' if stats.supervision.phd != 1 }},
-  {{ stats.supervision.masters_words }} Master's students, and
+  I have mentored {{ stats.supervision.phd_words }} PhD student{{ 's' if stats.supervision.phd != 1 }} and
+  co-supervised {{ stats.supervision.masters_words }} Master's students and
   {{ stats.supervision.junior_words }} undergraduate or junior research projects, and I
   deliver graduate lectures in dark matter and particle physics. My mentoring model is
   to give students a self-contained piece of a larger program, with a clear path to
   publication. The work of Ho Man Yim (PhD candidate, Melbourne) on sub-GeV atmospheric
   CP violation grew directly into a paper, and Kruteesh Desai, whose Bachelor's project
-  I supervised, went on to lead a published dark matter search with IceCube and P-ONE.
+  I co-supervised, went on to lead a published dark matter search with IceCube and P-ONE.
 
 lecturing:
   - "**Lecturer**, University of Iowa. Dark Matter Direct Detection (graduate lectures)."
@@ -17,6 +17,7 @@ students:
   - {level: phd, name: Esmenaz Isik, institution: Iowa, title: Solar Atmospheric Neutrinos}
   - {level: phd, name: Ruohan Li, institution: TUM, title: Dark Matter and Bioluminescence Searches with P-ONE}
   - {level: phd, name: Ho Man Yim, institution: Melbourne, title: Probing CP Violation with Sub-GeV Atmospheric Neutrinos}
+  - {level: masters, name: Ho Man Yim, institution: Melbourne, title: Atmospheric neutrino CP violation measurement}
   - {level: masters, name: Jeongoh Park, institution: Melbourne, title: Dark Matter Annihilation Signals in JUNO}
   - {level: masters, name: Jan Henrik Schmidt-Dencker, institution: TUM, title: Stau Search in IceCube, note: published as an ICRC proceeding}
   - {level: junior, name: Kruteesh Desai, institution: TUM, title: Solar Atmospheric Neutrino Modelling}
