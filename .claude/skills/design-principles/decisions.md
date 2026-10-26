@@ -2,6 +2,15 @@
 
 Newest first. One entry per adoption, change or exception: date, IDs, what, why.
 
+## 2026-10-26: Mentored students are private data (A7)
+
+A7 now lists the names of mentored students as private data. The public site and
+CV show only counts per level (`supervision` in `data/teaching.yml`) and the joint
+papers. The full list moves to `private/private.yml` and appears only in the
+private CV. Why: the user wants students named only in application documents
+until they have their own group. News posts keep the names of student coauthors,
+since they describe the papers. Earlier commits stay as they are.
+
 ## 2026-10-02: The skill tree is adopted for the website
 
 Adapted from the sanflux skill tree, at the user's request.
