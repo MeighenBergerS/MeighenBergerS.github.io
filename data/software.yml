@@ -9,6 +9,7 @@ intro: >-
 #          community -> "Community contributions": tools for training, teaching and
 #                       running a research group (smaller cards).
 #          earlier   -> "Earlier tools", a compact list.
+# `cv:` optional short text for the CV, used there in place of tagline and description.
 # `repo` (owner/name) and `pypi` are queried automatically for stars, version and
 # last update. `paper` is a key from papers.yml or any INSPIRE texkey.
 software:
@@ -25,6 +26,10 @@ software:
       single-track energies. One code serves IceCube, KM3NeT/ARCA, P-ONE, TRIDENT and
       Baikal-GVD, so published effective areas can be reproduced, explained and carried
       to detectors that have not been simulated yet. Author and maintainer.
+    cv: >-
+      Neutrino-telescope effective areas from muon transport, without a detector
+      simulation. One code covers IceCube, KM3NeT/ARCA, P-ONE, TRIDENT and Baikal-GVD.
+      Author and maintainer.
     paper: Meighen-Berger:2026yls
     themes: [simulation, transport]
 
@@ -39,6 +44,10 @@ software:
       geometries in water or ice. Lead developer and current maintainer. Released
       publicly (Comput. Phys. Commun. 2024) and adopted as a community baseline,
       including for the NuBench event-reconstruction benchmark.
+    cv: >-
+      Open-source, end-to-end simulation of neutrino telescopes in water or ice
+      (Comput. Phys. Commun. 2024). A community baseline and the source of the NuBench
+      training data. Lead developer and maintainer.
     paper: Lazar:2023rol
     themes: [simulation]
 
@@ -53,6 +62,9 @@ software:
       Predicts photon counts and timing distributions from muon tracks, electromagnetic
       showers, and hadronic showers in ice or water. Author and maintainer. Provides
       the light-yield backend used in Prometheus.
+    cv: >-
+      Fast parametric Cherenkov light yields for tracks and cascades, the light-yield
+      backend of Prometheus. Author and maintainer.
     themes: [simulation, transport]
 
   - name: bib-checker
