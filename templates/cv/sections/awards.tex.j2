@@ -2,7 +2,7 @@
 
 \denseouterlist{
 <% for a in cv.awards %>
-\entry{\textbf{<< a.name|tex >>} (<% if a.amount %><< a.amount|tex >>, <% endif %><< a.year >>)<% if a.extra %>, << a.extra|tex >><% endif %> \\
+\entry{\textbf{<< a.name|tex >>} (<% if a.type %><< a.type|tex >>, <% endif %><% if a.amount %><< a.amount|tex >>, <% endif %><< a.year >>)<% if a.extra %>, << a.extra|tex >><% endif %> \\
 \textit{<< a.note|tex >>}}
 
 <% endfor %>
