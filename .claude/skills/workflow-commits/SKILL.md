@@ -18,5 +18,5 @@ C5. Commit only when the user asks. Stage files by name, never `git add -A`.
     Check `git diff --cached --stat` in a command of its own, read it, and only then commit.
 C6. Never amend, rebase or force-push published history. Earlier commits are
     left as they are, even where they break these rules.
-C7. Before committing, `python pipeline/build.py` passes. Nothing in
-    `private/`, `_site/` or `build/` is staged.
+C7. Before committing, `python pipeline/build.py` passes. Nothing in `private/`
+    (except the template `private.yml.example`), `_site/` or `build/` is staged.

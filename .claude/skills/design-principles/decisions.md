@@ -2,6 +2,13 @@
 
 Newest first. One entry per adoption, change or exception: date, IDs, what, why.
 
+## 2026-10-26: The private.yml template may be committed (C7)
+
+C7 now excepts `private/private.yml.example` from "nothing in `private/` is
+staged". The file is tracked on purpose as the template for `private.yml` and
+documents its fields, such as `nationality` and `students`. It holds no
+private data.
+
 ## 2026-10-26: Mentored students are private data (A7)
 
 A7 now lists the names of mentored students as private data. The public site and
