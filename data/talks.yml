@@ -6,6 +6,10 @@
 # Add `url:` for a public announcement/agenda and `slides:` for public slides.
 
 talks:
+  - {date: 2026-11-14, year: 2026, kind: invited, event: Particle Physics on the Plains 2026, city: Lawrence, country: USA,
+     title: Particle Transport for Neutrino Telescopes, url: "https://indico.global/event/18413/"}
+  - {date: 2026-11-11, year: 2026, kind: seminar, event: Northwestern University, city: Evanston, country: USA,
+     title: Probing Dark Matter Interactions Near Supermassive Black Holes}
   - {date: 2026-12-02, year: 2026, kind: seminar, event: TRIUMF, city: Vancouver, country: Canada,
      title: Particle Transport for Neutrino Detectors}
   - {date: 2026-10-28, year: 2026, kind: seminar, event: York University, city: Toronto, country: Canada,
