@@ -1,5 +1,15 @@
 [
  {
+  "id": "2611.26418",
+  "title": "Future avenues for precision oscillation measurements with compact movable reactors",
+  "published": "2026-11-19",
+  "authors": [
+   "Matheus Hostert",
+   "Stephan A. Meighen-Berger",
+   "Maxim Pospelov"
+  ]
+ },
+ {
   "id": "2609.40188",
   "title": "Estimating High-Energy Neutrino Effective Areas from Muon Propagation",
   "published": "2026-09-30",
@@ -539,17 +549,6 @@
    "IceCube-Gen2 Collaboration",
    " :",
    "R. Abbasi",
-   "et al."
-  ]
- },
- {
-  "id": "2107.06966",
-  "title": "The IceCube Collaboration -- Contributions to the 37th International Cosmic Ray Conference (ICRC2021)",
-  "published": "2021-07-14",
-  "authors": [
-   " IceCube Collaboration",
-   "R. Abbasi",
-   "M. Ackermann",
    "et al."
   ]
  }
