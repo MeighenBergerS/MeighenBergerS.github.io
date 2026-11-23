@@ -144,7 +144,10 @@ papers:
     themes: [side]
 
 # Papers you deliberately leave off the curated list (silences the review report).
-hidden: []
+hidden:
+  # Journal version of Meighen-Berger:2025pcq (Phys. Rev. D, retitled), which
+  # INSPIRE filed as a separate record. Remove once INSPIRE merges the two.
+  - Meighen-Berger:2026vey
 
 # Experimental (collaboration) papers get their own section, grouped by experiment.
 # A paper's experiment is the first entry of `order` found in its INSPIRE
