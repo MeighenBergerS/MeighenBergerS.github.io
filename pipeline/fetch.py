@@ -27,6 +27,13 @@ UA = {"User-Agent": "MeighenBergerS.github.io site builder (https://github.com/M
 # Collaboration papers carry hundreds of authors; only keep author lists below this.
 AUTHOR_LIST_MAX = 30
 
+# Retries per request, and the wait in seconds before each retry. A rate limit
+# (HTTP 429) waits longer, or as long as the server's Retry-After asks, up to the cap.
+RETRIES = 4
+RETRY_WAIT = 5
+RATE_LIMIT_WAIT = 30
+RATE_LIMIT_WAIT_MAX = 300
+
 LIGHT_FIELDS = [
     "control_number", "texkeys", "titles", "arxiv_eprints", "dois", "publication_info",
     "document_type", "author_count", "collaborations", "citation_count",
@@ -40,15 +47,26 @@ def get(url, accept=None):
         headers["Accept"] = accept
     if "api.github.com" in url and os.environ.get("GITHUB_TOKEN"):
         headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
-    for attempt in range(4):
+    for attempt in range(RETRIES):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as r:
                 return r.read().decode("utf-8")
         except Exception as exc:  # network hiccups and rate limits: back off and retry
-            if attempt == 3 or getattr(exc, "code", None) == 404:
+            code = getattr(exc, "code", None)
+            if attempt == RETRIES - 1 or code == 404:
                 raise
-            print(f"  retry {url[:80]}... ({exc})", file=sys.stderr)
-            time.sleep(5 * (attempt + 1))
+            wait = RETRY_WAIT * (attempt + 1)
+            if code == 429:
+                wait = retry_after(exc) or RATE_LIMIT_WAIT * (attempt + 1)
+                wait = min(wait, RATE_LIMIT_WAIT_MAX)
+            print(f"  retry in {wait}s {url[:80]}... ({exc})", file=sys.stderr)
+            time.sleep(wait)
+
+
+def retry_after(exc):
+    """Seconds from a Retry-After header, or None when it is missing or a date."""
+    value = (getattr(exc, "headers", None) or {}).get("Retry-After", "")
+    return int(value) if value.strip().isdigit() else None
 
 
 def inspire_query(q, fields=None, fmt=None):
@@ -84,11 +102,19 @@ def fetch_inspire(bai, curated_keys):
 
 
 def fetch_arxiv():
-    """Recent arXiv listings, to catch preprints INSPIRE has not indexed yet."""
+    """Recent arXiv listings, to catch preprints INSPIRE has not indexed yet.
+
+    A backup to INSPIRE, so a failure keeps the previous arxiv.json and warns
+    instead of stopping the whole refresh.
+    """
     print("arXiv: author listing")
     q = urllib.parse.urlencode({"search_query": 'au:"Meighen-Berger"', "sortBy": "submittedDate",
                                 "sortOrder": "descending", "max_results": 50})
-    root = ET.fromstring(get(f"https://export.arxiv.org/api/query?{q}"))
+    try:
+        root = ET.fromstring(get(f"https://export.arxiv.org/api/query?{q}"))
+    except Exception as exc:
+        print(f"::warning::arXiv listing failed ({exc}), keeping the previous data/cache/arxiv.json")
+        return None
     ns = {"a": "http://www.w3.org/2005/Atom"}
     entries = []
     for e in root.findall("a:entry", ns):
