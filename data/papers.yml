@@ -29,6 +29,11 @@
 #                 The build asks you to remove it once INSPIRE has the journal.
 
 papers:
+  Hostert:2026nor:
+    roles: [wrote]
+    details: Built the simulations and performed the analyses
+    themes: [neutrino]
+
   Meighen-Berger:2026yls:
     roles: [wrote, idea]
     themes: [tools]
